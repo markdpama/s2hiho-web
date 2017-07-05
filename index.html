@@ -24,6 +24,28 @@
       margin: 0;
       height: 100%;
       -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    #preloader {
+      position: fixed;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background-color:#fff; /* change if the mask should have another color then white */
+      z-index:99; /* makes sure it stays on top */
+    }
+
+    #status {
+      width:80px;
+      height:80px;
+      position:absolute;
+      left:50%; /* centers the loading animation horizontally one the screen */
+      top:50%; /* centers the loading animation vertically one the screen */
+      background-repeat:no-repeat;
+      background-position:center;
+      margin:-40px 0 0 -40px; /* is width and height divided by two */
     }
 
     .wrapper {
@@ -101,27 +123,42 @@
 </head>
     
 <body>
+<!-- Preloader-->
+<div id="preloader">
+  <div id="status">
+      <svg width="80px"  height="80px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ripple">
+          <circle cx="50" cy="50" r="14.0334" fill="none" stroke="#c0f6d2" stroke-width="6">
+            <animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="1" keySplines="0 0.2 0.8 1" begin="-0.5s" repeatCount="indefinite"></animate>
+            <animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="1" keySplines="0.2 0 0.8 1" begin="-0.5s" repeatCount="indefinite"></animate>
+          </circle>
+          <circle cx="50" cy="50" r="33.5671" fill="none" stroke="#ff7c81" stroke-width="6">
+            <animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="1" keySplines="0 0.2 0.8 1" begin="0s" repeatCount="indefinite"></animate>
+            <animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="1" keySplines="0.2 0 0.8 1" begin="0s" repeatCount="indefinite"></animate>
+          </circle>
+        </svg>
+  </div>
+</div>
 
     <div class="wrapper">
         <div class="main">
-           <!--
+
             <section class="page1">
                   <div class="row">
                        <div class="col col-xs-6">
                           <div class="svgcanvas" id="introS2">
-                               <img src="images/s2logo.png" width="200" />
+                               <img src="images/s2logo.png" width="200" style="display:none" />
                           </div>
                        </div>
                        <div class="col col-xs-6">
                            <div class="svgcanvas" id="introHiHo">
-                               <img src="images/HiHoLogo.png" width="240" />
+                               <img src="images/HiHoLogo.png" width="240" style="display:none" />
                            </div>
                        </div>
                   </div>
                   <br />
             </section>
-            -->
-            <section class="page2 page-appdevice">
+
+            <section class="page2 page-appdevice" style="display:none">
                   <div class="row">
                       
                        <div class="appdevice"></div>
@@ -142,10 +179,12 @@
                   </div>
 
             </section>
+            <!--
             <section class="page3">
                   <h2>Page 3</h2>
                   <div style="height:500px"></div>
             </section>
+            -->
 
         </div>
     </div>
@@ -168,36 +207,6 @@
           //responsiveFallback: false
         });
 
-        var doc = $(document);
-        var colWidth = doc.width() / 2;
-        var colHeight = doc.height();
-
-        console.log(colWidth+'x'+colHeight);
-
-        $('.docHeight').each(function(){
-            $(this).height(colHeight);
-        });
-
-        var draw1 = SVG('introS2').size(colWidth, colHeight);
-        var draw2 = SVG('introHiHo').size(colWidth, colHeight);
-        var s2Logo = $('#introS2 img');
-        var HiHoLogo = $('#introHiHo img');
-
-        var polygon = draw1.polygon('0 '+colHeight+',100 '+colHeight+', '+colWidth+' 0, 0 0')
-        
-        polygon.fill('#FFB140')
-
-        /*polygon.animate(1200).plot([ [0,colHeight], [colWidth,colHeight], [colWidth,0], [0,0] ]).afterAll(function() {
-            s2Logo.fadeIn( function(){
-              var rect = draw2.rect(colWidth, colHeight).x(-colWidth).attr({fill:'#3498db'});
-                rect.animate(1200).move(0, 0).afterAll(function() {
-                    HiHoLogo.fadeIn();
-                });             
-            });
-
-
-        });*/
-
         //var rect = draw2.rect(colWidth, colHeight).x(0).attr({fill:'#3498db'});
 
 /*
@@ -213,9 +222,54 @@ SCRATCH
 */
 
     });
+
+    var doc = $(document);
+    var colWidth = doc.width() / 2;
+    var colHeight = doc.height();
+
+    console.log(colWidth+'x'+colHeight);
+
+    $('.docHeight').each(function(){
+        $(this).height(colHeight);
+    });
+
+    var S2HIHO_SVG = new function() {
+        var PAGE2 = $('section.page2');
+
+        this.animatePage1 = function() {
+            var draw1 = SVG('introS2').size(colWidth, colHeight);
+            var draw2 = SVG('introHiHo').size(colWidth, colHeight);
+            var s2Logo = $('#introS2 img');
+            var HiHoLogo = $('#introHiHo img');
+            var polygon = draw1.polygon('0 '+colHeight+',100 '+colHeight+', '+colWidth+' 0, 0 0')
+            
+            polygon.fill('#FFB140')
+
+            polygon.animate(1200).plot([ [0,colHeight], [colWidth,colHeight], [colWidth,0], [0,0] ]).afterAll(function() {
+                s2Logo.fadeIn( function(){
+                  var rect = draw2.rect(colWidth, colHeight).x(-colWidth).attr({fill:'#3498db'});
+                    rect.animate(1200).move(0, 0).afterAll(function() {
+                        HiHoLogo.fadeIn();
+                        PAGE2.show();
+                    });             
+                });
+
+            });
+
+        }
+    }
+    
+    $(window).on('load', function() { // makes sure the whole site is loaded 
+        $('#status').fadeOut(); // will first fade out the loading animation 
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+        $('body').delay(350).css({'overflow':'visible'});
+        setTimeout(function(){
+            S2HIHO_SVG.animatePage1();  
+        },500);
+        
+    })
+
 </script>  
-
-
 
 
 </body>
