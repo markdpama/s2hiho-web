@@ -1,0 +1,141 @@
+
+@font-face {
+   font-family: 'GothamMedium';
+   src: url('../fonts/GOTHAM-MEDIUM.TTF')  format('truetype');
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #E2E4E7;
+  padding: 0;
+  text-align: center;
+  font-family: 'open sans';
+  position: relative;
+  margin: 0;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+h1,h2,h3,h4,h5 {margin:0;}
+
+#preloader {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#fff; 
+  z-index:99; 
+}
+
+#status {
+  width:80px;
+  height:80px;
+  position:absolute;
+  left:50%; 
+  top:50%; 
+  background-repeat:no-repeat;
+  background-position:center;
+  margin:-40px 0 0 -40px; 
+}
+
+.wrapper {
+  height: 100% !important;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.main section .page_container {
+  position: relative;
+  top: 16%;
+  margin: 0 auto 0;
+  max-width: 950px;
+  z-index: 3;
+}
+.main section  {
+  overflow: hidden;
+}
+
+.main section > img {
+  position: absolute;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.main section.page1 {
+   background:#43e8c8;
+}
+
+.main .row {height:100%}
+.main .page1 .col{height:100%;padding:0;}
+.redBorder {border: 1px solid red}
+
+.hh-amber {background:#FFB140;}
+.hh-blue {background:#3498DB;}
+.hh-purple {background:#9452b0;}
+
+#introS2 {float:right;}
+#introHiHo {float:left;}
+.svgcanvas {position: relative;}
+
+.main .page1 .col img {display: none;position: absolute; top:50%; left:50%; margin-left:-100px; }
+.main .page1 .col #introS2 img {margin-top: -140px}
+.main .page1 .col #introHiHo img {margin-top: -140px}
+
+.page2 .svgcanvas {}
+
+.appdevice { width:200px;height: 311px; 
+    background: url('../images/app-device.png') no-repeat; background-size: cover;  
+    position: absolute; top:100px; left: 50%; margin-left:-100px; z-index:9; 
+}
+.page-appdevice .logo {position: absolute; top:20px; z-index:99}
+.page-appdevice .logo.s2 {left:20px;}
+.page-appdevice .logo.hiho {right:20px;}
+.page-appdevice .appdevice_details { width:454px;height:300px; position: absolute; top:120px; }
+.page-appdevice .appdevice_details.s2 {
+    background: url('../images/appdevice-details-s2.png') no-repeat; background-size: cover; right:55px; 
+}
+
+.page-appdevice .appdevice_details.hiho {
+    background: url('../images/appdevice-details-hiho.png') no-repeat; background-size: cover; left:45px;
+}
+
+.page-appdevice .btnLearMore {position: absolute; bottom:0px; width:250px; height:67px; background-size: cover;}
+.page-appdevice .btnLearMore.s2 {
+    background-image: url('../images/btn-learnmore1.png'); left:0; 
+}    
+.page-appdevice .btnLearMore.hiho {
+    background-image: url('../images/btn-learnmore2.png'); right:0; 
+}
+
+/* PAGE 3 */
+.page3  {font-family: 'GothamMedium', sans-serif;}
+.page3 .about-nav,
+.page3 .about-subpages {height:50%; position: relative; color:#FFF;}
+.page3 .about-nav .icons-tabs {width:820px; height: 180px;position: relative; margin:0 auto; 
+border:1px solid red;}
+
+.icons-tabs a.nav-item {color:#FFF; text-align: center; text-transform: uppercase;
+                         text-decoration: none!important; outline:none; }
+.icons-tabs a.nav-item:hover,
+.icons-tabs a.nav-item:hover span {color:#FFB140;}
+.icons-tabs a.nav-item span {display:block }
+.icons-tabs a.nav-item i {font-size:4em;}
+.icons-tabs a.nav-item .nav-name {font-size:2em;}
+
+.icons-tabs a.nav-item.nav-mission  {width:140px}
+.icons-tabs a.nav-item.nav-vision   {width:115px; position: absolute; left:50%; margin-left: -60px}
+.icons-tabs a.nav-item.nav-approach {width:180px;}
+
+.icons-tabs .white-line {position: absolute; height:2px; border-bottom: 2px solid #FFF; width: 200px;  top:30px;}
+.icons-tabs .white-line:first-child {left:140px;}
+.icons-tabs .white-line:nth-child(2) {right:150px;}
+
+
+
+
+
