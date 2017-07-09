@@ -17,7 +17,7 @@
     
 <body>
 <!-- Preloader-->
-<!--
+
 <div id="preloader">
   <div id="status">
       <svg width="80px"  height="80px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ripple">
@@ -31,21 +31,23 @@
           </circle>
         </svg>
   </div>
-</div>-->
+</div>
 
     <div class="wrapper">
         <div class="main">
-           <!--
-            <section class="page1" style="display:none">
+           
+            <section class="page1">
                   <div class="row">
                        <div class="col col-xs-6">
                           <div class="svgcanvas" id="introS2">
                                <img src="images/s2logo.png" width="200" style="display:none" />
+                               <div class="slogan"><h2>The Digital Step You Take</h2></div>
                           </div>
                        </div>
                        <div class="col col-xs-6">
                            <div class="svgcanvas" id="introHiHo">
                                <img src="images/HiHoLogo.png" width="240" style="display:none" />
+                               <div class="slogan"><h2>Your Events. Simpler &amp; Smarter</h2></div>
                            </div>
                        </div>
                   </div>
@@ -72,8 +74,8 @@
                        </div>
                   </div>
             </section>
-            -->
-  
+            
+          
             <section class="page3 page-about">
                   <div class="about-nav hh-purple">
                         <h2>About Us</h2>
@@ -157,7 +159,9 @@ SCRATCH
             var draw1 = SVG('introS2').size(colWidth, colHeight);
             var draw2 = SVG('introHiHo').size(colWidth, colHeight);
             var s2Logo = $('#introS2 img');
+            var s2Slogan = $('#introS2 h2');
             var HiHoLogo = $('#introHiHo img');
+            var HiHoSlogan = $('#introHiHo h2');
             var polygon = draw1.polygon('0 '+colHeight+',100 '+colHeight+', '+colWidth+' 0, 0 0')
             
             polygon.fill('#FFB140')
@@ -166,8 +170,14 @@ SCRATCH
                 s2Logo.fadeIn( function(){
                   var rect = draw2.rect(colWidth, colHeight).x(-colWidth).attr({fill:'#3498db'});
                     rect.animate(1200).move(0, 0).afterAll(function() {
-                        HiHoLogo.fadeIn();
-                        PAGE2.show();
+                        HiHoLogo.fadeIn( function(){
+                            s2Slogan.fadeIn( function(){
+                                HiHoSlogan.fadeIn( function(){
+                                    PAGE2.show();
+                                });
+                            });
+                        });
+                        
                     });             
                 });
 
@@ -177,11 +187,11 @@ SCRATCH
     }
     
     $(window).on('load', function() {
-        //$('#status').fadeOut(); 
-        //$('#preloader').delay(350).fadeOut('slow'); 
-        //$('body').delay(350).css({'overflow':'visible'});
+        $('#status').fadeOut(); 
+        $('#preloader').delay(350).fadeOut('slow'); 
+        $('body').delay(350).css({'overflow':'visible'});
         setTimeout(function(){
-            //S2HIHO_SVG.animatePage1();  
+            S2HIHO_SVG.animatePage1();  
         },500);
         
     })

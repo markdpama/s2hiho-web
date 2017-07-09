@@ -1,5 +1,10 @@
 
 @font-face {
+   font-family: 'GothamLight';
+   src: url('../fonts/GOTHAM-LIGHT.TTF')  format('truetype');
+}
+
+@font-face {
    font-family: 'GothamMedium';
    src: url('../fonts/GOTHAM-MEDIUM.TTF')  format('truetype');
 }
@@ -86,7 +91,11 @@ h1,h2,h3,h4,h5 {margin:0;}
 .main .page1 .col #introS2 img {margin-top: -140px}
 .main .page1 .col #introHiHo img {margin-top: -140px}
 
-.page2 .svgcanvas {}
+.page1 .slogan {width:490px; height:150px; position: absolute; top:50%; margin-top:40px; left:50%; margin-left:-245px;}
+
+.page1 .slogan h2 {font-family: 'GothamLight', sans-serif; color:#FFF; text-align: center;font-size:3em; display:none;}
+
+/*GothamLight*/
 
 .appdevice { width:200px;height: 311px; 
     background: url('../images/app-device.png') no-repeat; background-size: cover;  
@@ -116,8 +125,8 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page3  {font-family: 'GothamMedium', sans-serif;}
 .page3 .about-nav,
 .page3 .about-subpages {height:50%; position: relative; color:#FFF;}
-.page3 .about-nav .icons-tabs {width:820px; height: 180px;position: relative; margin:0 auto; 
-border:1px solid red;}
+.page3 .about-nav .icons-tabs {width:820px; height: 180px;position: relative; margin:0 auto;}
+.page3 .about-nav h2 {padding-top: 25px; margin:0;}
 
 .icons-tabs a.nav-item {color:#FFF; text-align: center; text-transform: uppercase;
                          text-decoration: none!important; outline:none; }
