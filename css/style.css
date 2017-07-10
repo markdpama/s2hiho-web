@@ -3,10 +3,21 @@
    font-family: 'GothamLight';
    src: url('../fonts/GOTHAM-LIGHT.TTF')  format('truetype');
 }
-
 @font-face {
    font-family: 'GothamMedium';
    src: url('../fonts/GOTHAM-MEDIUM.TTF')  format('truetype');
+}
+@font-face {
+   font-family: 'GothamMediumItalic';
+   src: url('../fonts/GOTHAM-MEDIUMITALIC.TTF')  format('truetype');
+}
+@font-face {
+   font-family: 'GothamBoldItalic';
+   src: url('../fonts/GOTHAM-BOLDITALIC.TTF')  format('truetype');
+}
+@font-face {
+   font-family: 'GothamBlackItalic';
+   src: url('../fonts/GOTHAM-BLACKITALIC.TTF')  format('truetype');
 }
 
 html {
@@ -82,6 +93,7 @@ h1,h2,h3,h4,h5 {margin:0;}
 .hh-amber {background:#FFB140;}
 .hh-blue {background:#3498DB;}
 .hh-purple {background:#9452b0;}
+.hh-darkamber {background:#f29c3a;}
 
 #introS2 {float:right;}
 #introHiHo {float:left;}
@@ -106,7 +118,7 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page-appdevice .logo.hiho {right:20px;}
 .page-appdevice .appdevice_details { width:454px;height:300px; position: absolute; top:120px; }
 .page-appdevice .appdevice_details.s2 {
-    background: url('../images/appdevice-details-s2.png') no-repeat; background-size: cover; right:55px; 
+    background: url('../images/appdevice-details-s2_draft.png') no-repeat; background-size: cover; right:55px; 
 }
 
 .page-appdevice .appdevice_details.hiho {
@@ -120,6 +132,13 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page-appdevice .btnLearMore.hiho {
     background-image: url('../images/btn-learnmore2.png'); right:0; 
 }
+
+.page-appdevice .desc-details { display:none; width:212px; height:40px; position: absolute; z-index:9; font-family: 'GothamBlackItalic', sans-serif;}
+.page-appdevice .desc-details span {text-align: center; color:#FFF; font-size: 1.8em; line-height: 42px}
+.page-appdevice .desc-details .underline {text-decoration: underline}
+.page-appdevice .desc-details.hh-purple {}
+.page-appdevice .desc-details.hh-darkamber {}
+.page-appdevice .desc-details:nth-child(4) {height:45px; line-height: 48px; width:265px;} /* digital awareness */
 
 /* PAGE 3 */
 .page3  {font-family: 'GothamMedium', sans-serif;}

@@ -10,14 +10,16 @@
 <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>-->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
-<link href='css/style.css' rel='stylesheet' type='text/css'>
+<link href='css/style.css?t=1' rel='stylesheet' type='text/css'>
+<!--
 <script src="https://use.fontawesome.com/cf0da6be55.js"></script>
-  
+  -->
+
 </head>
     
 <body>
 <!-- Preloader-->
-
+<!--
 <div id="preloader">
   <div id="status">
       <svg width="80px"  height="80px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ripple">
@@ -31,11 +33,11 @@
           </circle>
         </svg>
   </div>
-</div>
+</div>-->
 
     <div class="wrapper">
         <div class="main">
-           
+           <!--
             <section class="page1">
                   <div class="row">
                        <div class="col col-xs-6">
@@ -53,13 +55,20 @@
                   </div>
                   <br />
             </section>
-
-            <section class="page2 page-appdevice" style="display:none">
+            -->
+            <section class="page2 page-appdevice" style="display:block">
                   <div class="row">
-                      
                        <div class="appdevice"></div>
                        <div class="col col-xs-6 hh-amber">
                           <div class="svgcanvas docHeight">
+                              <div class="desc-details hh-purple" data-initial-pos="500,120" data-final-pos="160,120"><span class="underline">Custom</span></div>
+                              <div class="desc-details hh-darkamber" data-initial-pos="-164,170" data-final-pos="180,170"><span>SOFTWARE</span></div>
+                              <div class="desc-details hh-purple" data-initial-pos="550,219" data-final-pos="205,219"><span>Tied to</span></div>
+                              <div class="desc-details hh-darkamber" data-initial-pos="-164,270" data-final-pos="220,270"><span class="underline">Digital Awareness</span></div>
+                              <div class="desc-details hh-purple" data-initial-pos="550,330" data-final-pos="205,330"><span>Business Goals</span></div>
+
+                              <div class="desc-details hh-darkamber" data-initial-pos="-164,380" data-final-pos="180,380"><span>Drive by data</span></div>
+                                
                               <img src="images/s2logo.png" width="70" class="logo s2" /> 
                               <div class="appdevice_details s2"></div>
                               <a href="#"><div class="btnLearMore s2"></div></a>
@@ -68,14 +77,14 @@
                        <div class="col col-xs-6 hh-blue">
                           <div class="svgcanvas docHeight">
                               <img src="images/HiHoLogo.png" width="80" class="logo hiho" />
-                              <div class="appdevice_details hiho"></div>
+                              <div class="appdevice_details hiho redBorder"></div>
                                <a href="#"><div class="btnLearMore hiho"></div></a>
                           </div>
                        </div>
                   </div>
             </section>
             
-          
+            <!--
             <section class="page3 page-about">
                   <div class="about-nav hh-purple">
                         <h2>About Us</h2>
@@ -103,7 +112,7 @@
                   </div>
 
             </section>
-          
+            -->
 
         </div>
     </div>
@@ -120,11 +129,11 @@
 
 <script type="text/javascript">  
     $(document).ready(function(){
-        $(".main").onepage_scroll({
+        /*$(".main").onepage_scroll({
           sectionContainer: "section",
           //loop: true,
           //responsiveFallback: false
-        });
+        });*/
 
         //var rect = draw2.rect(colWidth, colHeight).x(0).attr({fill:'#3498db'});
 
@@ -154,6 +163,7 @@ SCRATCH
 
     var S2HIHO_SVG = new function() {
         var PAGE2 = $('section.page2');
+        var ONEPAGESCROLL = $(".main");
 
         this.animatePage1 = function() {
             var draw1 = SVG('introS2').size(colWidth, colHeight);
@@ -173,7 +183,17 @@ SCRATCH
                         HiHoLogo.fadeIn( function(){
                             s2Slogan.fadeIn( function(){
                                 HiHoSlogan.fadeIn( function(){
+                                    //--init onepage
+                                    ONEPAGESCROLL.onepage_scroll({sectionContainer: "section",
+                                      beforeMove: function(index) {
+                                         S2HIHO_SVG.OnePageBeforeMove(index);
+                                      },
+                                      afterMove: function(index) {
+                                         S2HIHO_SVG.OnePageAfterMove(index);
+                                      }
+                                    });
                                     PAGE2.show();
+
                                 });
                             });
                         });
@@ -184,14 +204,46 @@ SCRATCH
             });
 
         }
+        this.initAppDetailsPosition = function() {
+           var items = $('.page-appdevice .desc-details').length;
+           $('.page-appdevice .desc-details').each(function(){
+               var Pos = $(this).data('initial-pos').split(',');
+               var rightPos = Pos[0];
+               var topPos = Pos[1];
+               $(this).css('right',rightPos+'px');
+               $(this).css('top',topPos+'px');
+               if(!--items){
+                  S2HIHO_SVG.animateAppDetails();
+               }
+           });
+        }     
+        this.animateAppDetails = function() {
+            var delay = 0;
+            $('.page-appdevice .desc-details').each(function(){ 
+                var Pos = $(this).data('final-pos').split(',');
+                $(this).delay(delay).animate({
+                    right:Pos[0], opacity:"show"
+                },1200);
+                delay += 1200;
+            });
+        }    
+
+        this.OnePageBeforeMove = function(index) {
+           //console.log('OnePageBeforeMove: '+index);
+        }        
+        this.OnePageAfterMove = function(index) {
+           //console.log('OnePageAfterMove: '+index);
+        }
+
     }
     
     $(window).on('load', function() {
-        $('#status').fadeOut(); 
-        $('#preloader').delay(350).fadeOut('slow'); 
-        $('body').delay(350).css({'overflow':'visible'});
+        //$('#status').fadeOut(); 
+        //$('#preloader').delay(350).fadeOut('slow'); 
+        //$('body').delay(350).css({'overflow':'visible'});
         setTimeout(function(){
-            S2HIHO_SVG.animatePage1();  
+            //S2HIHO_SVG.animatePage1();  
+            S2HIHO_SVG.initAppDetailsPosition();  
         },500);
         
     })
