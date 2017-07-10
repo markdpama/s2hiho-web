@@ -72,13 +72,15 @@
                               <img src="images/s2logo.png" width="70" class="logo s2" /> 
                               <div class="appdevice_details s2"></div>
                               <a href="#"><div class="btnLearMore s2"></div></a>
+                              <a href="#"><div class="btnCheckVideo s2"></div></a>
                           </div>
                        </div>
                        <div class="col col-xs-6 hh-blue">
                           <div class="svgcanvas docHeight">
                               <img src="images/HiHoLogo.png" width="80" class="logo hiho" />
-                              <div class="appdevice_details hiho redBorder"></div>
+                              <div class="appdevice_details hiho"></div>
                                <a href="#"><div class="btnLearMore hiho"></div></a>
+                               <a href="#"><div class="btnCheckVideo hiho"></div></a>
                           </div>
                        </div>
                   </div>
@@ -207,7 +209,8 @@ SCRATCH
         this.initAppDetailsPosition = function() {
            var items = $('.page-appdevice .desc-details').length;
            $('.page-appdevice .desc-details').each(function(){
-               var Pos = $(this).data('initial-pos').split(',');
+               //var Pos = $(this).data('initial-pos').split(',');
+               var Pos = $(this).data('final-pos').split(',');
                var rightPos = Pos[0];
                var topPos = Pos[1];
                $(this).css('right',rightPos+'px');
@@ -222,7 +225,8 @@ SCRATCH
             $('.page-appdevice .desc-details').each(function(){ 
                 var Pos = $(this).data('final-pos').split(',');
                 $(this).delay(delay).animate({
-                    right:Pos[0], opacity:"show"
+                    //right:Pos[0], opacity:"show"
+                    opacity:"show"
                 },1200);
                 delay += 1200;
             });
