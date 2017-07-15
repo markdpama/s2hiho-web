@@ -61,16 +61,25 @@
                        <div class="appdevice"></div>
                        <div class="col col-xs-6 hh-amber">
                           <div class="svgcanvas docHeight">
-                              <div class="desc-details hh-purple" data-initial-pos="500,120" data-final-pos="160,120"><span class="underline">Custom</span></div>
-                              <div class="desc-details hh-darkamber" data-initial-pos="-164,170" data-final-pos="180,170"><span>SOFTWARE</span></div>
-                              <div class="desc-details hh-purple" data-initial-pos="550,219" data-final-pos="205,219"><span>Tied to</span></div>
-                              <div class="desc-details hh-darkamber" data-initial-pos="-164,270" data-final-pos="220,270"><span class="underline">Digital Awareness</span></div>
-                              <div class="desc-details hh-purple" data-initial-pos="550,330" data-final-pos="205,330"><span>Business Goals</span></div>
-
-                              <div class="desc-details hh-darkamber" data-initial-pos="-164,380" data-final-pos="180,380"><span>Drive by data</span></div>
-                                
                               <img src="images/s2logo.png" width="70" class="logo s2" /> 
-                              <div class="appdevice_details s2"></div>
+                              <div class="appdevice_details s2">
+                                  <div class="canbox">
+                                      <div class="lines ll01"></div> 
+                                      <div class="desc-details hh-purple" data-final-pos="102,0"><span class="underline">Custom</span></div>
+                                      <div class="lines ll02"></div> 
+                                      <div class="desc-details hh-darkamber" data-final-pos="123,49"><span>SOFTWARE</span></div>
+                                      <div class="lines ll03"></div>
+                                      <div class="desc-details hh-purple" data-final-pos="148,99"><span>Tied to</span></div>
+                                      <div class="lines ll04"></div>
+                                      <div class="desc-details hh-darkamber digitalawareness" data-final-pos="174,150"><span class="underline">Digital Awareness</span></div>
+                                      <div class="lines ll05"></div>
+                                      <div class="desc-details hh-purple business" data-final-pos="149,209"><span>Business Goals</span></div>
+                                      <div class="lines ll06"></div>
+                                      <div class="desc-details hh-darkamber" data-final-pos="124,261"><span>Drive by data</span></div>
+                                      <div class="lines ll07"></div>
+                                  </div>
+                              </div>
+
                               <a href="#"><div class="btnLearMore s2"></div></a>
                               <a href="#"><div class="btnCheckVideo s2"></div></a>
                           </div>
@@ -78,7 +87,11 @@
                        <div class="col col-xs-6 hh-blue">
                           <div class="svgcanvas docHeight">
                               <img src="images/HiHoLogo.png" width="80" class="logo hiho" />
-                              <div class="appdevice_details hiho"></div>
+                              <div class="appdevice_details hiho">
+                                  <div class="canbox">
+                                      <div class="desc-details hh-darkamber" data-final-pos="102,0"><span class="underline">Custom</span></div>
+                                  </div>  
+                              </div>
                                <a href="#"><div class="btnLearMore hiho"></div></a>
                                <a href="#"><div class="btnCheckVideo hiho"></div></a>
                           </div>
@@ -216,19 +229,40 @@ SCRATCH
                $(this).css('right',rightPos+'px');
                $(this).css('top',topPos+'px');
                if(!--items){
-                  S2HIHO_SVG.animateAppDetails();
+                  //S2HIHO_SVG.animateAppDetails();
+               }
+           });
+        }          
+        this.initDetailsPosition = function() {
+           var items = $('.page-appdevice .desc-details').length;
+           $('.page-appdevice .desc-details').each(function(){
+               //var Pos = $(this).data('initial-pos').split(',');
+               var Pos = $(this).data('final-pos').split(',');
+               var rightPos = Pos[0];
+               var topPos = Pos[1];
+               $(this).css('right',rightPos+'px');
+               $(this).css('top',topPos+'px');
+               if(!--items){
+                  //S2HIHO_SVG.animateAppDetails();
                }
            });
         }     
+
+
         this.animateAppDetails = function() {
             var delay = 0;
-            $('.page-appdevice .desc-details').each(function(){ 
-                var Pos = $(this).data('final-pos').split(',');
+            $('.appdevice_details .canbox div').each(function(){ 
+                //var Pos = $(this).data('final-pos').split(',');
                 $(this).delay(delay).animate({
                     //right:Pos[0], opacity:"show"
                     opacity:"show"
-                },1200);
-                delay += 1200;
+                },1000);
+                if($(this).hasClass('lines')){
+                   delay += 1000;  
+                }else{
+                   delay += 500;
+                }
+                
             });
         }    
 
@@ -247,7 +281,7 @@ SCRATCH
         //$('body').delay(350).css({'overflow':'visible'});
         setTimeout(function(){
             //S2HIHO_SVG.animatePage1();  
-            S2HIHO_SVG.initAppDetailsPosition();  
+            //S2HIHO_SVG.initAppDetailsPosition();  
         },500);
         
     })
