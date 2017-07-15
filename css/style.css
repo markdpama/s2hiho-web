@@ -127,7 +127,8 @@ h1,h2,h3,h4,h5 {margin:0;}
 }
 
 .page-appdevice .appdevice_details.hiho {
-    background: url('../images/appdevice-details-hiho-draft.png') no-repeat; background-size: cover; left:45px;
+    /*background: url('../images/appdevice-details-hiho-draft.png') no-repeat; */
+    background-size: cover; left:45px;
 }
 
 .page-appdevice .btnLearMore {position: absolute; bottom:0px; width:250px; height:67px; background-size: cover;}
@@ -146,24 +147,44 @@ h1,h2,h3,h4,h5 {margin:0;}
     background-image: url('../images/btnCheckVideo-hiho.png'); left:100px; 
 }
 
-.page-appdevice .desc-details { display:block; width:212px; height:40px; position: absolute; z-index:49; font-family: 'GothamMediumItalic', sans-serif;}
+.page-appdevice .desc-details { display:none; width:212px; height:40px; position: absolute; z-index:49; font-family: 'GothamMediumItalic', sans-serif;}
 .page-appdevice .desc-details span {text-align: center; color:#FFF; font-size: 1.8em; line-height: 42px}
 .page-appdevice .desc-details .underline {text-decoration: underline}
 .page-appdevice .desc-details.hh-purple {}
 .page-appdevice .desc-details.hh-darkamber {}
-.page-appdevice .desc-details.digitalawareness {height:45px; line-height: 48px; width:250px;} /* digital awareness */
-.page-appdevice .desc-details.business {width:216px;}
 
-.page-appdevice .lines {position: absolute; z-index:2; background-size: cover; display: block}
-.page-appdevice .lines.ll01 {width:105px; height:37px; right:-2px; top:-1px; background-image: url('../images/LL001.png');}
-.page-appdevice .lines.ll02 {width:45px; height:53px; right:315px; top:17px; background-image: url('../images/LL002.png');}
-.page-appdevice .lines.ll03 {width:50px; height:52px; right:99px; top:70px; background-image: url('../images/LL003.png');}
-.page-appdevice .lines.ll04 {width:95px; height:65px; right:360px; top:115px; background-image: url('../images/LL004.png');}
-.page-appdevice .lines.ll05 {width:44px; height:59px; right:130px; top:172px; background-image: url('../images/LL005.png');}
-.page-appdevice .lines.ll06 {width:50px; height:63px; right:338px; top:228px; background-image: url('../images/LL006.png');}
-.page-appdevice .lines.ll07 {width:120px; height:67px; right:5px; top:210px; background-image: url('../images/LL007.png');}
+.appdevice_details.s2 .desc-details.nth01 {right:102px; top:0;}
+.appdevice_details.s2 .desc-details.nth02 {right:123px; top:49px;}
+.appdevice_details.s2 .desc-details.nth03 {right:148px; top:99px;}
+.appdevice_details.s2 .desc-details.nth04 {right:174px; top:150px; height:45px; line-height: 48px; width:250px;} /* digital awareness */
+.appdevice_details.s2 .desc-details.nth05 {right:149px; top:209px; width:215px;}
+.appdevice_details.s2 .desc-details.nth06 {right:124px; top:261px; width:215px;}
+
+.page-appdevice .lines {position: absolute; z-index:2; background-size: cover; display: none}
+.appdevice_details.s2 .lines.ll01 {width:105px; height:37px; right:-2px; top:-1px; background-image: url('../images/LL001.png');}
+.appdevice_details.s2 .lines.ll02 {width:45px; height:53px; right:315px; top:17px; background-image: url('../images/LL002.png');}
+.appdevice_details.s2 .lines.ll03 {width:50px; height:52px; right:99px; top:70px; background-image: url('../images/LL003.png');}
+.appdevice_details.s2 .lines.ll04 {width:95px; height:65px; right:360px; top:115px; background-image: url('../images/LL004.png');}
+.appdevice_details.s2 .lines.ll05 {width:44px; height:59px; right:130px; top:172px; background-image: url('../images/LL005.png');}
+.appdevice_details.s2 .lines.ll06 {width:50px; height:63px; right:338px; top:228px; background-image: url('../images/LL006.png');}
+.appdevice_details.s2 .lines.ll07 {width:120px; height:67px; right:5px; top:210px; background-image: url('../images/LL007.png');}
+
+.appdevice_details.hiho .desc-details {display:none;}
+.appdevice_details.hiho .desc-details.nth01 {left:99px; top:0; width:214px;}
+.appdevice_details.hiho .desc-details.nth02 {left:122px; top:50px; width:215px; }
+.appdevice_details.hiho .desc-details.nth03 {left:144px; top:98px; width:214px; }
+.appdevice_details.hiho .desc-details.nth04 {left:166px; top:150px; height:45px; line-height: 55px; width:252px; }
+.appdevice_details.hiho .desc-details.nth05 {left:143px; top:208px; width:216px; }
+.appdevice_details.hiho .desc-details.nth06 {left:121px; top:259px; width:214px; }
 
 
+.appdevice_details.hiho .lines.lr01 {width:120px; height:25px; left:0; top:10px; background-image: url('../images/LR001.png');}
+.appdevice_details.hiho .lines.lr02 {width:47px; height:50px; left:312px; top:17px; background-image: url('../images/LR002.png');}
+.appdevice_details.hiho .lines.lr03 {width:50px; height:47px; left:100px; top:70px; background-image: url('../images/LR003.png');}
+.appdevice_details.hiho .lines.lr04 {width:100px; height:62px; left:350px; top:115px; background-image: url('../images/LR004.png');}
+.appdevice_details.hiho .lines.lr05 {width:42px; height:54px; left:130px; top:175px; background-image: url('../images/LR005.png');}
+.appdevice_details.hiho .lines.lr06 {width:56px; height:68px; left:328px; top:222px; background-image: url('../images/LR006.png');}
+.appdevice_details.hiho .lines.lr07 {width:125px; height:70px; left:0; top:208px; background-image: url('../images/LR007.png');}
 
 
 /* PAGE 3 */

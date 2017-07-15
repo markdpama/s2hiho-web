@@ -65,17 +65,17 @@
                               <div class="appdevice_details s2">
                                   <div class="canbox">
                                       <div class="lines ll01"></div> 
-                                      <div class="desc-details hh-purple" data-final-pos="102,0"><span class="underline">Custom</span></div>
+                                      <div class="desc-details hh-purple nth01"><span class="underline">Custom</span></div>
                                       <div class="lines ll02"></div> 
-                                      <div class="desc-details hh-darkamber" data-final-pos="123,49"><span>SOFTWARE</span></div>
+                                      <div class="desc-details hh-darkamber nth02"><span>SOFTWARE</span></div>
                                       <div class="lines ll03"></div>
-                                      <div class="desc-details hh-purple" data-final-pos="148,99"><span>Tied to</span></div>
+                                      <div class="desc-details hh-purple nth03"><span>Tied to</span></div>
                                       <div class="lines ll04"></div>
-                                      <div class="desc-details hh-darkamber digitalawareness" data-final-pos="174,150"><span class="underline">Digital Awareness</span></div>
+                                      <div class="desc-details hh-darkamber nth04"><span class="underline">Digital Awareness</span></div>
                                       <div class="lines ll05"></div>
-                                      <div class="desc-details hh-purple business" data-final-pos="149,209"><span>Business Goals</span></div>
+                                      <div class="desc-details hh-purple nth05"><span>Business Goals</span></div>
                                       <div class="lines ll06"></div>
-                                      <div class="desc-details hh-darkamber" data-final-pos="124,261"><span>Drive by data</span></div>
+                                      <div class="desc-details hh-darkamber nth06"><span>Drive by data</span></div>
                                       <div class="lines ll07"></div>
                                   </div>
                               </div>
@@ -89,7 +89,19 @@
                               <img src="images/HiHoLogo.png" width="80" class="logo hiho" />
                               <div class="appdevice_details hiho">
                                   <div class="canbox">
-                                      <div class="desc-details hh-darkamber" data-final-pos="102,0"><span class="underline">Custom</span></div>
+                                      <div class="lines lr01"></div>
+                                      <div class="desc-details hh-red nth01"><span class="underline">Pre-Fabricated</span></div>
+                                      <div class="lines lr02"></div>
+                                      <div class="desc-details hh-darkblue nth02"><span>HARDWARE</span></div>
+                                      <div class="lines lr03"></div>
+                                      <div class="desc-details hh-red nth03"><span>iOT</span></div>
+                                      <div class="lines lr04"></div>
+                                      <div class="desc-details hh-darkblue nth04"><span class="underline">Subscription</span></div>
+                                      <div class="lines lr05"></div>
+                                      <div class="desc-details hh-red nth05"><span>Quick to Deploy</span></div>
+                                      <div class="lines lr06"></div>
+                                      <div class="desc-details hh-darkblue nth06"><span>Data Driven</span></div>
+                                      <div class="lines lr07"></div>
                                   </div>  
                               </div>
                                <a href="#"><div class="btnLearMore hiho"></div></a>
@@ -251,19 +263,17 @@ SCRATCH
 
         this.animateAppDetails = function() {
             var delay = 0;
-            $('.appdevice_details .canbox div').each(function(){ 
-                //var Pos = $(this).data('final-pos').split(',');
-                $(this).delay(delay).animate({
-                    //right:Pos[0], opacity:"show"
-                    opacity:"show"
-                },1000);
-                if($(this).hasClass('lines')){
-                   delay += 1000;  
-                }else{
-                   delay += 500;
-                }
-                
-            });
+
+            for (var i = 1; i <= 7; i++) {
+                 $('.appdevice_details .canbox .ll0'+i).delay(delay).animate({opacity:"show"},1000);
+                 $('.appdevice_details .canbox .lr0'+i).delay(delay).animate({opacity:"show"},1000);
+                 delay += 1000; 
+
+                 $('.appdevice_details .canbox .nth0'+i).delay(delay).animate({opacity:"show"},1000);
+                 delay += 500;
+            }
+
+
         }    
 
         this.OnePageBeforeMove = function(index) {
@@ -282,6 +292,7 @@ SCRATCH
         setTimeout(function(){
             //S2HIHO_SVG.animatePage1();  
             //S2HIHO_SVG.initAppDetailsPosition();  
+            S2HIHO_SVG.animateAppDetails();
         },500);
         
     })
