@@ -1,5 +1,13 @@
 
 @font-face {
+   font-family: 'ChampagneLimousines';
+   src: url('../fonts/ChampagneLimousines.ttf')  format('truetype');
+}
+@font-face {
+   font-family: 'ChampagneLimousinesBoldItalic';
+   src: url('../fonts/ChampagneLimousinesBoldItalic.ttf')  format('truetype');
+}
+@font-face {
    font-family: 'GothamLight';
    src: url('../fonts/GOTHAM-LIGHT.TTF')  format('truetype');
 }
@@ -97,6 +105,17 @@ h1,h2,h3,h4,h5 {margin:0;}
 .hh-red {background:#CC352E;}
 .hh-darkblue {background:#257EAF;}
 
+.white-hr {height:2px; border-bottom: 2px solid #FFF;clear:both;}
+
+.hh-amber-linear{
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(244,157,43,1)), color-stop(23%, rgba(244,157,43,1)), color-stop(57%, rgba(242,162,58,1)), color-stop(100%, rgba(255,209,148,1)));
+  background: -webkit-linear-gradient(left, rgba(244,157,43,1) 0%, rgba(244,157,43,1) 23%, rgba(242,162,58,1) 57%, rgba(255,209,148,1) 100%);
+  background: -o-linear-gradient(left, rgba(244,157,43,1) 0%, rgba(244,157,43,1) 23%, rgba(242,162,58,1) 57%, rgba(255,209,148,1) 100%);
+  background: -ms-linear-gradient(left, rgba(244,157,43,1) 0%, rgba(244,157,43,1) 23%, rgba(242,162,58,1) 57%, rgba(255,209,148,1) 100%);
+  background: linear-gradient(to right, rgba(244,157,43,1) 0%, rgba(244,157,43,1) 23%, rgba(242,162,58,1) 57%, rgba(255,209,148,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f49d2b', endColorstr='#ffd194', GradientType=1 );
+}
+
 #introS2 {float:right;}
 #introHiHo {float:left;}
 .svgcanvas {position: relative;}
@@ -192,15 +211,16 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page3 .about-nav,
 .page3 .about-subpages {height:50%; position: relative; color:#FFF;}
 .page3 .about-nav .icons-tabs {width:820px; height: 180px;position: relative; margin:0 auto;}
-.page3 .about-nav h2 {padding-top: 25px; margin:0;}
+.page3 .about-nav h2 {padding-top: 25px; margin:0 0 40px; font-size: 3em}
 
 .icons-tabs a.nav-item {color:#FFF; text-align: center; text-transform: uppercase;
                          text-decoration: none!important; outline:none; }
+.icons-tabs a.nav-item.active,
 .icons-tabs a.nav-item:hover,
 .icons-tabs a.nav-item:hover span {color:#FFB140;}
 .icons-tabs a.nav-item span {display:block }
-.icons-tabs a.nav-item i {font-size:4em;}
-.icons-tabs a.nav-item .nav-name {font-size:2em;}
+.icons-tabs a.nav-item i {font-size:5em;}
+.icons-tabs a.nav-item .nav-name {font-size:1.8em; margin-top:8px;}
 
 .icons-tabs a.nav-item.nav-mission  {width:140px}
 .icons-tabs a.nav-item.nav-vision   {width:115px; position: absolute; left:50%; margin-left: -60px}
@@ -210,7 +230,15 @@ h1,h2,h3,h4,h5 {margin:0;}
 .icons-tabs .white-line:first-child {left:140px;}
 .icons-tabs .white-line:nth-child(2) {right:150px;}
 
+.page3 .row {padding:35px 0;}
+.page3 h1 {font-family: 'GothamBlackItalic', sans-serif; font-size: 5em}
+.page3 p.desc {font-family: 'ChampagneLimousines', sans-serif; font-size: 2em}
+.page3 p.desc .italic {font-family: 'ChampagneLimousinesBoldItalic', sans-serif; }
+.page3 #about-mission h1 {background: url('../images/header-midline.png') no-repeat 120% center; background-size: auto 100%; padding:0; line-height: 1em}
+.page3 #about-vision h1 {background: url('../images/vision-header.png') no-repeat center center; background-size: auto 100%;padding:25px 0 15px; margin-bottom: 20px}
+.page3 #about-vision p.desc {font-size: 2.5em}
 
-
+.about-subpages .row {display:none;}
+.about-subpages .row.active {display:block;}
 
 

@@ -5,15 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<title></title>
+<title>S2:HiHo</title>
 
 <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>-->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
 <link href='css/style.css?t=1' rel='stylesheet' type='text/css'>
-<!--
 <script src="https://use.fontawesome.com/cf0da6be55.js"></script>
-  -->
 
 </head>
     
@@ -56,6 +54,7 @@
                   <br />
             </section>
             -->
+            <!--
             <section class="page2 page-appdevice" style="display:block">
                   <div class="row">
                        <div class="appdevice"></div>
@@ -110,36 +109,68 @@
                        </div>
                   </div>
             </section>
-            
-            <!--
+            -->
+
             <section class="page3 page-about">
-                  <div class="about-nav hh-purple">
+                  <div class="about-nav hh-purple rowspan-50">
                         <h2>About Us</h2>
                         <div class="icons-tabs">
                             <div class="icon-item">
                                 <div class="white-line"></div>
                                 <div class="white-line"></div>
-                                <a href="#" class="nav-item nav-mission pull-left">
+                                <a href="#about-mission" class="nav-item nav-mission pull-left active">
                                     <span class="nav-icon"><i class="fa fa-check"></i></span>
                                     <span class="nav-name">Mission</span>
                                 </a>                                 
-                                <a href="#" class="nav-item nav-vision">
+                                <a href="#about-vision" class="nav-item nav-vision">
                                     <span class="nav-icon"><i class="fa fa-eye"></i></span>
                                     <span class="nav-name">Vision</span>
                                 </a>                                
-                                <a href="#" class="nav-item nav-approach pull-right">
-                                    <span class="nav-icon"><i class="fa fa-bullseye"></i></span>
+                                <a href="#about-approach" class="nav-item nav-approach pull-right">
+                                    <span class="nav-icon">
+                                      <!--<i class="fa fa-bullseye"></i>-->
+                                      <i class="fa fa-crosshairs"></i>
+                                    </span>
                                     <span class="nav-name">Approach</span>
                                 </a>
                             </div>
                         </div>
                   </div>
-                  <div class="about-subpages hh-amber">
-                 
+                  <div class="about-subpages hh-amber-linear rowspan-50">
+                      <div class="container">
+                           <div id="about-mission" class="row active">
+                               <div class="col-md-6">
+                                     <h1>MISSION</h1>
+                                     <p class="desc"><span class="italic">Help</span> our clients no matter the size to <span class="italic">learn, grow</span> and evolve through a <span class="italic">partnership</span> of expertise, creativity and technology.</p>
+                               </div>
+                               <div class="col-md-6">
+                                      <div style="height:240px;background:#FFF"></div>
+                               </div>
+                           </div>
+                           <div id="about-vision" class="row">
+                               <div class="col-md-12">
+                                     <h1>VISION</h1>
+                                     <p class="desc">To start and never stop inspiring the love and marriage of technology</p>
+                                     <div class="white-hr" style="margin:0 40px"></div>
+                               </div>
+                           </div>
+                           <div id="about-approach" class="row">
+                               <div class="col-md-6">
+                                    <br />
+                                    <br />
+                                    <p><img src="images/approach-details.png" alt="" height="170" /></p>
+                               </div>
+                               <div class="col-md-6">
+                                     <h1>APPROACH</h1>
+                                     <p class="desc">Starts with your unique story. Begins again with a <span class="italic">new partnership. Continuous</span> through evolving technology.</p>
+                               </div>
+                           </div>
+
+                      </div>
+                      <!--/container -->
                   </div>
 
             </section>
-            -->
 
         </div>
     </div>
@@ -181,14 +212,11 @@ SCRATCH
     var doc = $(document);
     var colWidth = doc.width() / 2;
     var colHeight = doc.height();
+    var colHeightHalf = doc.height()/2 ;
 
     console.log(colWidth+'x'+colHeight);
 
-    $('.docHeight').each(function(){
-        $(this).height(colHeight);
-    });
-
-    var S2HIHO_SVG = new function() {
+    var S2HIHO = new function() {
         var PAGE2 = $('section.page2');
         var ONEPAGESCROLL = $(".main");
 
@@ -213,10 +241,10 @@ SCRATCH
                                     //--init onepage
                                     ONEPAGESCROLL.onepage_scroll({sectionContainer: "section",
                                       beforeMove: function(index) {
-                                         S2HIHO_SVG.OnePageBeforeMove(index);
+                                         S2HIHO.OnePageBeforeMove(index);
                                       },
                                       afterMove: function(index) {
-                                         S2HIHO_SVG.OnePageAfterMove(index);
+                                         S2HIHO.OnePageAfterMove(index);
                                       }
                                     });
                                     PAGE2.show();
@@ -241,7 +269,7 @@ SCRATCH
                $(this).css('right',rightPos+'px');
                $(this).css('top',topPos+'px');
                if(!--items){
-                  //S2HIHO_SVG.animateAppDetails();
+                  //S2HIHO.animateAppDetails();
                }
            });
         }          
@@ -255,25 +283,21 @@ SCRATCH
                $(this).css('right',rightPos+'px');
                $(this).css('top',topPos+'px');
                if(!--items){
-                  //S2HIHO_SVG.animateAppDetails();
+                  //S2HIHO.animateAppDetails();
                }
            });
         }     
 
 
         this.animateAppDetails = function() {
-            var delay = 0;
+          var delay = 0;
+          for (var i = 1; i <= 7; i++) {
+             $('.ll0'+i+',.lr0'+i).delay(delay).animate({opacity:"show"},1000);
+             delay += 1000; 
 
-            for (var i = 1; i <= 7; i++) {
-                 $('.appdevice_details .canbox .ll0'+i).delay(delay).animate({opacity:"show"},1000);
-                 $('.appdevice_details .canbox .lr0'+i).delay(delay).animate({opacity:"show"},1000);
-                 delay += 1000; 
-
-                 $('.appdevice_details .canbox .nth0'+i).delay(delay).animate({opacity:"show"},1000);
-                 delay += 500;
-            }
-
-
+             $('.appdevice_details .canbox .nth0'+i).delay(delay).animate({opacity:"show"},1000);
+             delay += 800;
+          }
         }    
 
         this.OnePageBeforeMove = function(index) {
@@ -281,21 +305,46 @@ SCRATCH
         }        
         this.OnePageAfterMove = function(index) {
            //console.log('OnePageAfterMove: '+index);
+        }        
+        this.resizeLayouts = function() {
+            $('.docHeight').each(function(){
+                $(this).height(colHeight);
+            });    
+            $('.rowspan-50').each(function(){
+                $(this).height(colHeightHalf);
+                console.log('rowspan-50:'+colHeightHalf)
+            });
         }
 
     }
     
+    
+    $('.about-nav a.nav-item').click(function(e){
+        e.preventDefault();
+        var target = $(this).attr('href');
+        $(".about-nav a.nav-item").removeClass('active');
+        $('.about-subpages .row').removeClass('active').hide();
+        $(this).addClass('active');
+        $(target).fadeIn(function(){
+            $(target).addClass('active');
+        });
+    });
+    
+    S2HIHO.resizeLayouts();
+
     $(window).on('load', function() {
         //$('#status').fadeOut(); 
         //$('#preloader').delay(350).fadeOut('slow'); 
         //$('body').delay(350).css({'overflow':'visible'});
         setTimeout(function(){
-            //S2HIHO_SVG.animatePage1();  
-            //S2HIHO_SVG.initAppDetailsPosition();  
-            S2HIHO_SVG.animateAppDetails();
+            //S2HIHO.animatePage1();  
+            S2HIHO.animateAppDetails();
         },500);
         
-    })
+    });
+    $(window).on('resize', function() {
+        S2HIHO.resizeLayouts();
+    });  
 
 </script>  
 
