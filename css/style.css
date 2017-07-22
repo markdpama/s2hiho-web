@@ -12,6 +12,10 @@
    src: url('../fonts/GOTHAM-LIGHT.TTF')  format('truetype');
 }
 @font-face {
+   font-family: 'GothamThin';
+   src: url('../fonts/GOTHAM-THIN.TTF')  format('truetype');
+}
+@font-face {
    font-family: 'GothamMedium';
    src: url('../fonts/GOTHAM-MEDIUM.TTF')  format('truetype');
 }
@@ -26,6 +30,10 @@
 @font-face {
    font-family: 'GothamBoldItalic';
    src: url('../fonts/GOTHAM-BOLDITALIC.TTF')  format('truetype');
+}
+@font-face {
+   font-family: 'GothamBlack';
+   src: url('../fonts/GOTHAM-BLACK.TTF')  format('truetype');
 }
 @font-face {
    font-family: 'GothamBlackItalic';
@@ -267,7 +275,26 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page-contact .s2-slice02 {background: url('../images/contact-s2-slice02.png') no-repeat; background-size: cover; height:59px; width:230px; right:306px; top:132px;}
 .page-contact .s2-slice03 {background: url('../images/contact-s2-slice03.png') no-repeat; background-size: cover; height:53px; width:202px; right:113px; top:232px;}
 .page-contact .s2-slice04 {background: url('../images/contact-s2-slice04.png') no-repeat; background-size: cover; height:135px; width:70px; right:276px; top:295px;}
+.page-contact .s2-slice05 {background: url('../images/contact-s2-slice05.png') no-repeat; background-size: cover; height:96px; width:380px; right:120px; top:455px;}
 
 .page-contact .s2-text01 { height:65px; width:368px; right:130px; top:190px; font-family: 'GothamBold', sans-serif; text-align: left }
+
+.page-contact .hiho-slice01 {height:0; width:130px; left:148px; top:65px; border-bottom: 1.5px solid #FFF}
+.page-contact .hiho-slice02 {background: url('../images/HiHoLogo.png') no-repeat; background-size: cover; height:49px; width:80px; left:295px; top:42px;}
+.page-contact .hiho-slice03 {background: url('../images/contact-hiho-slice03.png') no-repeat; background-size: cover; height:60px; width:43px; left:388px; top:65px;}
+.page-contact .hiho-slice04 {background: url('../images/contact-hiho-slice04.png') no-repeat; background-size: cover; height:63px; width:210px; left:282px; top:165px;}
+.page-contact .hiho-slice05 {background: url('../images/contact-hiho-slice05.png') no-repeat; background-size: cover; height:220px; width:124px; left:132px; top:165px;}
+.page-contact .hiho-slice06 {background: url('../images/contact-hiho-slice06.png') no-repeat; background-size: cover; height:110px; width:210px; left:282px; top:320px;}
+.page-contact .hiho-slice07 {background: url('../images/contact-hiho-slice07.png') no-repeat; background-size: cover; height:96px; width:380px; left:120px; top:455px;}
+
+.page-contact .hiho-text { height:90px; width:210px; left:282px; top:240px; text-align: center }
+.page-contact .hiho-text span {display:block; }
+.page-contact .hiho-text .text01 {font-family: 'GothamBold', sans-serif; font-size: 2.2em; line-height: 28px}
+.page-contact .hiho-text .text02 {font-family: 'GothamBlack', sans-serif; font-size: 2.5em; }
+
+
+.page-contact .hiho-slogan {font-family: 'GothamThin', sans-serif; font-size: 1.1em; line-height: 20px; height:50px; width:115px; left:280px; top:95px; }  
+
+
 
 
