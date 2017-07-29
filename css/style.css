@@ -143,14 +143,14 @@ h1,h2,h3,h4,h5 {margin:0;}
 }
 
 .hh-blue-linear{
-  background: rgba(53,190,219,1);
-  background: -moz-linear-gradient(left, rgba(53,190,219,1) 0%, rgba(53,190,219,1) 1%, rgba(53,154,219,1) 50%, rgba(37,127,176,1) 100%);
+  background: rgba(54,202,224,1);
+  background: -moz-linear-gradient(left, rgba(54,202,224,1) 0%, rgba(53,190,219,1) 1%, rgba(53,154,219,1) 50%, rgba(37,127,176,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(53,190,219,1)), color-stop(1%, rgba(53,190,219,1)), color-stop(50%, rgba(53,154,219,1)), color-stop(100%, rgba(37,127,176,1)));
-  background: -webkit-linear-gradient(left, rgba(53,190,219,1) 0%, rgba(53,190,219,1) 1%, rgba(53,154,219,1) 50%, rgba(37,127,176,1) 100%);
-  background: -o-linear-gradient(left, rgba(53,190,219,1) 0%, rgba(53,190,219,1) 1%, rgba(53,154,219,1) 50%, rgba(37,127,176,1) 100%);
-  background: -ms-linear-gradient(left, rgba(53,190,219,1) 0%, rgba(53,190,219,1) 1%, rgba(53,154,219,1) 50%, rgba(37,127,176,1) 100%);
-  background: linear-gradient(to right, rgba(53,190,219,1) 0%, rgba(53,190,219,1) 1%, rgba(53,154,219,1) 50%, rgba(37,127,176,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35bedb', endColorstr='#257fb0', GradientType=1 );
+  background: -webkit-linear-gradient(left, rgba(54,202,224,1) 0%, rgba(53,190,219,1) 1%, rgba(53,154,219,1) 50%, rgba(37,127,176,1) 100%);
+  background: -o-linear-gradient(left, rgba(54,202,224,1) 0%, rgba(53,190,219,1) 1%, rgba(53,154,219,1) 50%, rgba(37,127,176,1) 100%);
+  background: -ms-linear-gradient(left, rgba(54,202,224,1) 0%, rgba(53,190,219,1) 1%, rgba(53,154,219,1) 50%, rgba(37,127,176,1) 100%);
+  background: linear-gradient(to right, rgba(54,202,224,1) 0%, rgba(53,190,219,1) 1%, rgba(53,154,219,1) 50%, rgba(37,127,176,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36cae0', endColorstr='#257fb0', GradientType=1 );
 }
 
 #introS2 {float:right;}
@@ -309,42 +309,74 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 .page-contact .hiho-slogan {font-family: 'GothamThin', sans-serif; font-size: 1.1em; line-height: 20px; height:50px; width:115px; left:280px; top:95px; }  
 
-.page5 {font-family: 'GothamThin', sans-serif; text-align: left}
-.page5 .form-box {width:1040px; background-color: #FFF; margin:0 auto; }
-.page5 .form-box .row {margin:0;}
-.page5 .form-box .col-right {padding:20px 20px 20px 0;}
-.page5 .form-box .contact-details {padding:20px;}
-.page5 .form-box .contact-details h2 {font-family: 'GothamBold', sans-serif; font-size: 3.3em;}
-.page5 .form-box .contact-details p {font-family: 'GothamLight', sans-serif; font-size: 1.5em; font-weight: bold; letter-spacing: -1px}
-.page5 .form-box .contact-details p.address {font-size: 1.1em}
-.page5 .form-box .contact-details .map-image img {border:6px solid #9b59b6; text-align: center}
-.page5 .form-box .contact-form { padding-top:10px; background:#fab26f; font-family: 'GothamLight', sans-serif; }
-.page5 .form-box .contact-form .row-fluid {margin-bottom: 5px}
-.page5 .form-box .contact-form .col-input-form {background:#FFF; margin-bottom: 10px}
-.page5 .form-box .contact-form .col-icon {text-align: center; padding:0;}
-.page5 .form-box .contact-form .icon {text-align: left; }
-.page5 .form-box .contact-form .icon i {color:#FFF; font-size: 1.6em; margin: 10px 0 0 5px}
-.page5 .form-box .contact-form .icon i.fa-globe,
-.page5 .form-box .contact-form .icon i.fa-user {font-size:2em;}
-.page5 .form-box .contact-form .form-group {margin-bottom: 5px; padding-top:4px;}
-.page5 .form-box .contact-form label {margin:0;color:#707070;font-size:12px;}
-.page5 .form-box .contact-form .form-control {margin:0; padding:0 0 2px 0; border-radius: 0; border:none; font-size:1em; font-weight: bold; color:#111;
-                                              border-bottom:1px solid #707070; box-shadow: none; height:20px;
-                                           }
-.page5 .form-box .contact-form .form-control:focus,
-.page5 .form-box .contact-form .form-control:active {outline:none; box-shadow: none; border-bottom-color:#FFF;}
-.page5 .form-box .contact-form .slogan span {display:block;font-family: 'GothamBold', sans-serif; color:#FFF; font-size: 3.2em; text-align: center}
-.page5 .form-box .contact-form .slogan span.second {font-size: 4.2em; line-height: 42px}
-.page5 .form-box .contact-form .slogan span.step {font-size: 6.8em; line-height: 90px; margin-bottom: -8px}
+.page-s2hiho-contact {font-family: 'GothamThin', sans-serif; text-align: left}
+.page-s2hiho-contact .container { position: relative;}
+.page-s2hiho-contact .contactus-header {width:320px; height:55px; background:#228c78; border: 2px solid #FFF; position: absolute; z-index: 99}
+.page-s2hiho-contact .contactus-header h2 {font-family: 'GothamBold', sans-serif; font-size: 2.3em; line-height: 52px; color:#FFF; text-align: center}
 
-.page5 .form-box .contact-form .message-row {margin-left:-15px; margin-right: -15px; background:#bcbec0;}
-.page5 .form-box .contact-form .message-row textarea {margin:15px; resize: none; width: 190px; height:100px; font-size: 11px; background:none; outline: none!important; border:none!important;}
-.page5 .form-box .contact-form .message-row textarea:focus,
-.page5 .form-box .contact-form .message-row textarea:active {border:none;}
-.page5 .form-box .contact-form .btnSubmit {padding:2px 35px 0; height:38px; margin:0 auto; font-size: 1.6em; color:#444; font-family: 'GothamBold', sans-serif; background:#d1d3d4; border:none; border-bottom: 3px solid #444}
-.page5 .form-box .contact-form .quote-button {margin:0 -15px; text-align: center}
-.page5 .form-box .contact-form .quote-button span {display:block; color:#FFF; font-size:9px; font-weight:bold;}
-.page5 .form-box .contact-form .btnQuoteApp {padding:2px 15px 0; height:38px; width:100%; border-radius: 12px; display:block; margin:0 auto; font-size: 1.4em; color:#FFF; font-family: 'GothamBold', sans-serif; background:#9b59b6; border:none; }
+.page-s2hiho-contact .form-box {width:1040px; background-color: #FFF; margin:0 auto }
+.page-s2hiho-contact .form-box .row {margin:0;}
+.page-s2hiho-contact .form-box .col-right {padding:20px 20px 20px 0;}
+.page-s2hiho-contact .form-box .contact-details {padding:20px;}
+.page-s2hiho-contact .form-box .contact-details h2 {font-family: 'GothamBold', sans-serif; font-size: 3.3em;}
+.page-s2hiho-contact .form-box .contact-details p {font-family: 'GothamLight', sans-serif; font-size: 1.5em; font-weight: bold; letter-spacing: -1px}
+.page-s2hiho-contact .form-box .contact-details p.address {font-size: 1.1em}
+.page-s2hiho-contact .form-box .contact-details .map-image img {border:6px solid; text-align: center}
+.page-s2hiho-contact .form-box .contact-form { padding-top:10px; font-family: 'GothamLight', sans-serif; }
+.page-s2hiho-contact .form-box .contact-form .row-fluid {margin-bottom: 5px}
+.page-s2hiho-contact .form-box .contact-form .col-input-form {background:#FFF; margin-bottom: 8px}
+.page-s2hiho-contact .form-box .contact-form .col-icon {text-align: center; padding:0;}
+.page-s2hiho-contact .form-box .contact-form .icon {text-align: left; }
+.page-s2hiho-contact .form-box .contact-form .icon i {color:#FFF; font-size: 1.6em; margin: 10px 0 0 5px}
+.page-s2hiho-contact .form-box .contact-form .icon i.fa-globe,
+.page-s2hiho-contact .form-box .contact-form .icon i.fa-user {font-size:2em;}
+.page-s2hiho-contact .form-box .contact-form .form-group {margin-bottom: 5px; padding-top:4px;}
+.page-s2hiho-contact .form-box .contact-form label {margin:0;color:#707070;font-size:12px;}
+.page-s2hiho-contact .form-box .contact-form .form-control {margin:0; padding:0 0 2px 0; border-radius: 0; border:none; font-size:12px; font-weight: bold; color:#111;
+                                              border-bottom:1px solid #707070; box-shadow: none; height:18px;
+                                           }
+.page-s2hiho-contact .form-box .contact-form .form-control:focus,
+.page-s2hiho-contact .form-box .contact-form .form-control:active {outline:none; box-shadow: none; border-bottom-color:#FFF;}
+.page-s2hiho-contact .form-box .contact-form .slogan span {display:block;font-family: 'GothamBold', sans-serif; color:#FFF; font-size: 3.2em; text-align: center}
+.page-s2hiho-contact .form-box .contact-form .slogan span.second {font-size: 4.2em; line-height: 42px}
+.page-s2hiho-contact .form-box .contact-form .slogan span.step {font-size: 6.8em; line-height: 90px; margin-bottom: -8px}
+
+.page-s2hiho-contact .form-box .contact-form .message-row {margin-left:-15px; margin-right: -15px; background:#bcbec0;}
+.page-s2hiho-contact .form-box .contact-form .message-row textarea {margin:15px; resize: none; width: 190px; height:90px; font-size: 11px; background:none; outline: none!important; border:none!important;}
+.page-s2hiho-contact .form-box .contact-form .message-row textarea:focus,
+.page-s2hiho-contact .form-box .contact-form .message-row textarea:active {border:none;}
+.page-s2hiho-contact .form-box .contact-form .btnSubmit {padding:2px 35px 0; height:38px; margin:0 auto; font-size: 1.6em; color:#444; font-family: 'GothamBold', sans-serif; background:#d1d3d4; border:none; border-bottom: 3px solid #444}
+.page-s2hiho-contact .form-box .contact-form .quote-button {margin:0 -15px; text-align: center}
+.page-s2hiho-contact .form-box .contact-form .quote-button span {display:block; color:#FFF; font-size:9px; font-weight:bold;}
+.page-s2hiho-contact .form-box .contact-form .btnQuoteApp {padding:2px 15px 0; height:38px; width:100%; border-radius: 12px; display:block; margin:0 auto; font-size: 1.4em; color:#FFF; font-family: 'GothamBold', sans-serif; border:none; }
+
+/* S2 Contact Form */
+.page5 .contactus-header { top:40px; left:330px; }
+.page5 .slice01 {height:80px; width:55px; border-top:1.5px solid #FFF; border-left:1.5px solid #FFF; left:275px; top:65px;}
+.page5 .slice02 {height:7px; width:105px; left:648px; top:65px; background: url('../images/contactform-s2-slice02.png') no-repeat; background-size: cover;}
+.page5 .slice03 {font-family: 'GothamThin', sans-serif; font-size: 1.1em; line-height: 20px; height:110px; width:130px; left:738px; top:30px; color:#FFF; text-align: center}  
+.page5 .slice03 img {margin-bottom: 10px}
+.page5 .slice04 {height:58px; width:42px; left:858px; top:65px; background: url('../images/contactform-s2-slice04.png') no-repeat; background-size: cover;}
+
+.page5 .form-box {margin:125px auto 0; }
+.page5 .form-box .contact-form{background:#fab26f;}
+.page5 .form-box .contact-details .map-image img {border-color:#9b59b6;}
+.page5 .form-box .contact-form .btnQuoteApp {background:#9b59b6;}
+
+/* HiHo Contact Form */
+.page6 .contactus-header {top:40px; left:405px; }
+.page6 .slice01 {height:58px; width:42px; left:180px; top:65px; background: url('../images/contactform-hiho-slice01.png') no-repeat; background-size: cover;}
+.page6 .slice02 {font-family: 'GothamThin', sans-serif; font-size: 1.1em; line-height: 20px; height:110px; width:130px; left:210px; top:40px; color:#FFF; text-align: center}  
+.page6 .slice02 img {margin-bottom: 10px}
+.page6 .slice03 {height:1px; width:80px; border-bottom:1.5px solid #FFF; left:325px; top:65px;}
+.page6 .slice04 {height:95px; width:70px; border-top:1.5px solid #FFF; border-right:1.5px solid #FFF; left:724px; top:65px;}
+
+
+.page6 .form-box {margin:135px auto 0; }
+.page6 .form-box .contact-details .map-image img {border-color:#e55a5a;}
+.page6 .form-box .contact-form .btnQuoteApp {background:#e55a5a;}
+.page6 .form-box .contact-form{background:#3498db;}
+
 
 
 
