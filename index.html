@@ -18,7 +18,7 @@
     
 <body>
 <!-- Preloader-->
-<!--
+
 <div id="preloader">
   <div id="status">
       <svg width="80px"  height="80px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ripple">
@@ -32,11 +32,11 @@
           </circle>
         </svg>
   </div>
-</div>-->
+</div>
 
     <div class="wrapper">
         <div class="main">
-           <!--
+    
             <section class="page1">
                   <div class="row">
                        <div class="col col-xs-6">
@@ -54,9 +54,9 @@
                   </div>
                   <br />
             </section>
-            -->
-            <!--
-            <section class="page2 page-appdevice" style="display:block">
+        
+           
+            <section class="page2 page-appdevice" style="display:none">
                   <div class="row">
                        <div class="appdevice"></div>
                        <div class="col col-xs-6 hh-amber">
@@ -110,9 +110,7 @@
                        </div>
                   </div>
             </section>
-            -->
-
-            <!--
+    
             <section class="page3 page-about">
                   <div class="about-nav hh-purple rowspan-50">
                         <h2>About Us</h2>
@@ -171,9 +169,7 @@
                   </div>
 
             </section>
-            -->
 
-            <!--
              <section class="page4 page-contact">
                   <div class="row">
                        <div class="col col-xs-6">
@@ -183,7 +179,7 @@
                               <div class="s2-slice02 pos-absolute"></div>
                               <div class="s2-slice03 pos-absolute"></div>
                               <div class="s2-slice04 pos-absolute"></div>
-                              <a href="#">
+                              <a href="#" class="btnMoveTo" data-goto="5">
                               <div class="s2-slice05 pos-absolute"></div>
                               </a>
                               <div class="s2-text01 pos-absolute">
@@ -199,7 +195,7 @@
                                 <div class="hiho-slice04 pos-absolute"></div>
                                 <div class="hiho-slice05 pos-absolute"></div>
                                 <div class="hiho-slice06 pos-absolute"></div>
-                                <a href="#">
+                                <a href="#" class="btnMoveTo" data-goto="6">
                                 <div class="hiho-slice07 pos-absolute"></div>
                                 </a>
                                 <div class="hiho-slogan pos-absolute">The solution for you.</div>
@@ -211,9 +207,9 @@
                        </div>
                   </div>
              </section> 
-             --> 
+        
 
-             <section class="page5 page-s2hiho-contact" style="display:none">
+             <section class="page5 page-s2hiho-contact" >
                   <div class="svgcanvas docHeight hh-amber-linear-right">
 
                         <div class="container">
@@ -753,7 +749,15 @@ SCRATCH
            //console.log('OnePageBeforeMove: '+index);
         }        
         this.OnePageAfterMove = function(index) {
-           //console.log('OnePageAfterMove: '+index);
+           console.log('OnePageAfterMove: '+index);
+            switch(index) {
+                case 2:
+                    if( $('.lines.ll01').not(":visible") ){
+                        S2HIHO.animateAppDetails();  
+                    }
+                    break;
+            }
+
         }        
         this.resizeLayouts = function() {
             $('.docHeight').each(function(){
@@ -778,15 +782,26 @@ SCRATCH
             $(target).addClass('active');
         });
     });
+
+    $('a.btnMoveTo').click(function(e){
+        e.preventDefault();
+        var target = $(this).data('goto');
+        $(".main").moveTo(target);
+        
+    });
     
     S2HIHO.resizeLayouts();
 
+    /*
+
+    */
+
     $(window).on('load', function() {
-        //$('#status').fadeOut(); 
-        //$('#preloader').delay(350).fadeOut('slow'); 
-        //$('body').delay(350).css({'overflow':'visible'});
+        $('#status').fadeOut(); 
+        $('#preloader').delay(350).fadeOut('slow'); 
+        $('body').delay(350).css({'overflow':'visible'});
         setTimeout(function(){
-            //S2HIHO.animatePage1();  
+            S2HIHO.animatePage1();  
             //S2HIHO.animateAppDetails();
         },500);
         
