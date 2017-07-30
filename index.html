@@ -18,7 +18,7 @@
     
 <body>
 <!-- Preloader-->
-
+<!--
 <div id="preloader">
   <div id="status">
       <svg width="80px"  height="80px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ripple">
@@ -33,22 +33,23 @@
         </svg>
   </div>
 </div>
+-->
 
     <div class="wrapper">
         <div class="main">
-    
+            <!--
             <section class="page1">
                   <div class="row">
                        <div class="col col-xs-6">
                           <div class="svgcanvas" id="introS2">
                                <img src="images/s2logo.png" width="200" style="display:none" />
-                               <div class="slogan"><h2>The Digital Step You Take</h2></div>
+                               <div class="slogan"><h2>The Digital Step you Take</h2></div>
                           </div>
                        </div>
                        <div class="col col-xs-6">
                            <div class="svgcanvas" id="introHiHo">
                                <img src="images/HiHoLogo.png" width="240" style="display:none" />
-                               <div class="slogan"><h2>Your Events. Simpler &amp; Smarter</h2></div>
+                               <div class="slogan"><h2>Events Reimagined</h2></div>
                            </div>
                        </div>
                   </div>
@@ -169,6 +170,7 @@
                   </div>
 
             </section>
+            
 
              <section class="page4 page-contact">
                   <div class="row">
@@ -207,9 +209,11 @@
                        </div>
                   </div>
              </section> 
-        
+             
+             --> 
 
-             <section class="page5 page-s2hiho-contact" >
+
+             <section class="page5 page-s2hiho-contact" style="display:none">
                   <div class="svgcanvas docHeight hh-amber-linear-right">
 
                         <div class="container">
@@ -413,7 +417,7 @@
              </section>
 
 
-             <section class="page6 page-s2hiho-contact">
+             <section class="page6 page-s2hiho-contact" style="display:none">
                   <div class="svgcanvas docHeight hh-blue-linear">
 
                         <div class="container">
@@ -617,6 +621,161 @@
              </section>
 
 
+             <section class="page7 page-hiho-create page-s2hiho-contact">
+                  <div class="svgcanvas docHeight hh-blue-linear">
+                      <div class="container">
+                          <br />
+                          <div class="form-box">
+                              <div class="header">
+                                  <h2>Create your Account</h2>
+                              </div>
+                              <div class="contact-form">
+                                
+                                    <form>
+                                      <div class="row">
+                                            <div class="col-md-6">
+
+                                                <div class="row-fluid">
+                                                    <div class="col-sm-2 col-icon">
+                                                        <div class="icon"><i class="fa fa-user"></i></div>
+                                                    </div>
+                                                    <div class="col-sm-10 col-input-form">
+                                                        <div class="form-group">
+                                                            <label for="firstname">First Name</label>
+                                                            <input type="text" class="form-control input-sm" name="firstname" id="firstname" />
+                                                        </div>
+                                                    </div>                                                   
+                                                </div>
+                                                <!--#First Name -->
+
+                                                <div class="row-fluid">
+                                                    <div class="col-sm-2 col-icon"></div>
+                                                    <div class="col-sm-10 col-input-form">
+                                                        <div class="form-group">
+                                                            <label for="lastname">Last Name</label>
+                                                            <input type="text" class="form-control input-sm" name="lastname" id="lastname" />
+                                                        </div>
+                                                    </div>                                                      
+                                                </div>
+                                                <!--#Last Name -->
+
+                                                <div class="row-fluid">
+                                                    <div class="col-sm-2 col-icon">
+                                                        <div class="icon"><i class="fa fa-desktop"></i></div>
+                                                    </div>
+                                                    <div class="col-sm-10 col-input-form">
+                                                        <div class="form-group">
+                                                            <label for="username">User Name</label>
+                                                            <input type="text" class="form-control input-sm" name="username" id="username" />
+                                                        </div>
+                                                    </div>                                                  
+                                                </div>
+                                                <!--#Company -->
+
+                                                <div class="row-fluid">
+                                                    <div class="col-sm-2 col-icon">
+                                                        <div class="icon"><i class="fa fa-globe"></i></div>
+                                                    </div>
+                                                    <div class="col-sm-10 col-input-form">
+                                                        <div class="form-group">
+                                                            <label for="firstname">Country</label>
+                                                            <select class="form-control"><option></option></select>
+                                                        </div>
+                                                    </div>                                                      
+                                                </div>
+                                                <!--#Country -->
+
+
+                                                <div class="row-fluid">
+                                                    <div class="col-sm-2 col-icon">
+                                                        <div class="icon"><i class="fa fa-envelope"></i></div>
+                                                    </div>
+                                                    <div class="col-sm-10 col-input-form">
+                                                        <div class="form-group">
+                                                            <label for="email">Email Address</label>
+                                                            <input type="text" class="form-control input-sm" name="email" id="email" />
+                                                        </div>
+                                                    </div>                                                  
+                                                </div>
+                                                <!--#Email -->
+
+                                            </div>
+                                            <!--/.col-md-6 LEFT COL -->
+                                            <div class="col-md-6">
+
+                                                <div class="row-fluid">
+                                                    <div class="col-sm-2 col-icon">
+                                                        <div class="icon"><i class="fa fa-users"></i></div>
+                                                    </div>
+                                                    <div class="col-sm-10 col-input-form">
+                                                        <div class="form-group">
+                                                            <label for="company">Company Name</label>
+                                                            <input type="text" class="form-control input-sm" name="company" id="company" />
+                                                        </div>
+                                                    </div>                                                  
+                                                </div>
+                                                <!--#Company -->
+
+                                                <div class="row-fluid">
+                                                    <div class="col-sm-2 col-icon">
+                                                        <div class="icon"><i class="fa fa-briefcase"></i></div>
+                                                    </div>
+                                                    <div class="col-sm-10 col-input-form">
+                                                        <div class="form-group">
+                                                            <label for="company_role">Company Role</label>
+                                                            <input type="text" class="form-control input-sm" name="company_role" id="company_role" />
+                                                        </div>
+                                                    </div>                                                   
+                                                </div>
+                                                <!--#Company Role -->
+
+                                                <div class="row-fluid">
+                                                    <div class="col-sm-2 col-icon">
+                                                        <div class="icon"><i class="fa fa-archive"></i></div>
+                                                    </div>
+                                                    <div class="col-sm-10 col-input-form">
+                                                        <div class="form-group" style="margin-bottom: 0">
+                                                            <label for="industry">Industry</label>
+                                                            <select class="form-control"><option></option></select>
+                                                        </div>
+                                                    </div>                                                      
+                                                </div>
+                                                <!--#Industry -->
+
+
+                                                <div class="row-fluid">
+                                                    <div class="col-sm-10 col-sm-offset-2">
+
+                                                      <div class="quote-button">
+                                                         <button class="btnQuoteApp">Create Account</button>
+                                                       </div>
+                                                       <br />
+
+                                                       <p class="text-center">
+                                                         <a href="#"><img src="images/btnFBLogin.png" width="90" /></a>
+                                                         <a href="#"><img src="images/btnGoogleLogin.png" width="90" /></a>
+                                                       </p>
+                                 
+                                                       
+                                                    </div>                                                   
+                                                </div>
+
+
+
+
+                                            </div>
+                                      </div>
+                                    </form> 
+
+                              </div>
+                              <!--/.contact-form -->
+                          </div>
+                      </div>
+                      <!--/container -->
+                      
+                  </div>
+             </section>
+
         </div>
     </div>
 
@@ -778,6 +937,7 @@ SCRATCH
         $(".about-nav a.nav-item").removeClass('active');
         $('.about-subpages .row').removeClass('active').hide();
         $(this).addClass('active');
+        
         $(target).fadeIn(function(){
             $(target).addClass('active');
         });
@@ -801,7 +961,7 @@ SCRATCH
         $('#preloader').delay(350).fadeOut('slow'); 
         $('body').delay(350).css({'overflow':'visible'});
         setTimeout(function(){
-            S2HIHO.animatePage1();  
+            //S2HIHO.animatePage1();  
             //S2HIHO.animateAppDetails();
         },500);
         

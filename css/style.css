@@ -378,5 +378,20 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page6 .form-box .contact-form{background:#3498db;}
 
 
+/* Create Account */
+.page7 .form-box {margin:0 35px; background:#FFF url('../images/beacon_app.png') right bottom no-repeat; background-size: auto 520px }
+.page7 .form-box .header {background:#e55a5a; }
+.page7 .form-box .header  h2 {padding:15px; font-family: 'GothamBold', sans-serif; font-size: 2.4em; line-height: 52px; color:#FFF; text-align: center; text-transform: uppercase;}
+.page7 .form-box .contact-form {width: 700px; height:520px; padding-top: 30px;}
+
+.page7 .form-box .contact-form .icon i {color:#e55a5a; font-size: 2em; margin: 10px 0 0 8px}
+
+.page7 .form-box .contact-form .col-input-form {background:#3498db; margin-bottom: 15px; padding:8px 15px;}
+.page7 .form-box .contact-form label {color:#FFF;font-size:14px;font-family: 'GothamMedium', sans-serif;}
+.page7 .form-box .contact-form .form-control {background:transparent; border-bottom:1.5px solid #FFF;}
+.page7 .form-box .contact-form .form-control:focus,
+.page7 .form-box .contact-form .form-control:active {border-bottom-color: #3498db }
+.page7 .form-box .contact-form .quote-button {margin:0;}
+.page7 .form-box .contact-form .btnQuoteApp {background:#e55a5a; width:auto; padding:2px 25px 0;}
 
 
