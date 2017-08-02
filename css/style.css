@@ -379,10 +379,10 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 
 /* Create Account */
-.page7 .form-box {margin:0 35px; background:#FFF url('../images/beacon_app.png') right bottom no-repeat; background-size: auto 520px }
+.page7 .form-box {margin:0 35px; background:#FFF url('../images/beacon_app.png') right bottom no-repeat; background-size: auto 500px }
 .page7 .form-box .header {background:#e55a5a; }
 .page7 .form-box .header  h2 {padding:15px; font-family: 'GothamBold', sans-serif; font-size: 2.4em; line-height: 52px; color:#FFF; text-align: center; text-transform: uppercase;}
-.page7 .form-box .contact-form {width: 700px; height:520px; padding-top: 30px;}
+.page7 .form-box .contact-form {width: 720px; height:490px; padding-top: 30px;}
 
 .page7 .form-box .contact-form .icon i {color:#e55a5a; font-size: 2em; margin: 10px 0 0 8px}
 
@@ -393,5 +393,16 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page7 .form-box .contact-form .form-control:active {border-bottom-color: #3498db }
 .page7 .form-box .contact-form .quote-button {margin:0;}
 .page7 .form-box .contact-form .btnQuoteApp {background:#e55a5a; width:auto; padding:2px 25px 0;}
+.page7 .form-box .contact-form h3.get_started {color:#555; font-family: 'GothamBold', sans-serif; font-size:17px; margin:35px -15px 0;}
 
+.page7 .form-box .contact-form .row-links  {text-align: center; margin-top:15px;}
+.page7 .form-box .contact-form .row-links .col-sm-4 {padding:0;}
+
+.page7 .form-box .contact-form .icon-link {text-align: center;}
+.page7 .form-box .contact-form .icon-link  a,
+.page7 .form-box .contact-form .icon-link  a:hover {color:#e55a5a; text-decoration: none}
+.page7 .form-box .contact-form .icon-link  span {display:block; color:#e55a5a; font-family: 'GothamMedium',sans-serif; font-size: 12px}
+
+.page7 .form-box .contact-form .icon-link .item {border-radius: 8px; background:#3498db; margin:0 auto; width:38px; height:35px;padding:5px;color:#FFF;}
+.page7 .form-box .contact-form .icon-link .item i {font-size: 26px}
 
