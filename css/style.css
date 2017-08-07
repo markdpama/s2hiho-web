@@ -406,3 +406,15 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page7 .form-box .contact-form .icon-link .item {border-radius: 8px; background:#3498db; margin:0 auto; width:38px; height:35px;padding:5px;color:#FFF;}
 .page7 .form-box .contact-form .icon-link .item i {font-size: 26px}
 
+
+body.page-quote {
+  background:#FFF;
+}
+
+.quote-app .header { background:#f6a02d; padding:30px 0; position: relative; height:180px;}
+.quote-app .header .rounded-box {border:1.5px solid #FFF; border-radius:20px; padding:20px 0; width:570px; left:50%; margin-left:-285px; background:#fab26f; color:#FFF; z-index:10}
+.quote-app .header .rounded-box h2 {font-size:4.2em; font-family: 'GothamBold', sans-serif; text-align: center; text-decoration: underline}
+.quote-app .header .hd-bar {height:40px; background:#fab26f; border:1.5px solid #FFF; width:100%; z-index:0; top:62px; }
+.quote-app .sub-header {background:#9b59b6; color:#FFF; text-align: center;padding:15px 0 10px;}
+.quote-app .sub-header h2 {font-family: 'GothamBlack', sans-serif; font-size:4.8em; margin:0;}
+

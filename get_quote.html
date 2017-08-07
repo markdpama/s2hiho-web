@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>S2:HiHo</title>
+
+<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>-->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
+<link href='css/style.css?t=1' rel='stylesheet' type='text/css'>
+<!--
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<script src="https://use.fontawesome.com/cf0da6be55.js"></script>
+-->
+</head>
+    
+<body class="page-quote">
+
+
+    <div class="wrapper">
+        <div class="main quote-app">
+            <!--
+            <button class="btnAnimate">ANIMATE LEFT</button>&nbsp;&nbsp;
+            <button class="btnAnimateRight">ANIMATE RIGHT</button>
+            <section class="page001">
+                  <div class="row">
+                       <div class="col col-md-6">
+                          <div class="svgcanvas docHeight" id="introS2">
+                               <div class="slogan" style="height:450px;width:400px;background:#f3f3f3;display:none"><h2>The Digital Step you Take</h2></div>
+                          </div>
+                       </div>
+                  </div>
+                  <br />
+            </section>
+            -->
+            <div class="header">
+                <div class="rounded-box pos-absolute">
+                    <h2>Quote My App</h2>
+                </div>
+                <div class="hd-bar pos-absolute"></div>
+            </div>
+            <div class="sub-header">
+                    <h2>PLATFORM</h2>
+            </div>
+
+
+        
+        </div>
+        <!--/.main -->
+
+    </div>
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/svg.min.js"></script> 
+<script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+
+<script type="text/javascript">  
+    $(document).ready(function(){
+
+        $('.btnAnimate').click(function(e){
+            $('#introS2 .slogan').show().removeClass().addClass('fadeInLeft animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+              $(this).removeClass('fadeInLeft animated');
+            });
+        }); 
+
+        $('.btnAnimateRight').click(function(e){
+            $('#introS2 .slogan').show().removeClass().addClass('fadeInRight animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+              $(this).removeClass('fadeInRight animated');
+            });
+        }); 
+
+
+    });
+
+    var doc = $(document);
+    var colWidth = doc.width() / 2;
+    var colHeight = doc.height();
+    var colHeightHalf = doc.height()/2 ;
+
+
+    var S2HIHO = new function() {
+        var PAGE2 = $('section.page2');
+        var ONEPAGESCROLL = $(".main");
+
+        this.func = function() {
+
+
+        }   
+
+        this.OnePageBeforeMove = function(index) {
+           //console.log('OnePageBeforeMove: '+index);
+        }        
+        this.OnePageAfterMove = function(index) {
+           console.log('OnePageAfterMove: '+index);
+            switch(index) {
+                case 2:
+                    if( $('.lines.ll01').not(":visible") ){
+                        S2HIHO.animateAppDetails();  
+                    }
+                    break;
+            }
+
+        }        
+        this.resizeLayouts = function() {
+            $('.docHeight').each(function(){
+                $(this).height(colHeight);
+            });    
+            $('.rowspan-50').each(function(){
+                $(this).height(colHeightHalf);
+                console.log('rowspan-50:'+colHeightHalf)
+            });
+        }
+
+    }
+
+
+ 
+
+    $('a.btnMoveTo').click(function(e){
+        e.preventDefault();
+        var target = $(this).data('goto');
+        $(".main").moveTo(target);
+        
+    });
+    
+    S2HIHO.resizeLayouts();
+
+    /*
+
+    */
+
+    $(window).on('load', function() {
+        $('#status').fadeOut(); 
+        $('#preloader').delay(350).fadeOut('slow'); 
+        $('body').delay(350).css({'overflow':'visible'});
+        setTimeout(function(){
+            //S2HIHO.animatePage1();  
+            //S2HIHO.animateAppDetails();
+        },500);
+        
+    });
+    $(window).on('resize', function() {
+        S2HIHO.resizeLayouts();
+    });  
+
+</script>  
+
+
+</body>
+</html>
+
