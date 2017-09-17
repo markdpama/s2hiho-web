@@ -408,7 +408,7 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 
 body.page-quote {
-  background:#FFF; font-family: 'ChampagneLimousines', sans-serif; 
+  background:#FFF; font-family: 'ChampagneLimousines', sans-serif; overflow: auto!important;
 }
 
 .quote-app .header { background:#f6a02d; padding:20px 0; position: relative; height:140px;}
@@ -444,6 +444,7 @@ body.page-quote {
 }
 
 .qa-con-main .note {background:#fab26f; float:left; font-weight: bold; padding:2px 12px; }
+#qma-wizard-form .step-desc {display:none;}
 
 .navs-bullet {}
 .navs-bullet .pagination > li > a {
@@ -470,11 +471,12 @@ body.page-quote {
 .wizard > .content > .body{
   width:100%;
   padding:0;
+  height:auto;
 }
 
 .wizard > .content {
   background:none;
-  min-height: 280px;
+  min-height: 30em
 
 }
 .wizard ul, .tabcontrol ul {
@@ -544,7 +546,8 @@ body.page-quote {
 }
 
 section.qma-form-bo {font-family: 'ChampagneLimousinesBoldItalic', sans-serif;}
-section.qma-form-bo .option-desc {color:#FFF; background:#b7b7b7; font-size: 1.5em; padding:10px 15px; margin:20px; border-radius: 20px}
+section.qma-form-bo .option-desc {color:#FFF; background:#b7b7b7; font-size: 1.5em; line-height:24px; padding:8px 15px; margin:10px 20px 20px; border-radius: 20px}
 
-
-
+section.qma-form-bo .flaticons {text-align: center}
+section.qma-form-bo .flaticons img{ width:160px; }
+section.qma-form-bo .radiobox-item {margin:35px auto 12px;}
