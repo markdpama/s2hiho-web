@@ -122,7 +122,7 @@ h1,h2,h3,h4,h5 {margin:0;}
 .hh-darkblue {background:#257EAF;}
 
 .white-hr {height:2px; border-bottom: 2px solid #FFF;clear:both;}
-
+.clear {clear:both;}
 
 .hh-amber-linear{
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(244,157,43,1)), color-stop(23%, rgba(244,157,43,1)), color-stop(57%, rgba(242,162,58,1)), color-stop(100%, rgba(255,209,148,1)));
@@ -278,7 +278,7 @@ h1,h2,h3,h4,h5 {margin:0;}
 .about-subpages .row {display:none;}
 .about-subpages .row.active {display:block;}
 
-.page-contact {font-family: 'ChampagneLimousines', sans-serif;color:#FFF;}
+.page-contact {font-family: 'ChampagneLimousines', sans-serif; color:#FFF;}
 .page-contact .col-xs-6{padding:0;}
 .page-contact .col-left {border-right:5px solid #FFF;}
 .page-contact .col-right {border-left:5px solid #FFF;}
@@ -408,13 +408,143 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 
 body.page-quote {
-  background:#FFF;
+  background:#FFF; font-family: 'ChampagneLimousines', sans-serif; 
 }
 
-.quote-app .header { background:#f6a02d; padding:30px 0; position: relative; height:180px;}
-.quote-app .header .rounded-box {border:1.5px solid #FFF; border-radius:20px; padding:20px 0; width:570px; left:50%; margin-left:-285px; background:#fab26f; color:#FFF; z-index:10}
-.quote-app .header .rounded-box h2 {font-size:4.2em; font-family: 'GothamBold', sans-serif; text-align: center; text-decoration: underline}
-.quote-app .header .hd-bar {height:40px; background:#fab26f; border:1.5px solid #FFF; width:100%; z-index:0; top:62px; }
-.quote-app .sub-header {background:#9b59b6; color:#FFF; text-align: center;padding:15px 0 10px;}
-.quote-app .sub-header h2 {font-family: 'GothamBlack', sans-serif; font-size:4.8em; margin:0;}
+.quote-app .header { background:#f6a02d; padding:20px 0; position: relative; height:140px;}
+.quote-app .header .rounded-box {border:1.5px solid #FFF; border-radius:20px; padding:16px 0; width:510px; left:50%; margin-left:-255px; background:#fab26f; color:#FFF; z-index:10}
+.quote-app .header .rounded-box h2 {font-size:3.6em; font-family: 'GothamBold', sans-serif; text-align: center; text-decoration: underline}
+.quote-app .header .hd-bar {height:36px; background:#fab26f; border:1.5px solid #FFF; width:100%; z-index:0; top:62px; }
+.quote-app .sub-header {background:#9b59b6; color:#FFF; text-align: center; padding:8px 0 4px 15px; height:80px; margin-top: 25px}
+.quote-app .sub-header h2 {font-family: 'GothamBlack', sans-serif; font-size:4.2em; margin:0; padding:0;}
+.quote-app .sub-header p {padding-right:320px; text-align: right; font-size: 1.5em}
+
+.quote-app .qa-con-wrap {background:#fab26f; padding-right: 160px; border-top:1px solid #FFF; position: relative;}
+.quote-app .qa-con-wrap .qa-con-main {background: #FFF; border-right:1px solid #FFF; position: relative; min-height: 480px}
+
+.qa-con-main .top-form-header { 
+  width: 320px;
+  height: 130px;
+  -webkit-transform: skew(15deg);
+  -moz-transform: skew(15deg);
+  -o-transform: skew(15deg);
+  background: #fab26f;
+  position: absolute; top:0; right: -20px;
+  border-left:1px solid #FFF;
+}
+
+.top-form-header .text {
+  -webkit-transform: skew(-15deg);
+  -moz-transform: skew(-15deg);
+  -o-transform: skew(-15deg);
+   padding-top: 15px;
+ }
+.top-form-header .text h2{
+   color:#FFF; font-size:2.5em; line-height:44px; font-family: 'GothamBlack', sans-serif; text-shadow: 4px 4px 0 rgba(102, 102, 102, 1);
+}
+
+.qa-con-main .note {background:#fab26f; float:left; font-weight: bold; padding:2px 12px; }
+
+.navs-bullet {}
+.navs-bullet .pagination > li > a {
+  font-size: 1.3em;
+}
+.navs-bullet .pagination > li > a, 
+.navs-bullet .pagination > li > span { 
+  border-radius: 50% !important;margin: 0 5px;
+  border:none; background-color:#9B59B6; color:#FFF; font-family: 'GothamBlack', sans-serif;
+  height:30px; width:30px; padding:2px;
+} 
+.navs-bullet .pagination > li.active > a,
+.navs-bullet .pagination > li > a:hover {
+  background-color:#FAB26F; outline:0;
+}
+.navs-bullet .pagination > li > a:focus{
+  outline: 0
+}
+
+
+.wizard  {
+  margin-top: 35px; 
+}
+.wizard > .content > .body{
+  width:100%;
+  padding:0;
+}
+
+.wizard > .content {
+  background:none;
+  min-height: 280px;
+
+}
+.wizard ul, .tabcontrol ul {
+  /*display: inline-block;*/
+}
+
+
+.wizard > .steps > ul > li {
+  width:auto;
+  display:block;
+  float:none;
+  text-align: center;
+  font-size: 1.8em
+}
+.wizard > .steps a, .wizard > .steps a:hover, .wizard > .steps a:active {
+  display:block;
+  border-radius: 50% !important; margin: 20px auto;
+  border:none; color:#FFF; font-family: 'GothamBlack', sans-serif;
+  height:60px; width:60px; padding:6px;
+}
+
+.wizard > .steps .disabled a, .wizard > .steps .disabled a:hover, .wizard > .steps .disabled a:active,
+.wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active {
+  background-color:#9B59B6; color:#FFF; 
+}
+
+.wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
+  background-color:#FAB26F; color:#FFF; border:1px solid #FFF;
+}
+
+.wizard > .actions {
+  text-align: center;  
+}
+
+.wizard > .actions > ul {
+   text-align: center;  display: inline-block;
+}
+
+.wizard > .steps{
+   position: absolute!important; 
+   top:0; width:140px; right:-150px; z-index: 9;
+}
+
+
+
+/* CUSTOM RADIO/CHECK BOX V1 */
+/*
+.radiobox-item {background:#fab26f; display: table; background:#FFF;}
+.radiobox-item .radio-box, .radiobox-item .label-box {display: table-cell; vertical-align: middle;}
+.radiobox-item .radio-box { border-right:1px solid #FFF; background:#fab26f; }
+    .radio-box .radio-tickbox {height: 32px; width: 32px; border:1px solid #FFF; background-color: #FFF; margin:10px; cursor: pointer }
+    .radio-box .radio-tickbox.checked {background-color:#9b59b6;}  
+
+.radiobox-item .label-box {}
+    .label-box .label {color:#FFF; width:290px; display: inline-block; font-size: 1.6em}
+*/
+.radiobox-item {display: table; margin:0 auto;}
+.radiobox-item .radio-box, .radiobox-item .label-box {display: table-cell; vertical-align: middle;}
+.radiobox-item .label-box .label {color:#999; font-family: 'ChampagneLimousinesBoldItalic', sans-serif; font-size: 2.2em}
+
+.radiobox-item .radio-box { height: 36px; width: 36px; padding:6px; border-radius:50%; border-right:1px solid #FFF; background:#fab26f; }
+.radio-box .radio-tickbox {height: 24px; width: 24px; border-radius:50%; border:2px solid #606060; background-color: #FFF;  cursor: pointer }
+    .radio-box .radio-tickbox.checked {background-color:#69f7dc; border-color: #1abc9c }  
+
+.radio-tickbox input[type="radio"], .check-tickbox input[type="checkbox"] {
+    visibility: hidden;
+}
+
+section.qma-form-bo {font-family: 'ChampagneLimousinesBoldItalic', sans-serif;}
+section.qma-form-bo .option-desc {color:#FFF; background:#b7b7b7; font-size: 1.5em; padding:10px 15px; margin:20px; border-radius: 20px}
+
+
 

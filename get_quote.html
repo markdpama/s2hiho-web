@@ -10,7 +10,9 @@
 <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>-->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
+<link href='css/jquery.steps.css' rel='stylesheet' type='text/css'>
 <link href='css/style.css?t=1' rel='stylesheet' type='text/css'>
+
 <!--
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <script src="https://use.fontawesome.com/cf0da6be55.js"></script>
@@ -22,29 +24,129 @@
 
     <div class="wrapper">
         <div class="main quote-app">
-            <!--
-            <button class="btnAnimate">ANIMATE LEFT</button>&nbsp;&nbsp;
-            <button class="btnAnimateRight">ANIMATE RIGHT</button>
-            <section class="page001">
-                  <div class="row">
-                       <div class="col col-md-6">
-                          <div class="svgcanvas docHeight" id="introS2">
-                               <div class="slogan" style="height:450px;width:400px;background:#f3f3f3;display:none"><h2>The Digital Step you Take</h2></div>
-                          </div>
-                       </div>
-                  </div>
-                  <br />
-            </section>
-            -->
+
             <div class="header">
                 <div class="rounded-box pos-absolute">
                     <h2>Quote My App</h2>
                 </div>
                 <div class="hd-bar pos-absolute"></div>
             </div>
-            <div class="sub-header">
-                    <h2>PLATFORM</h2>
+
+            <div class="qa-con-wrap">
+
+                <div class="qa-con-main" style="background:pink;">
+                        <div style="overflow: hidden; position:relative;">
+                            <div class="top-form-header">
+                                <div class="text"><h2>Business <br />Objectives</h2></div>
+                            </div>
+                            <div class="sub-header">
+                               <p>A digital platform should always be tied to specific goals. Help us understand what objective is your top priority so that we can conceptualize something essential for you</p>
+                            </div>
+                            <div class="note">Hover your cursor on the icon for more details</div>
+                        </div>
+
+
+
+                        <div id="qma-wizard-form">
+                            <h3>Business <br />Objectives</h3>
+                            <section class="qma-form-bo" style="border:2px solid green">
+                                  <div class="row" style="background:blue">
+                                       <div class="col-md-4">  
+                                         <div class="flaticons">
+                                            <img src="images/flaticons/graph-1.png" width="200" />
+                                         </div>
+                                         <div class="radiobox-item">
+                                           <div class="label-box">
+                                            <div class="label">
+                                              Marketing
+                                            </div>
+                                           </div> 
+                                           <div class="radio-box">
+                                            <div class="radio-tickbox">
+                                              <input type="radio" name="radio-btn" />
+                                            </div>
+                                           </div> 
+                                         </div>
+                                         <div class="option-desc">Increase Digital Awareness and User Reach</div>
+                                       </div>
+
+                                       <div class="col-md-4">          
+                                         <div class="radiobox-item">
+                                           <div class="label-box">
+                                            <div class="label">
+                                              Sales
+                                            </div>
+                                           </div> 
+                                           <div class="radio-box">
+                                            <div class="radio-tickbox">
+                                              <input type="radio" name="radio-btn" />
+                                            </div>
+                                           </div> 
+                                         </div>
+                                       </div>
+                                       <div class="col-md-4">          
+                                         <div class="radiobox-item">
+                                           <div class="label-box">
+                                            <div class="label">
+                                              Sales
+                                            </div>
+                                           </div> 
+                                           <div class="radio-box">
+                                            <div class="radio-tickbox">
+                                              <input type="radio" name="radio-btn" />
+                                            </div>
+                                           </div> 
+                                         </div>
+                                       </div>
+
+                                       <br class="clear" />
+
+                                  </div>
+                                  <br class="clear" />
+                                  <br />
+                            </section>
+                            <h3></h3>
+                            <section>
+                                <p>Wonderful transition effects.</p>
+                            </section>
+                            <h3></h3>
+                            <section>
+                                <p>The next and previous buttons help you to navigate through your content.</p>
+                            </section>
+                        </div>
+
+
+                        <br class="clear" />
+                        <br />
+                        <br />
+
+                </div>
+                <!--/.qa-con-main -->
+
+
             </div>
+            <!--/.qa-con-wrap -->
+
+
+
+
+
+
+
+
+            <!--
+            <div class="navs-bullet">
+                <ul class="pagination">
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                </ul>      
+            </div>
+            -->
+
+
+
 
 
         
@@ -62,7 +164,8 @@
 <script type="text/javascript" src="js/jquery.min.js"></script> 
 <script type="text/javascript" src="js/svg.min.js"></script> 
 <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
-
+<script type="text/javascript" src="js/jquery.steps.min.js"></script>
+ 
 <script type="text/javascript">  
     $(document).ready(function(){
 
@@ -122,20 +225,11 @@
 
     }
 
-
- 
-
-    $('a.btnMoveTo').click(function(e){
-        e.preventDefault();
-        var target = $(this).data('goto');
-        $(".main").moveTo(target);
-        
-    });
     
-    S2HIHO.resizeLayouts();
+    //S2HIHO.resizeLayouts();
 
     /*
-
+        http://www.jquery-steps.com/Examples
     */
 
     $(window).on('load', function() {
@@ -148,9 +242,42 @@
         },500);
         
     });
-    $(window).on('resize', function() {
-        S2HIHO.resizeLayouts();
-    });  
+
+
+    $("#qma-wizard-form").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        transitionEffect: "slideLeft",
+        autoFocus: true,
+        titleTemplate: "<span class=\"number\">#index#</span>", //removed title and dot
+        stepsContainerTag: "div"
+    });
+
+    /*setTimeout(function(){
+       //$("#qma-wizard-form ul").clone().append("#qma-pager");
+       $("#qma-pager").append( $("#qma-wizard-form ul").clone() );
+    },1200);*/
+
+  
+$(".radio-tickbox").on('click', function () {
+    var _this = $(this),
+        block = _this.parent().parent();
+    $('.radio-tickbox input:radio').attr('checked', false);
+    //block.find(".radio-tickbox").removeClass('checkedRadio');
+    $(".radio-tickbox").removeClass('checked');
+    _this.addClass('checked');
+    _this.find('input:radio').attr('checked', true);
+});
+
+
+$('input[name="check-box"]').wrap('<div class="check-box"></div>');
+$.fn.toggleCheckbox = function () {
+    this.attr('checked', !this.attr('checked'));
+}
+$('.check-box').on('click', function () {
+    $(this).find(':checkbox').toggleCheckbox();
+    $(this).toggleClass('checkedBox');
+});
 
 </script>  
 
