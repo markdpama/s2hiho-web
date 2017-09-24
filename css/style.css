@@ -52,7 +52,7 @@ body {
   background: #E2E4E7;
   padding: 0;
   text-align: center;
-  font-family: 'open sans';
+  font-family: 'ChampagneLimousines', sans-serif;
   position: relative;
   margin: 0;
   height: 100%;
@@ -408,8 +408,10 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 
 body.page-quote {
-  background:#FFF; font-family: 'ChampagneLimousines', sans-serif; overflow: auto!important;
+  background:#f6a02d; font-family: 'ChampagneLimousines', sans-serif; overflow: auto!important;
 }
+
+.main.quote-app {max-width: 1840px; margin:0 auto;}
 
 .quote-app .header { background:#f6a02d; padding:20px 0; position: relative; height:140px;}
 .quote-app .header .rounded-box {border:1.5px solid #FFF; border-radius:20px; padding:16px 0; width:510px; left:50%; margin-left:-255px; background:#fab26f; color:#FFF; z-index:10}
@@ -420,7 +422,8 @@ body.page-quote {
 .quote-app .sub-header p {padding-right:320px; text-align: right; font-size: 1.5em}
 
 .quote-app .qa-con-wrap {background:#fab26f; padding-right: 160px; border-top:1px solid #FFF; position: relative;}
-.quote-app .qa-con-wrap .qa-con-main {background: #FFF; border-right:1px solid #FFF; position: relative; min-height: 480px}
+.quote-app .qa-con-wrap .qa-con-main {background: #FFF; border-right:1px solid #FFF; position: relative; }
+
 
 .qa-con-main .top-form-header { 
   width: 320px;
@@ -476,7 +479,8 @@ body.page-quote {
 
 .wizard > .content {
   background:none;
-  min-height: 30em
+  /*min-height: 30em;*/
+  min-height: none;
 
 }
 .wizard ul, .tabcontrol ul {
@@ -545,9 +549,19 @@ body.page-quote {
     visibility: hidden;
 }
 
-section.qma-form-bo {font-family: 'ChampagneLimousinesBoldItalic', sans-serif;}
-section.qma-form-bo .option-desc {color:#FFF; background:#b7b7b7; font-size: 1.5em; line-height:24px; padding:8px 15px; margin:10px 20px 20px; border-radius: 20px}
+.quote-app section {font-family: 'ChampagneLimousinesBoldItalic', sans-serif; }
+.quote-app section .option-desc {text-align:center; max-width:340px; color:#FFF; background:#b7b7b7; font-size: 1.5em; line-height:24px; padding:8px 15px; margin:10px auto 20px; border-radius: 10px}
+.quote-app section .option-desc .subdesc {display:block; font-family: 'ChampagneLimousines', sans-serif; }
+.quote-app section .flaticons {text-align: center}
+.quote-app section .flaticons img{ width:270px; }
+.quote-app section .radiobox-item {margin:35px auto 12px;}
 
-section.qma-form-bo .flaticons {text-align: center}
-section.qma-form-bo .flaticons img{ width:160px; }
-section.qma-form-bo .radiobox-item {margin:35px auto 12px;}
+
+section.qma-form-platform .flaticons i{color:#fab26f; font-size: 10em}
+section.qma-form-platform .radiobox-item {margin:35px auto 12px;}
+section.qma-form-bo .option-desc {max-width:380px; }
+section.qma-form-de .flaticons img{ width:230px; }
+section.qma-form-uc .option-desc { font-size: 1.3em; max-width:420px; }
+section.qma-form-uc .flaticons img{ width:300px; }
+
+
