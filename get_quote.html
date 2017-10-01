@@ -12,10 +12,10 @@
 <link href='css/jquery.steps.css' rel='stylesheet' type='text/css'>
 <link href='css/style.css?t=1' rel='stylesheet' type='text/css'>
 
-<!--
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <script src="https://use.fontawesome.com/cf0da6be55.js"></script>
--->
+
 </head>
     
 <body class="page-quote">
@@ -342,6 +342,126 @@
                       </section>
 
 
+                      <h3>App Key <br />Features</h3>
+                      <section class="qma-form-af">
+                          <div class="step-desc">What features will define the user experience, achieve your goals, and visualize your digital growth?</div>
+                            <div class="row">
+
+                                  <div class="col-md-6">  
+
+                                       <div class="radiobox-item">
+                                         <div class="radio-icon">
+                                             <img src="images/flaticons/user-3.png"  />   
+                                         </div>
+                                         <div class="radio-box">
+                                          <div class="radio-tickbox">
+                                            <input type="radio" name="radio-btn" />
+                                          </div>
+                                         </div> 
+                                         <div class="label-box">
+                                          <div class="label">
+                                            Account Creation &amp; Sign-Up
+                                          </div>
+                                         </div> 
+                                       </div>  
+                                       <br class="clear" />                                 
+
+                                       <div class="radiobox-item">
+                                         <div class="radio-icon">
+                                             <img src="images/flaticons/growth.png"  />   
+                                         </div>
+                                         <div class="radio-box">
+                                          <div class="radio-tickbox">
+                                            <input type="radio" name="radio-btn" />
+                                          </div>
+                                         </div> 
+                                         <div class="label-box">
+                                          <div class="label">
+                                            Analytics &amp; Aggregation
+                                          </div>
+                                         </div> 
+                                       </div>     
+                                       <br class="clear" />                          
+
+                                       <div class="radiobox-item">
+                                         <div class="radio-icon">
+                                             <img src="images/flaticons/alarm-1.png"  />   
+                                         </div>
+                                         <div class="radio-box">
+                                          <div class="radio-tickbox">
+                                            <input type="radio" name="radio-btn" />
+                                          </div>
+                                         </div> 
+                                         <div class="label-box">
+                                          <div class="label">
+                                            Notifications
+                                          </div>
+                                         </div> 
+                                       </div>
+                                   
+                                 </div>
+
+                                  <div class="col-md-6">  
+
+                                       <div class="radiobox-item">
+                                         <div class="radio-icon">
+                                             <img src="images/flaticons/network.png"  />   
+                                         </div>
+                                         <div class="radio-box">
+                                          <div class="radio-tickbox">
+                                            <input type="radio" name="radio-btn" />
+                                          </div>
+                                         </div> 
+                                         <div class="label-box">
+                                          <div class="label">
+                                            Social Media Integration
+                                          </div>
+                                         </div> 
+                                       </div>  
+                                       <br class="clear" />                                 
+
+                                       <div class="radiobox-item">
+                                         <div class="radio-icon">
+                                             <img src="images/flaticons/calendar.png"  />   
+                                         </div>
+                                         <div class="radio-box">
+                                          <div class="radio-tickbox">
+                                            <input type="radio" name="radio-btn" />
+                                          </div>
+                                         </div> 
+                                         <div class="label-box">
+                                          <div class="label">
+                                            Calendar &amp; Scheduler
+                                          </div>
+                                         </div> 
+                                       </div>     
+                                       <br class="clear" />                          
+
+                                       <div class="radiobox-item">
+                                         <div class="radio-icon">
+                                             <img src="images/flaticons/maps-and-flags-3.png"  />   
+                                         </div>
+                                         <div class="radio-box">
+                                          <div class="radio-tickbox">
+                                            <input type="radio" name="radio-btn" />
+                                          </div>
+                                         </div> 
+                                         <div class="label-box">
+                                          <div class="label">
+                                            Payment &amp; Promotions
+                                          </div>
+                                         </div> 
+                                       </div>
+
+                                 </div>
+
+
+
+                            </div>
+
+
+                      </section>
+
                   </div>
 
 
@@ -386,19 +506,6 @@
 <script type="text/javascript">  
     $(document).ready(function(){
 
-        $('.btnAnimate').click(function(e){
-            $('#introS2 .slogan').show().removeClass().addClass('fadeInLeft animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-              $(this).removeClass('fadeInLeft animated');
-            });
-        }); 
-
-        $('.btnAnimateRight').click(function(e){
-            $('#introS2 .slogan').show().removeClass().addClass('fadeInRight animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-              $(this).removeClass('fadeInRight animated');
-            });
-        }); 
-
-
     });
 
     var doc = $(document);
@@ -442,10 +549,6 @@
 
     }
 
-    
-    //S2HIHO.resizeLayouts();
-
-
     $(window).on('load', function() {
         $('#status').fadeOut(); 
         $('#preloader').delay(350).fadeOut('slow'); 
@@ -478,34 +581,35 @@
 
           return true; 
         },
-        startIndex: 4,
+        //startIndex: 5,
+    });
+  
+    $(".radio-tickbox").on('click', function () {
+        var _this = $(this),
+            block = _this.parent().parent();
+        $('.radio-tickbox input:radio').attr('checked', false);
+        //block.find(".radio-tickbox").removeClass('checkedRadio');
+        $(".radio-tickbox").removeClass('checked');
+        _this.addClass('checked');
+        _this.find('input:radio').attr('checked', true);
     });
 
-    /*setTimeout(function(){
-       //$("#qma-wizard-form ul").clone().append("#qma-pager");
-       $("#qma-pager").append( $("#qma-wizard-form ul").clone() );
-    },1200);*/
+    
+    $(".radiobox-item .label").on('click', function () {
+        var _this = $(this), item = _this.parent().parent();
+        var radioTickBox =  item.find(".radio-tickbox");
+        radioTickBox.trigger("click");
 
-  
-$(".radio-tickbox").on('click', function () {
-    var _this = $(this),
-        block = _this.parent().parent();
-    $('.radio-tickbox input:radio').attr('checked', false);
-    //block.find(".radio-tickbox").removeClass('checkedRadio');
-    $(".radio-tickbox").removeClass('checked');
-    _this.addClass('checked');
-    _this.find('input:radio').attr('checked', true);
-});
+     });
 
-
-$('input[name="check-box"]').wrap('<div class="check-box"></div>');
-$.fn.toggleCheckbox = function () {
-    this.attr('checked', !this.attr('checked'));
-}
-$('.check-box').on('click', function () {
-    $(this).find(':checkbox').toggleCheckbox();
-    $(this).toggleClass('checkedBox');
-});
+    $('input[name="check-box"]').wrap('<div class="check-box"></div>');
+    $.fn.toggleCheckbox = function () {
+        this.attr('checked', !this.attr('checked'));
+    }
+    $('.check-box').on('click', function () {
+        $(this).find(':checkbox').toggleCheckbox();
+        $(this).toggleClass('checkedBox');
+    });
 
 </script>  
 

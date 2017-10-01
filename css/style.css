@@ -8,6 +8,10 @@
    src: url('../fonts/ChampagneLimousinesBoldItalic.ttf')  format('truetype');
 }
 @font-face {
+   font-family: 'ChampagneLimousinesItalic';
+   src: url('../fonts/ChampagneLimousinesItalic.ttf')  format('truetype');
+}
+@font-face {
    font-family: 'GothamThin';
    src: url('../fonts/GOTHAM-THIN.TTF')  format('truetype');
 }
@@ -516,12 +520,56 @@ body.page-quote {
 }
 
 .wizard > .actions > ul {
-   text-align: center;  display: inline-block;
+   text-align: center;  display: inline;
 }
 
 .wizard > .steps{
    position: absolute!important; 
    top:0; width:140px; right:-150px; z-index: 9;
+}
+
+.wizard > .actions a, .wizard > .actions a:hover, .wizard > .actions a:active {
+  background:none;
+  text-indent: -999px;
+  overflow: hidden;
+  color:#111;
+}
+.wizard > .actions li:first-child a,
+.wizard > .actions .disabled:first-child a:hover{
+  height: 80px;
+  width: 170px;
+  background: transparent url('../images/btn_form_back.png') no-repeat;
+  background-size: auto 80px; 
+}
+
+.wizard > .actions li:nth-child(2){
+  margin-left: 25%
+}
+.wizard > .actions li:nth-child(2) a,
+.wizard > .actions .disabled:nth-child(2) a:hover{
+  height: 80px;
+  width: 280px;
+  background: transparent url('../images/btn_form_next.png') no-repeat;
+  background-size: auto 60px; 
+  background-position: 0 50%;
+}
+
+.wizard > .actions li:nth-child(3){
+  margin-left: 22%
+}
+
+.wizard > .actions li:nth-child(3) a,
+.wizard > .actions .disabled:nth-child(3) a:hover{
+  height: 80px;
+  width: 420px;
+  background: transparent url('../images/btn_form_finish.png') no-repeat;
+  background-size: auto 65px; 
+  background-position: 0 50%;
+}
+
+
+.wizard > .actions .disabled a, .wizard > .actions .disabled a:hover, .wizard > .actions .disabled a:active {
+  background:none!important;
 }
 
 
@@ -538,18 +586,21 @@ body.page-quote {
     .label-box .label {color:#FFF; width:290px; display: inline-block; font-size: 1.6em}
 */
 .radiobox-item {display: table; margin:0 auto;}
-.radiobox-item .radio-box, .radiobox-item .label-box {display: table-cell; vertical-align: middle;}
-.radiobox-item .label-box .label {color:#999; font-family: 'ChampagneLimousinesBoldItalic', sans-serif; font-size: 2.2em}
+.radiobox-item .radio-box, .radiobox-item .label-box, .radiobox-item .radio-icon {display: table-cell; vertical-align: middle;}
+.radiobox-item .label-box .label {color:#999; font-family: 'ChampagneLimousinesBoldItalic', sans-serif; font-size: 2.2em; cursor: pointer;}
 
 .radiobox-item .radio-box { height: 36px; width: 36px; padding:6px; border-radius:50%; border-right:1px solid #FFF; background:#fab26f; }
 .radio-box .radio-tickbox {height: 24px; width: 24px; border-radius:50%; border:2px solid #606060; background-color: #FFF;  cursor: pointer }
     .radio-box .radio-tickbox.checked {background-color:#69f7dc; border-color: #1abc9c }  
 
+.radiobox-item .radio-icon {width: 60px; position: relative;} 
+.radiobox-item .radio-icon img {position: absolute; left:0; max-width: 48px; top:-6px; }
+
 .radio-tickbox input[type="radio"], .check-tickbox input[type="checkbox"] {
     visibility: hidden;
 }
 
-.quote-app section {font-family: 'ChampagneLimousinesBoldItalic', sans-serif; }
+.quote-app section {font-family: 'ChampagneLimousinesItalic', sans-serif; font-weight: normal}
 .quote-app section .option-desc {text-align:center; max-width:340px; color:#FFF; background:#b7b7b7; font-size: 1.5em; line-height:24px; padding:8px 15px; margin:10px auto 20px; border-radius: 10px}
 .quote-app section .option-desc .subdesc {display:block; font-family: 'ChampagneLimousines', sans-serif; }
 .quote-app section .flaticons {text-align: center}
@@ -563,5 +614,11 @@ section.qma-form-bo .option-desc {max-width:380px; }
 section.qma-form-de .flaticons img{ width:230px; }
 section.qma-form-uc .option-desc { font-size: 1.3em; max-width:420px; }
 section.qma-form-uc .flaticons img{ width:300px; }
+
+section.qma-form-af .radiobox-item { min-width: 460px}
+section.qma-form-af .radiobox-item .label-box {text-align: left}
+section.qma-form-af .radiobox-item .label-box .label {font-size: 1.6em; }
+
+
 
 
