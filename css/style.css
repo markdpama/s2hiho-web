@@ -382,6 +382,40 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page6 .form-box .contact-form{background:#3498db;}
 
 
+/* S2 Contact Form - MOBILE */
+body.page-contact-mobile {
+  background:#f6a02d; font-family: 'ChampagneLimousines', sans-serif; overflow: auto!important;
+}
+body.page-contact-mobile .w{
+
+}
+
+.s2hiho-contact-mobile {}
+
+.s2hiho-contact-mobile .container {max-width: 420px}
+.s2hiho-contact-mobile.page5 .slice01 {height:48px;width:45px;left:5px;}
+.s2hiho-contact-mobile.page5 .contactus-header {position: static; width: 100%; margin-top: 20px; border-width: 1px} 
+.s2hiho-contact-mobile .form-box {max-width: 380px; margin-top: 10px}
+.s2hiho-contact-mobile .form-box .header {background-color:#9b59b6; color:#FFF; text-align: center; padding:15px 0 0; font-family: 'GothamBold', sans-serif; font-size: 2em}
+.s2hiho-contact-mobile .form-box .sub-header {background-color:#9b59b6; color:#FFF; font-size:12px; text-align: center; margin:0 5%; padding:0 8px 8px; font-family: 'ChampagneLimousines', sans-serif; font-weight: bold}
+.s2hiho-contact-mobile .form-box .hd-mail-icon {background-color:#9b59b6; color:#FFF; font-size: 2.2em; width:90px; height:22px; margin:0 auto; padding:0; text-align:center}
+.s2hiho-contact-mobile .form-box .hd-mail-icon img {height:32px; margin: -15px 0 0; line-height: 20px}
+.s2hiho-contact-mobile .col-form-label {padding:0;font-size:1.5em;font-family: 'ChampagneLimousines', sans-serif; color:#d1d3d4;}
+.s2hiho-contact-mobile .form-control {margin:0; padding:0 0 2px 0; border-radius: 0; border:none; font-size:1.5em; font-weight: bold; color:#111; background:transparent;
+                                              border-bottom:1px solid #d1d3d4; box-shadow: none; height:32px; font-family: 'ChampagneLimousines', sans-serif;
+                                           }
+.s2hiho-contact-mobile .form-control:focus,
+.s2hiho-contact-mobile .form-control:active {border-bottom-color: #FFF }
+.s2hiho-contact-mobile .icon i {color:#9b59b6; font-size: 3em;margin-top: -4px}
+.s2hiho-contact-mobile .icon i.fa-envelope {font-size: 2.5em; }
+.s2hiho-contact-mobile .icon i.fa-users {font-size: 2.5em; margin-top: 10px;}
+.s2hiho-contact-mobile .icon i.fa-archive {font-size: 2.5em;}
+.s2hiho-contact-mobile .message-row textarea {height:90px; font-size:1.5em; background:none; outline: none!important; resize: none}
+.s2hiho-contact-mobile .message-row textarea:focus,
+.s2hiho-contact-mobile .message-row textarea:active {border:none;}
+
+.s2hiho-contact-mobile .hr {height:2px; border-bottom: 2px solid #faaa6f;clear:both; margin: 15px 0 20px}
+
 /* Create Account */
 .page7 .form-box {margin:0 35px; background:#FFF url('../images/beacon_app.png') right bottom no-repeat; background-size: auto 500px }
 .page7 .form-box .header {background:#e55a5a; }
