@@ -118,6 +118,7 @@ h1,h2,h3,h4,h5 {margin:0;}
 .main .page1 .col{height:100%;padding:0;}
 .redBorder {border: 1px solid red}
 .pos-absolute {position: absolute;}
+.pos-relative {position: absolute;}
 .hh-amber {background:#FFB140;}
 .hh-blue {background:#3498DB;}
 .hh-purple {background:#9452b0;}
@@ -415,6 +416,12 @@ body.page-contact-mobile .w{
 .s2hiho-contact-mobile .message-row textarea:active {border:none;}
 
 .s2hiho-contact-mobile .hr {height:2px; border-bottom: 2px solid #faaa6f;clear:both; margin: 15px 0 20px}
+.s2hiho-contact-mobile .btnSubmit {background:#d1d3d4; font-size: 2em; text-transform: uppercase; border-bottom: 3px solid #333; border-radius:0; font-size: bold; font-family: 'GothamBold', sans-serif; padding:2px 25px; }
+
+.s2hiho-contact-mobile .qma-thick-hr {background:#9b59b6; height:20px; }
+.s2hiho-contact-mobile .rounded-box {border-radius:20px; background:#9b59b6; color:#FFF; width:260px; margin:-38px auto 0; padding:10px;}
+.s2hiho-contact-mobile .rounded-box h2 {font-size:2em; font-family: 'GothamBold', sans-serif; text-align: center; }
+
 
 /* Create Account */
 .page7 .form-box {margin:0 35px; background:#FFF url('../images/beacon_app.png') right bottom no-repeat; background-size: auto 500px }
