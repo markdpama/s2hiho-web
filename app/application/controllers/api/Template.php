@@ -61,7 +61,7 @@ class Template extends \Restserver\Libraries\REST_Controller {
 		$new_name = $_FILES["userfile"]['name']."_".date("Ymd_H-i-s").".".$ext;
 	    $config['file_name'] = $new_name;
 
-	    $file_url = base_url('uploads/'.$new_name);
+	    
 
         $this->load->library('upload', $config);
 
@@ -79,8 +79,11 @@ class Template extends \Restserver\Libraries\REST_Controller {
         {
             //$data = array('upload_data' => $this->upload->data());
             $updata = $this->upload->data();
-            $data = array("file_name" =>  $updata["file_name"], "file_url" => $file_url );
 
+            $file_url = base_url('uploads/'.$updata["file_name"]);
+
+            $data = array("file_name" =>  $updata["file_name"], "file_url" => $file_url );
+            
             $this->set_response([
                 'status' => "success",
                 'data' =>  $data
