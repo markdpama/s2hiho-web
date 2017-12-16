@@ -43,7 +43,7 @@
 
 
 
-                  <div id="qma-wizard-form">
+                  <form id="qma-wizard-form" action="http://127.0.0.1:3000/get_quote/saveDB" method="post">
                       <h3>Business <br />Objectives</h3>
                       <section class="qma-form-bo">
                             <div class="step-desc">A digital platform should always be tied to specific goals. Help us understand what objective is your top priority so that we can conceptualize something essential for you</div>
@@ -61,7 +61,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="radio-btn" />
+                                        <input type="radio" name="business_objectives" value="Marketing" />
                                       </div>
                                      </div> 
                                    </div>
@@ -80,7 +80,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="radio-btn" />
+                                        <input type="radio" name="business_objectives" value="Sales" />
                                       </div>
                                      </div> 
                                    </div>
@@ -99,7 +99,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="radio-btn" />
+                                        <input type="radio" name="business_objectives" value="Operations" />
                                       </div>
                                      </div> 
                                    </div>
@@ -113,7 +113,7 @@
 
 
                       </section>
-
+<!--
                       <h3> Select a <br />Platform</h3>
                       <section class="qma-form-platform">
                          <div class="step-desc">What is the scope of this project in terms of reaching your target market’s platform? Don’t worry, you can select more than one.</div>
@@ -132,7 +132,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="radio-btn" />
+                                        <input type="radio" name="platform" value="iOS" />
                                       </div>
                                      </div> 
                                    </div>
@@ -151,7 +151,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="radio-btn" />
+                                        <input type="radio" name="platform" value="Android" />
                                       </div>
                                      </div> 
                                    </div>
@@ -170,7 +170,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="radio-btn" />
+                                        <input type="radio" name="platform" value="Windows" />
                                       </div>
                                      </div> 
                                    </div>
@@ -201,7 +201,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="radio-btn" />
+                                        <input type="radio" name="app_type" value="Offline and Static" />
                                       </div>
                                      </div> 
                                    </div>
@@ -222,7 +222,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="radio-btn" />
+                                        <input type="radio" name="app_type" value="Online and Dynamic" />
                                       </div>
                                      </div> 
                                    </div>
@@ -256,7 +256,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="radio-btn" />
+                                        <input type="radio" name="digital_ecosystem" value="Single Application" />
                                       </div>
                                      </div> 
                                    </div>
@@ -275,7 +275,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="radio-btn" />
+                                        <input type="radio" name="digital_ecosystem" value="Console App and Field App" />
                                       </div>
                                      </div> 
                                    </div>
@@ -307,7 +307,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="radio-btn" />
+                                        <input type="radio" name="ui_custom" value="Standard Look and Feel" />
                                       </div>
                                      </div> 
                                    </div>
@@ -326,7 +326,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="radio-btn" />
+                                        <input type="radio" name="ui_custom" value="Custom User Interface" />
                                       </div>
                                      </div> 
                                    </div>
@@ -340,7 +340,7 @@
                             <br class="clear" />
 
                       </section>
-
+-->
 
                       <h3>App Key <br />Features</h3>
                       <section class="qma-form-af">
@@ -355,7 +355,7 @@
                                          </div>
                                          <div class="radio-box">
                                           <div class="radio-tickbox">
-                                            <input type="radio" name="radio-btn" />
+                                            <input type="checkbox" name="app_features[]" value="Account Creation and Sign-Up" />
                                           </div>
                                          </div> 
                                          <div class="label-box">
@@ -372,7 +372,7 @@
                                          </div>
                                          <div class="radio-box">
                                           <div class="radio-tickbox">
-                                            <input type="radio" name="radio-btn" />
+                                            <input type="checkbox" name="app_features[]" value="Analytics and Aggregation" />
                                           </div>
                                          </div> 
                                          <div class="label-box">
@@ -389,7 +389,7 @@
                                          </div>
                                          <div class="radio-box">
                                           <div class="radio-tickbox">
-                                            <input type="radio" name="radio-btn" />
+                                            <input type="checkbox" name="app_features[]" value="Notifications" />
                                           </div>
                                          </div> 
                                          <div class="label-box">
@@ -409,7 +409,7 @@
                                          </div>
                                          <div class="radio-box">
                                           <div class="radio-tickbox">
-                                            <input type="radio" name="radio-btn" />
+                                            <input type="checkbox" name="app_features[]" value="Social Media Integration" />
                                           </div>
                                          </div> 
                                          <div class="label-box">
@@ -426,7 +426,7 @@
                                          </div>
                                          <div class="radio-box">
                                           <div class="radio-tickbox">
-                                            <input type="radio" name="radio-btn" />
+                                            <input type="checkbox" name="app_features[]" value="Calendar and Scheduler" />
                                           </div>
                                          </div> 
                                          <div class="label-box">
@@ -443,7 +443,7 @@
                                          </div>
                                          <div class="radio-box">
                                           <div class="radio-tickbox">
-                                            <input type="radio" name="radio-btn" />
+                                            <input type="checkbox" name="app_features[]" value="Payment and Promotions" />
                                           </div>
                                          </div> 
                                          <div class="label-box">
@@ -462,7 +462,7 @@
 
                       </section>
 
-                  </div>
+                  </form>
 
 
           </div>
@@ -581,17 +581,51 @@
 
           return true; 
         },
+        onFinishing: function (event, currentIndex) { 
+            console.log($("#qma-wizard-form").serialize());
+            $.ajax({
+               type: "POST",
+               url: "http://127.0.0.1:3000/get_quote/saveDB",
+               data: $("#qma-wizard-form").serialize(), // serializes the form's elements.
+               success: function(data)
+               {
+                   alert(data); // show response from the php script.
+               }
+             });
+             //$("#qma-wizard-form").submit();
+             //event.preventDefault(); // avoid to execute the actual submit of the form.
+
+        }
         //startIndex: 5,
     });
   
     $(".radio-tickbox").on('click', function () {
         var _this = $(this),
             block = _this.parent().parent();
-        $('.radio-tickbox input:radio').attr('checked', false);
+        //$('.radio-tickbox input:radio').attr('checked', false);
         //block.find(".radio-tickbox").removeClass('checkedRadio');
-        $(".radio-tickbox").removeClass('checked');
-        _this.addClass('checked');
-        _this.find('input:radio').attr('checked', true);
+        if(_this.find("input").is(":radio")){
+          $(".radio-tickbox").removeClass('checked'); 
+          _this.addClass('checked'); 
+          _this.find('input:radio').attr('checked', true);
+        }else{
+          //--checkbox
+
+          if(_this.find("input").is(":checked")){
+              _this.removeClass('checked'); 
+              _this.find("input").attr('checked', false);
+          }else{
+            _this.removeClass('checked'); 
+          _this.addClass('checked'); 
+          _this.find('input').attr('checked', true);
+          } 
+          
+
+
+        }
+        
+
+        
     });
 
     

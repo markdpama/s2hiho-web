@@ -637,8 +637,10 @@ body.page-quote {
 .radiobox-item .radio-icon {width: 60px; position: relative;} 
 .radiobox-item .radio-icon img {position: absolute; left:0; max-width: 48px; top:-6px; }
 
-.radio-tickbox input[type="radio"], .check-tickbox input[type="checkbox"] {
-    visibility: hidden;
+.radio-tickbox input[type="radio"], .radio-tickbox input[type="checkbox"] {
+    /*visibility: hidden;
+    opacity: 0;*/
+    margin-left: -15px
 }
 
 .quote-app section {font-family: 'ChampagneLimousinesItalic', sans-serif; font-weight: normal}
