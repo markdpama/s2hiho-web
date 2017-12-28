@@ -19,7 +19,7 @@
 <body>
 <!-- Preloader-->
 
-<div id="preloader">
+<div id="preloader" style="display:none">
   <div id="status">
       <svg width="80px"  height="80px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ripple">
           <circle cx="50" cy="50" r="14.0334" fill="none" stroke="#c0f6d2" stroke-width="6">
@@ -49,7 +49,7 @@
                        <div class="col col-xs-6">
                            <div class="svgcanvas" id="introHiHo">
                                <img src="images/HiHoLogo.png" width="240" style="display:none" />
-                               <div class="slogan"><h2>Events Reimagined</h2></div>
+                               <div class="slogan"><h2>Events <br />Reimagined</h2></div>
                            </div>
                        </div>
                   </div>
@@ -65,24 +65,15 @@
                               <img src="images/s2logo.png" width="70" class="logo s2" /> 
                               <div class="appdevice_details s2">
                                   <div class="canbox">
-                                      <div class="lines ll01"></div> 
-                                      <div class="desc-details hh-purple nth01"><span class="underline">Custom</span></div>
-                                      <div class="lines ll02"></div> 
-                                      <div class="desc-details hh-darkamber nth02"><span>SOFTWARE</span></div>
-                                      <div class="lines ll03"></div>
-                                      <div class="desc-details hh-purple nth03"><span>Tied to</span></div>
-                                      <div class="lines ll04"></div>
-                                      <div class="desc-details hh-darkamber nth04"><span class="underline">Digital Awareness</span></div>
-                                      <div class="lines ll05"></div>
+                                      <div class="desc-details hh-purple nth01"><span>Custom</span></div>
+                                      <div class="desc-details hh-darkamber nth02"><span>Software</span></div>
+                                      <div class="desc-details hh-purple nth03"><span>Connected To</span></div>
+                                      <div class="desc-details hh-darkamber nth04"><span>Digital Awareness</span></div>
                                       <div class="desc-details hh-purple nth05"><span>Business Goals</span></div>
-                                      <div class="lines ll06"></div>
-                                      <div class="desc-details hh-darkamber nth06"><span>Drive by data</span></div>
-                                      <div class="lines ll07"></div>
+                                      <div class="desc-details hh-darkamber nth06"><span>Driven By Data</span></div>
+                                      <a href="#"><div class="btnLearMore s2"></div></a>
                                   </div>
                               </div>
-
-                              <a href="#"><div class="btnLearMore s2"></div></a>
-                              <a href="#"><div class="btnCheckVideo s2"></div></a>
                           </div>
                        </div>
                        <div class="col col-xs-6 hh-blue">
@@ -90,26 +81,21 @@
                               <img src="images/HiHoLogo.png" width="80" class="logo hiho" />
                               <div class="appdevice_details hiho">
                                   <div class="canbox">
-                                      <div class="lines lr01"></div>
-                                      <div class="desc-details hh-red nth01"><span class="underline">Pre-Fabricated</span></div>
-                                      <div class="lines lr02"></div>
-                                      <div class="desc-details hh-darkblue nth02"><span>HARDWARE</span></div>
-                                      <div class="lines lr03"></div>
-                                      <div class="desc-details hh-red nth03"><span>iOT</span></div>
-                                      <div class="lines lr04"></div>
-                                      <div class="desc-details hh-darkblue nth04"><span class="underline">Subscription</span></div>
-                                      <div class="lines lr05"></div>
-                                      <div class="desc-details hh-red nth05"><span>Quick to Deploy</span></div>
-                                      <div class="lines lr06"></div>
+                                      <div class="desc-details hh-lightred nth01"><span>Pre Fabricated</span></div>
+                                      <div class="desc-details hh-darkblue nth02"><span>Hardware</span></div>
+                                      <div class="desc-details hh-lightred nth03"><span>iOT</span></div>
+                                      <div class="desc-details hh-darkblue nth04"><span>Subscription</span></div>
+                                      <div class="desc-details hh-lightred nth05"><span>Quick to Deploy</span></div>
                                       <div class="desc-details hh-darkblue nth06"><span>Data Driven</span></div>
-                                      <div class="lines lr07"></div>
+                                      <a href="#"><div class="btnLearMore hiho"></div></a>
                                   </div>  
                               </div>
-                               <a href="#"><div class="btnLearMore hiho"></div></a>
-                               <a href="#"><div class="btnCheckVideo hiho"></div></a>
+                               
+                               
                           </div>
                        </div>
                   </div>
+
             </section>
     
             <section class="page3 page-about">
@@ -182,7 +168,9 @@
                               <div class="s2-slice03 pos-absolute"></div>
                               <div class="s2-slice04 pos-absolute"></div>
                               <a href="#" class="btnMoveTo" data-goto="5">
-                              <div class="s2-slice05 pos-absolute"></div>
+                                <span class="s2-slice05 pos-absolute hh-purple">
+                                  CLICK HERE
+                                </span>
                               </a>
                               <div class="s2-text01 pos-absolute">
                                   <h3>Personalize your application and get a quote now</h3>
@@ -198,7 +186,9 @@
                                 <div class="hiho-slice05 pos-absolute"></div>
                                 <div class="hiho-slice06 pos-absolute"></div>
                                 <a href="#" class="btnMoveTo" data-goto="6">
-                                <div class="hiho-slice07 pos-absolute"></div>
+                                  <span class="hiho-slice07 pos-absolute hh-red">
+                                     CLICK HERE
+                                  </span>
                                 </a>
                                 <div class="hiho-slogan pos-absolute">The solution for you.</div>
                                 <div class="hiho-text pos-absolute">
@@ -208,6 +198,7 @@
                            </div>
                        </div>
                   </div>
+
              </section> 
 
 
@@ -621,7 +612,7 @@
 
              <section class="page7 page-hiho-create page-s2hiho-contact">
                   <div class="svgcanvas docHeight hh-blue-linear">
-                      <div class="container">
+                      <div class="container-fluid">
                           <br />
                           <div class="form-box">
                               <div class="header">
@@ -743,7 +734,7 @@
 
                                                 <div class="row-fluid">
                                                     <div class="col-sm-10 col-sm-offset-2">
-
+                                                       <br />  
                                                       <div class="quote-button">
                                                          <button class="btnQuoteApp">Create Account</button>
                                                        </div>
@@ -823,6 +814,7 @@
 
 
 <script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="js/svg.min.js"></script> 
 <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
 
@@ -933,11 +925,10 @@ SCRATCH
         this.animateAppDetails = function() {
           var delay = 0;
           for (var i = 1; i <= 7; i++) {
-             $('.ll0'+i+',.lr0'+i).delay(delay).animate({opacity:"show"},1000);
-             delay += 1000; 
-
-             $('.appdevice_details .canbox .nth0'+i).delay(delay).animate({opacity:"show"},1000);
-             delay += 800;
+             //$('.ll0'+i+',.lr0'+i).delay(delay).animate({opacity:"show"},1000);
+             //delay += 1000; 
+             $('.appdevice_details .canbox .nth0'+i).delay(delay).animate({opacity:"show"},800);
+             delay += 600;
           }
         }    
 
@@ -994,9 +985,9 @@ SCRATCH
     */
 
     $(window).on('load', function() {
-        $('#status').fadeOut(); 
-        $('#preloader').delay(350).fadeOut('slow'); 
-        $('body').delay(350).css({'overflow':'visible'});
+        //$('#status').fadeOut(); 
+        //$('#preloader').delay(350).fadeOut('slow'); 
+        //$('body').delay(350).css({'overflow':'visible'});
         setTimeout(function(){
             S2HIHO.animatePage1();  
             //S2HIHO.animateAppDetails();

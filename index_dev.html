@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>S2:HiHo</title>
+
+<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>-->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
+<link href='css/style.css?t=1' rel='stylesheet' type='text/css'>
+
+<!--
+<script src="https://use.fontawesome.com/cf0da6be55.js"></script>
+-->
+
+</head>
+    
+<body>
+<!-- Preloader-->
+
+
+<div class="wrapper">
+  <div class="main">
+
+    <section class="page2 page-appdevice">
+      <div id="learnmore-hiho" class="row">
+
+
+          <div class="s2hiho-tabs" style="padding:40px;">
+
+              <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#lm01">HiHo</a></li>
+                <li><a data-toggle="tab" href="#lm02">Menu 1</a></li>
+                <li><a data-toggle="tab" href="#lm03">Menu 2</a></li>
+                <li><a data-toggle="tab" href="#lm04">Menu 2</a></li>
+              </ul>
+              <div class="tab-content">
+
+                  <div id="lm01" class="tab-pane fade in active">
+                    <h3>HOME</h3>
+                    <p>Some content.</p>
+                  </div>
+
+                  <div id="lm02" class="tab-pane fade">
+                    <h3>Menu 1</h3>
+                    <p>Some content in menu 1.</p>
+                  </div>
+
+                  <div id="lm03" class="tab-pane fade">
+                    <h3>Menu 2</h3>
+                    <p>Some content in menu 2.</p>
+                  </div>
+
+                  <div id="lm04" class="tab-pane fade">
+                    <h3>Menu 2</h3>
+                    <p>Some content in menu 2.</p>
+                  </div>
+
+                </div>
+                <!--/tab-content-->
+
+            </div>
+            <!--/s2hiho-tabs-->     
+
+      </div>
+      <!--/learnmore-hiho -->
+
+    </section>
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="js/svg.min.js"></script> 
+<script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+
+<script type="text/javascript">  
+    $(document).ready(function(){
+
+
+    });
+
+    var doc = $(document);
+    var colWidth = doc.width() / 2;
+    var colHeight = doc.height();
+    var colHeightHalf = doc.height()/2 ;
+
+    console.log(colWidth+'x'+colHeight);
+
+    var S2HIHO = new function() {
+        var PAGE2 = $('section.page2');
+        var ONEPAGESCROLL = $(".main");
+
+        this.animatePage1 = function() {
+            var draw1 = SVG('introS2').size(colWidth, colHeight);
+            var draw2 = SVG('introHiHo').size(colWidth, colHeight);
+            var s2Logo = $('#introS2 img');
+            var s2Slogan = $('#introS2 h2');
+            var HiHoLogo = $('#introHiHo img');
+            var HiHoSlogan = $('#introHiHo h2');
+            var polygon = draw1.polygon('0 '+colHeight+',100 '+colHeight+', '+colWidth+' 0, 0 0')
+            
+            polygon.fill('#FFB140')
+
+            polygon.animate(1200).plot([ [0,colHeight], [colWidth,colHeight], [colWidth,0], [0,0] ]).afterAll(function() {
+                s2Logo.fadeIn( function(){
+                  var rect = draw2.rect(colWidth, colHeight).x(-colWidth).attr({fill:'#3498db'});
+                    rect.animate(1200).move(0, 0).afterAll(function() {
+                        HiHoLogo.fadeIn( function(){
+                            s2Slogan.fadeIn( function(){
+                                HiHoSlogan.fadeIn( function(){
+                                    //--init onepage
+                                    ONEPAGESCROLL.onepage_scroll({sectionContainer: "section",
+                                      beforeMove: function(index) {
+                                         S2HIHO.OnePageBeforeMove(index);
+                                      },
+                                      afterMove: function(index) {
+                                         S2HIHO.OnePageAfterMove(index);
+                                      }
+                                    });
+                                    PAGE2.show();
+
+                                });
+                            });
+                        });
+                        
+                    });             
+                });
+
+            });
+
+        }
+        this.initAppDetailsPosition = function() {
+           var items = $('.page-appdevice .desc-details').length;
+           $('.page-appdevice .desc-details').each(function(){
+               //var Pos = $(this).data('initial-pos').split(',');
+               var Pos = $(this).data('final-pos').split(',');
+               var rightPos = Pos[0];
+               var topPos = Pos[1];
+               $(this).css('right',rightPos+'px');
+               $(this).css('top',topPos+'px');
+               if(!--items){
+                  //S2HIHO.animateAppDetails();
+               }
+           });
+        }          
+        this.initDetailsPosition = function() {
+           var items = $('.page-appdevice .desc-details').length;
+           $('.page-appdevice .desc-details').each(function(){
+               //var Pos = $(this).data('initial-pos').split(',');
+               var Pos = $(this).data('final-pos').split(',');
+               var rightPos = Pos[0];
+               var topPos = Pos[1];
+               $(this).css('right',rightPos+'px');
+               $(this).css('top',topPos+'px');
+               if(!--items){
+                  //S2HIHO.animateAppDetails();
+               }
+           });
+        }     
+
+
+        this.animateAppDetails = function() {
+          var delay = 0;
+          for (var i = 1; i <= 7; i++) {
+             //$('.ll0'+i+',.lr0'+i).delay(delay).animate({opacity:"show"},1000);
+             //delay += 1000; 
+             $('.appdevice_details .canbox .nth0'+i).delay(delay).animate({opacity:"show"},800);
+             delay += 600;
+          }
+        }    
+
+        this.OnePageBeforeMove = function(index) {
+           //console.log('OnePageBeforeMove: '+index);
+        }        
+        this.OnePageAfterMove = function(index) {
+           console.log('OnePageAfterMove: '+index);
+            switch(index) {
+                case 2:
+                    if( $('.lines.ll01').not(":visible") ){
+                        S2HIHO.animateAppDetails();  
+                    }
+                    break;
+            }
+
+        }        
+        this.resizeLayouts = function() {
+            $('.docHeight').each(function(){
+                $(this).height(colHeight);
+            });    
+            $('.rowspan-50').each(function(){
+                $(this).height(colHeightHalf);
+                console.log('rowspan-50:'+colHeightHalf)
+            });
+        }
+
+    }
+    
+    
+    $('.about-nav a.nav-item').click(function(e){
+        e.preventDefault();
+        var target = $(this).attr('href');
+        $(".about-nav a.nav-item").removeClass('active');
+        $('.about-subpages .row').removeClass('active').hide();
+        $(this).addClass('active');
+        
+        $(target).fadeIn(function(){
+            $(target).addClass('active');
+        });
+    });
+
+    $('a.btnMoveTo').click(function(e){
+        e.preventDefault();
+        var target = $(this).data('goto');
+        $(".main").moveTo(target);
+        
+    });
+    
+    S2HIHO.resizeLayouts();
+
+    /*
+
+    */
+
+    $(window).on('load', function() {
+        //$('#status').fadeOut(); 
+        //$('#preloader').delay(350).fadeOut('slow'); 
+        //$('body').delay(350).css({'overflow':'visible'});
+        setTimeout(function(){
+            //S2HIHO.animatePage1();  
+            //S2HIHO.animateAppDetails();
+        },500);
+        
+    });
+    $(window).on('resize', function() {
+        S2HIHO.resizeLayouts();
+    });  
+
+</script>  
+
+
+</body>
+</html>
+

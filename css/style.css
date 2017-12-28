@@ -124,6 +124,7 @@ h1,h2,h3,h4,h5 {margin:0;}
 .hh-purple {background:#9452b0;}
 .hh-darkamber {background:#f29c3a;}
 .hh-red {background:#CC352E;}
+.hh-lightred {background:#E55A5A;}
 .hh-darkblue {background:#257EAF;}
 
 .white-hr {height:2px; border-bottom: 2px solid #FFF;clear:both;}
@@ -174,13 +175,13 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 .appdevice { width:200px;height: 311px; 
     background: url('../images/app-device.png') no-repeat; background-size: cover;  
-    position: absolute; top:100px; left: 50%; margin-left:-100px; z-index:9; 
+    position: absolute; top:100px; left: 50%; margin-left:-88px; z-index:9; 
 }
 .page-appdevice .logo {position: absolute; top:20px; z-index:99}
 .page-appdevice .logo.s2 {left:20px;}
 .page-appdevice .logo.hiho {right:20px;}
-.page-appdevice .appdevice_details { width:454px;height:300px; position: absolute; top:120px; }
-.page-appdevice .appdevice_details .canbox { width:454px;height:300px; position: relative;}
+.page-appdevice .appdevice_details { width:454px;height:500px; position: absolute; top:120px; }
+.page-appdevice .appdevice_details .canbox { width:454px;height:380px; position: relative;}
 
 .page-appdevice .appdevice_details.s2 {
     /*background: url('../images/appdevice-details-s2_draft-2.png') no-repeat; */
@@ -192,12 +193,12 @@ h1,h2,h3,h4,h5 {margin:0;}
     background-size: cover; left:45px;
 }
 
-.page-appdevice .btnLearMore {position: absolute; bottom:0px; width:250px; height:67px; background-size: cover;}
+.page-appdevice .btnLearMore {position: absolute; bottom:0px; width:160px; height:43px; background-size: cover;}
 .page-appdevice .btnLearMore.s2 {
-    background-image: url('../images/btn-learnmore1.png'); left:0; 
+    background-image: url('../images/btn-learnmore1.png'); right:0; 
 }    
 .page-appdevice .btnLearMore.hiho {
-    background-image: url('../images/btn-learnmore2.png'); right:0; 
+    background-image: url('../images/btn-learnmore2.png'); left:0; 
 }
 
 .page-appdevice .btnCheckVideo {position: absolute; top:500px; width:210px; height:75px; background-size: cover;}
@@ -214,12 +215,12 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page-appdevice .desc-details.hh-purple {}
 .page-appdevice .desc-details.hh-darkamber {}
 
-.appdevice_details.s2 .desc-details.nth01 {right:102px; top:0;}
-.appdevice_details.s2 .desc-details.nth02 {right:123px; top:49px;}
-.appdevice_details.s2 .desc-details.nth03 {right:148px; top:99px;}
-.appdevice_details.s2 .desc-details.nth04 {right:174px; top:150px; height:45px; line-height: 48px; width:250px;} /* digital awareness */
-.appdevice_details.s2 .desc-details.nth05 {right:149px; top:209px; width:215px;}
-.appdevice_details.s2 .desc-details.nth06 {right:124px; top:261px; width:215px;}
+.appdevice_details.s2 .desc-details.nth01 {right:62px; top:5px;}
+.appdevice_details.s2 .desc-details.nth02 {right:90px; top:46px;}
+.appdevice_details.s2 .desc-details.nth03 {right:120px; top:87px; width:270px;}
+.appdevice_details.s2 .desc-details.nth04 {right:120px; top:128px; height:45px; line-height: 48px; width:270px;} /* digital awareness */
+.appdevice_details.s2 .desc-details.nth05 {right:90px; top:174px; width:215px;}
+.appdevice_details.s2 .desc-details.nth06 {right:62px; top:215px; width:215px;}
 
 .page-appdevice .lines {position: absolute; z-index:2; background-size: cover; display: none}
 .appdevice_details.s2 .lines.ll01 {width:105px; height:37px; right:-2px; top:-1px; background-image: url('../images/LL001.png');}
@@ -231,12 +232,12 @@ h1,h2,h3,h4,h5 {margin:0;}
 .appdevice_details.s2 .lines.ll07 {width:120px; height:67px; right:5px; top:210px; background-image: url('../images/LL007.png');}
 
 .appdevice_details.hiho .desc-details {display:none;}
-.appdevice_details.hiho .desc-details.nth01 {left:99px; top:0; width:214px;}
-.appdevice_details.hiho .desc-details.nth02 {left:122px; top:50px; width:215px; }
-.appdevice_details.hiho .desc-details.nth03 {left:144px; top:98px; width:214px; }
-.appdevice_details.hiho .desc-details.nth04 {left:166px; top:150px; height:45px; line-height: 55px; width:252px; }
-.appdevice_details.hiho .desc-details.nth05 {left:143px; top:208px; width:216px; }
-.appdevice_details.hiho .desc-details.nth06 {left:121px; top:259px; width:214px; }
+.appdevice_details.hiho .desc-details.nth01 {left:90px; top:5px; width:214px;}
+.appdevice_details.hiho .desc-details.nth02 {left:110px; top:46px; width:215px; }
+.appdevice_details.hiho .desc-details.nth03 {left:138px; top:87px; width:214px; }
+.appdevice_details.hiho .desc-details.nth04 {left:138px; top:128px; height:45px; line-height: 55px; width:252px; }
+.appdevice_details.hiho .desc-details.nth05 {left:110px; top:174px; width:216px; }
+.appdevice_details.hiho .desc-details.nth06 {left:90px; top:215px; width:214px; }
 
 
 .appdevice_details.hiho .lines.lr01 {width:120px; height:25px; left:0; top:10px; background-image: url('../images/LR001.png');}
@@ -294,7 +295,8 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page-contact .s2-slice02 {background: url('../images/contact-s2-slice02.png') no-repeat; background-size: cover; height:59px; width:230px; right:306px; top:132px;}
 .page-contact .s2-slice03 {background: url('../images/contact-s2-slice03.png') no-repeat; background-size: cover; height:53px; width:202px; right:113px; top:232px;}
 .page-contact .s2-slice04 {background: url('../images/contact-s2-slice04.png') no-repeat; background-size: cover; height:135px; width:70px; right:276px; top:295px;}
-.page-contact .s2-slice05 {background: url('../images/contact-s2-slice05.png') no-repeat; background-size: cover; height:96px; width:380px; right:120px; top:455px;}
+.page-contact .s2-slice05 {right:155px; top:455px;}
+
 
 .page-contact .s2-text01 { height:65px; width:368px; right:130px; top:190px; font-family: 'GothamBold', sans-serif; text-align: left }
 
@@ -304,7 +306,7 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page-contact .hiho-slice04 {background: url('../images/contact-hiho-slice04.png') no-repeat; background-size: cover; height:63px; width:210px; left:282px; top:165px;}
 .page-contact .hiho-slice05 {background: url('../images/contact-hiho-slice05.png') no-repeat; background-size: cover; height:220px; width:124px; left:132px; top:165px;}
 .page-contact .hiho-slice06 {background: url('../images/contact-hiho-slice06.png') no-repeat; background-size: cover; height:110px; width:210px; left:282px; top:320px;}
-.page-contact .hiho-slice07 {background: url('../images/contact-hiho-slice07.png') no-repeat; background-size: cover; height:96px; width:380px; left:120px; top:455px;}
+.page-contact .hiho-slice07 {left:120px; top:455px;}
 
 .page-contact .hiho-text { height:90px; width:210px; left:282px; top:240px; text-align: center }
 .page-contact .hiho-text span {display:block; }
@@ -314,12 +316,21 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 .page-contact .hiho-slogan {font-family: 'GothamThin', sans-serif; font-size: 1.1em; line-height: 20px; height:50px; width:115px; left:280px; top:95px; }  
 
+.page-contact a.btnMoveTo span { display:block; color:#FFF!important; width:320px; 
+  font-family: 'GothamBlack', sans-serif!important; 
+  font-size: 2.5em; padding:10px; border-radius:14px;
+  border: 1px solid #FFF;
+}
+
+
 .page-s2hiho-contact {font-family: 'GothamThin', sans-serif; text-align: left}
 .page-s2hiho-contact .container { position: relative;}
 .page-s2hiho-contact .contactus-header {width:320px; height:55px; background:#228c78; border: 2px solid #FFF; position: absolute; z-index: 99}
 .page-s2hiho-contact .contactus-header h2 {font-family: 'GothamBold', sans-serif; font-size: 2.3em; line-height: 52px; color:#FFF; text-align: center}
 
-.page-s2hiho-contact .form-box {width:1040px; background-color: #FFF; margin:0 auto }
+.page-s2hiho-contact .form-box {
+  /*width:1040px;*/ 
+  background-color: #FFF; margin:0 auto }
 .page-s2hiho-contact .form-box .row {margin:0;}
 .page-s2hiho-contact .form-box .col-right {padding:20px 20px 20px 0;}
 .page-s2hiho-contact .form-box .contact-details {padding:20px;}
@@ -424,10 +435,15 @@ body.page-contact-mobile .w{
 
 
 /* Create Account */
-.page7 .form-box {margin:0 35px; background:#FFF url('../images/beacon_app.png') right bottom no-repeat; background-size: auto 500px }
+.page7 .form-box {margin:0 35px; background:#FFF url('../images/beacon_app.png') right bottom no-repeat; background-size: auto 90% }
 .page7 .form-box .header {background:#e55a5a; }
 .page7 .form-box .header  h2 {padding:15px; font-family: 'GothamBold', sans-serif; font-size: 2.4em; line-height: 52px; color:#FFF; text-align: center; text-transform: uppercase;}
-.page7 .form-box .contact-form {width: 720px; height:490px; padding-top: 30px;}
+.page7 .form-box .contact-form {
+  /*width: 720px; */
+  max-width: 1280px;
+  margin-right:30%;
+  height:520px; padding-top: 30px;
+}
 
 .page7 .form-box .contact-form .icon i {color:#e55a5a; font-size: 2em; margin: 10px 0 0 8px}
 
