@@ -249,6 +249,127 @@ h1,h2,h3,h4,h5 {margin:0;}
 .appdevice_details.hiho .lines.lr07 {width:125px; height:70px; left:0; top:208px; background-image: url('../images/LR007.png');}
 
 
+/********* S2 HIHO LEARN MORE PAGE */
+.s2hiho-tabs {
+   max-width: 1020px; margin: 0 auto;
+}
+
+.s2hiho-tabs .nav-tabs {
+   margin-left: 35px
+}
+.s2hiho-tabs .nav-tabs > li {
+   margin-right: 20px
+}
+
+.s2hiho-tabs .nav-tabs > li > a {
+   padding:6px 15px;
+   font-family: 'GothamBold', sans-serif; border:2px solid #43e8c8!important;  color:#FFF;
+   border-radius: 0; border-bottom: none!important; 
+   /* background: #1abc8d; */
+    background: rgba(26,188,142,1);
+    background: -moz-linear-gradient(left, rgba(26,188,142,1) 0%, rgba(26,188,142,1) 32%, rgba(31,229,157,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(26,188,142,1)), color-stop(32%, rgba(26,188,142,1)), color-stop(100%, rgba(31,229,157,1)));
+    background: -webkit-linear-gradient(left, rgba(26,188,142,1) 0%, rgba(26,188,142,1) 32%, rgba(31,229,157,1) 100%);
+    background: -o-linear-gradient(left, rgba(26,188,142,1) 0%, rgba(26,188,142,1) 32%, rgba(31,229,157,1) 100%);
+    background: -ms-linear-gradient(left, rgba(26,188,142,1) 0%, rgba(26,188,142,1) 32%, rgba(31,229,157,1) 100%);
+    background: linear-gradient(to right, rgba(26,188,142,1) 0%, rgba(26,188,142,1) 32%, rgba(31,229,157,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1abc8e', endColorstr='#1fe59d', GradientType=1 );
+}
+
+.s2hiho-tabs .nav-tabs > li.active > a, .s2hiho-tabs .nav-tabs > li.active > a:hover, .s2hiho-tabs .nav-tabs > li.active > a:focus {
+   outline:none; color:#FFF;
+    /* background: #f04620; */
+    background: rgba(240,70,32,1);
+    background: -moz-linear-gradient(left, rgba(240,70,32,1) 0%, rgba(240,70,32,1) 10%, rgba(255,108,100,1) 51%, rgba(240,70,32,1) 90%, rgba(240,70,32,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,70,32,1)), color-stop(10%, rgba(240,70,32,1)), color-stop(51%, rgba(255,108,100,1)), color-stop(90%, rgba(240,70,32,1)), color-stop(100%, rgba(240,70,32,1)));
+    background: -webkit-linear-gradient(left, rgba(240,70,32,1) 0%, rgba(240,70,32,1) 10%, rgba(255,108,100,1) 51%, rgba(240,70,32,1) 90%, rgba(240,70,32,1) 100%);
+    background: -o-linear-gradient(left, rgba(240,70,32,1) 0%, rgba(240,70,32,1) 10%, rgba(255,108,100,1) 51%, rgba(240,70,32,1) 90%, rgba(240,70,32,1) 100%);
+    background: -ms-linear-gradient(left, rgba(240,70,32,1) 0%, rgba(240,70,32,1) 10%, rgba(255,108,100,1) 51%, rgba(240,70,32,1) 90%, rgba(240,70,32,1) 100%);
+    background: linear-gradient(to right, rgba(240,70,32,1) 0%, rgba(240,70,32,1) 10%, rgba(255,108,100,1) 51%, rgba(240,70,32,1) 90%, rgba(240,70,32,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f04620', endColorstr='#f04620', GradientType=1 );
+
+
+}
+
+.s2hiho-tabs .tab-content .tab-pane {
+
+}
+.s2hiho-tabs .tab-content .mod_content{
+  padding:20px;
+}
+   
+    /* HiHo In A Nutshell */
+#lm01.tab-pane {
+   background:#61c7ff;
+}
+#lm01 h2,
+#lm02 h2 {
+  color:#FFF; font-size: 4.5em;
+  font-family: 'GothamBlack', sans-serif;
+  text-shadow: 3px 3px 0px rgba(85, 85, 85, 1);
+}
+#lm01 .mod_content {
+   min-height: 450px;
+   background: url('../images/lm01_hiho.png') no-repeat center 120px;
+   background-size: auto 238px;
+   position: relative;
+}
+#lm01 .mod_content .circ {
+  height: 120px; width: 120px; 
+  border-radius:50%;
+  background: #FFF; position: absolute;
+}
+
+#lm01 .mod_content .circ.c01 {
+   left:70px; top:85px;
+}
+#lm01 .mod_content .circ.c02 {
+   left:70px; top:285px;
+}
+#lm01 .mod_content .circ.c03 {
+   right:70px; top:85px;
+}
+#lm01 .mod_content .circ.c04 {
+   right:70px; top:285px;
+}
+
+#lm01 .mod_content .lbl {
+  width:130px; height:70px;  
+  font-family: 'GothamBold', sans-serif;
+  color:#e55a5a; font-size: 1em;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+  text-align: left;
+  position: absolute;
+}
+
+#lm01 .mod_content .lbl.l01 {
+  left:212px; top:136px;
+}
+#lm01 .mod_content .lbl.l02 {
+  left:212px; top:300px;
+}
+#lm01 .mod_content .lbl.l03 {
+  right:212px; top:136px; text-align: right;
+}
+#lm01 .mod_content .lbl.l04 {
+  right:212px; top:300px; text-align: right;
+}
+
+#lm01 .mod_content .vert-post {
+    background:#43e8c8; width:12px;
+    height: 110px; position: absolute; bottom: 0;
+    left:50%; margin-left: -20px;
+}
+
+#lm02.tab-pane {
+   background:#43e8c8;
+}
+#lm04.tab-pane {
+   background:#3498db;
+}
+
+/******* /END S2 HIHO LEAR MORE PAGE */
+
 /* PAGE 3 */
 .page3  {font-family: 'GothamMedium', sans-serif;}
 .page3 .about-nav,
