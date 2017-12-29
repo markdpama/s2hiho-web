@@ -364,33 +364,89 @@ h1,h2,h3,h4,h5 {margin:0;}
    background:#43e8c8;
 }
 #lm02 .mod_content {
-  padding:20px;
+  padding-bottom:30px; position: relative;
+}
+
+#lm02 .mod_content .step-con {   
+  width:150px; 
+  margin:0 auto;
+}
+
+.steps-items {
+   margin:0 82px 0;
+}
+
+.title-process {
+   color:#FFF;
+   border-bottom: 2px solid #FFF;
+   padding:0;
+   width:106%;
+   font-family: 'ChampagneLimousinesItalic', sans-serif; letter-spacing: 1px;
+   margin: 0 0 12px -3%;
+}
+
+.step-con .step-label {   
+  background:#ff756e; color:#FFF; font-family: 'GothamMedium', sans-serif; font-size: 10px; padding:2px;
+  margin:0 10px; padding: 4px 0;
+  border-radius: 0 0 4px 4px;
 }
 
 #lm02 .mod_content .step-box {
   background:#FFF;
   border-radius: 14px;
   padding:10px;
-  width:140px;
+  width:150px;
 }
 
 #lm02 .mod_content .step-box .inner{
   background:#515151;
-  width:120px;
+  width:130px;
   height:130px;
   border-radius: 6px;
   position: relative;
 }
 
-.step-box .badge-num {
+.step-box .badge-num, .badge-num-five {
    background:#ff756e;
    color:#FFF; font-family: 'GothamBlack', sans-serif; padding:4px;
    height:52px; width:52px; font-size: 2.4em; border-radius: 50%;
-   position: absolute; left: 32px; top: -45px;
+   position: absolute; left: 37px; top: -45px;
 }
-.step-box .badge-num .white-line{
+.step-box .badge-num .white-line, .badge-num-five .white-line{
   height:44px; width:44px; border-radius: 50%; border:1px solid #FFF;
 }
+
+.badge-num-five {
+   position: static; float:left; margin:0;
+}
+.arrow-right {
+  width:80px; float:left;
+}
+.arrow-right i {
+  font-size: 4em; color:#e74c3c;
+}
+
+.step-five {
+  margin-left:150px;
+}
+
+.step-five button {
+  font-family: 'GothamMediumItalic', sans-serif; color:#FFF; background:#61c7ff; font-size:1.2em;
+  padding: 4px 20px 2px;
+  margin-top:8px;
+  box-shadow: -3px 3px 0px rgba(52, 152, 220, 1);
+  float:left;
+}
+.step-five button:hover {
+   color:#FFF;
+} 
+
+#lm02 .mod_content .vert-post {
+    background:#FFF; width:12px;
+    height: 20px; position: absolute; bottom: 0;
+    left:190px;
+}
+
 
 #lm04.tab-pane {
    background:#3498db;
