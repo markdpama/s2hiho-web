@@ -456,7 +456,7 @@ h1,h2,h3,h4,h5 {margin:0;}
   width:230px;
   height:240px;
   background:#FFF;
-  margin:100px 50px 50px;
+  margin:100px 50px 10px;
   position: relative;
 
 }
@@ -509,7 +509,16 @@ h1,h2,h3,h4,h5 {margin:0;}
   color:#ffb140; 
 }
 
-
+#lm03 .btn {
+   color:#FFF; font-family: 'GothamBlack', sans-serif;
+   border-radius:20px; text-transform: uppercase; font-size:1.2em; padding:4px 20px 2px; margin-bottom: -22px; margin-left:60px;
+}
+#lm03 .btn.turquoise {
+  background:#1abc9c; 
+}
+#lm03 .btn.orange {
+  background:#f49d2a; 
+}
 
 
 /* Contact Us Team */
