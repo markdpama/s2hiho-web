@@ -447,7 +447,72 @@ h1,h2,h3,h4,h5 {margin:0;}
     left:190px;
 }
 
+/* HiHo Subscription */
+#lm03.tab-pane {
+   background:#61c7ff; color:;
+}
 
+#lm03 .related-pix{
+  width:230px;
+  height:240px;
+  background:#FFF;
+  margin:100px 50px 50px;
+  position: relative;
+
+}
+
+.related-pix .package-box {
+   width:260px; text-align: center;
+   position: absolute; top:-30px; right:-100px;
+}
+
+.related-pix .pack-details {
+  width:200px;
+  height:195px;
+  background:#f4f4f4; border-radius: 4px;
+  box-shadow: 3px 3px 0px rgba(85, 85, 85, 1);
+  padding:12px; margin:0 auto;
+}
+.related-pix .pack-details ul {
+  margin:0; padding:0;
+}
+
+.related-pix .pack-details li {
+  color:#515151; display:block; font-family: 'GothamMediumItalic', sans-serif;
+  margin-bottom: 5px; width:100%; padding:2px 12px; text-align: right;
+}
+.package-name h2 {
+  font-size: 3em; font-family: 'GothamBoldItalic', sans-serif;
+  margin-top:-16px;
+  text-shadow: 3px 3px 0 rgba(81, 81, 81, 1);
+}
+
+.related-pix .package-price {
+    color:#FFF;font-family: 'GothamBlack', sans-serif;
+   width:160px; margin:0 auto; padding:4px 8px 2px; text-shadow: -2px 2px 0 rgba(81, 81, 81, 1);
+}
+.package-price .price{
+   font-size:1.4em;
+}
+
+.turquoise .pack-details li, .turquoise .package-price {
+  background: #43e8c8;
+}
+.turquoise .package-name h2 {
+  color:#43e8c8; 
+}
+
+.orange .pack-details li, .orange .package-price {
+  background:#ffb140; 
+}
+.orange .package-name h2 {
+  color:#ffb140; 
+}
+
+
+
+
+/* Contact Us Team */
 #lm04.tab-pane {
    background:#3498db;
 }
