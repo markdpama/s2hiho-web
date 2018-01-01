@@ -177,6 +177,9 @@ h1,h2,h3,h4,h5 {margin:0;}
     background: url('../images/app-device.png') no-repeat; background-size: cover;  
     position: absolute; top:100px; left: 50%; margin-left:-88px; z-index:9; 
 }
+.page-appdevice {
+  background:#FFF;
+}
 .page-appdevice .logo {position: absolute; top:20px; z-index:99}
 .page-appdevice .logo.s2 {left:20px;}
 .page-appdevice .logo.hiho {right:20px;}
@@ -536,9 +539,14 @@ h1,h2,h3,h4,h5 {margin:0;}
 }
 
 #lm04 .hiho-slogan {font-family: 'GothamThin', sans-serif; font-size: 12px; line-height: 20px; height:50px; width:115px; margin:0 auto; color:#FFF;}  
+.page6 .getstarted-header h2,
+.page6 .getenabled-header h2,
+#lm04 .getstarted-header h2,
 #lm04 .getstarted-header h2,
 #lm04 .getenabled-header h2 {font-family: 'GothamBold', sans-serif; font-size: 3.4em; line-height: 52px; color:#FFF;}
-#lm04 .getenabled-header h2 {font-size: 2.5em; margin:0; text-align: left; padding:0; line-height:28px;}
+
+#lm04 .getenabled-header h2,
+.page6 .getenabled-header h2 {font-size: 2.5em; margin:0; text-align: left; padding:0; line-height:28px;}
 
 #lm04 .form-box {
    margin:0 120px;
@@ -557,16 +565,16 @@ h1,h2,h3,h4,h5 {margin:0;}
    background: transparent; border:none; padding:3px 5px; color:#1F6E9B;
 }
 
-.form-v2 .notif-badge { background:#e55a5a; color:#FFF; font-family: 'GothamMedium', sans-serif; font-size:12px; margin: 10px 0 15px; padding:2px;}
+.form-v2 .notif-badge { background:#e55a5a; color:#FFF; font-family: 'GothamMedium', sans-serif; font-size:12px; margin: 10px 0 15px; padding:2px; text-align: center;}
 .form-v2 .form-field.message-row {background:none;border:none; margin-left: 80px}
 .form-v2 .form-field.message-row label {float:left;}
 .form-v2 .form-field.message-row textarea {float:left; margin:0; resize: none; padding:3px 5px; color:#1F6E9B; width: 340px; height:90px; background:#61c7ff; outline: none!important; border:1px solid #FFF;}
 .form-v2 .form-field.message-row textarea:focus,
 .form-v2 .form-field.message-row textarea:active {border:none;}
-.form-v2 .buttton-action {margin-top:10px; font-family: 'GothamMediumItalic', sans-serif; margin-left:75px;}
-.form-v2 .buttton-action span {display:inline-block;padding:0 12px; color:#FFF;}
-.form-v2 .buttton-action button { color:#FFF; padding:5px 15px 3px; font-size:12px; border:none;}
-.form-v2 .buttton-action button.btn-red {
+.form-v2 .button-action {margin-top:10px; font-family: 'GothamMediumItalic', sans-serif; margin-left:75px;}
+.form-v2 .button-action span {display:inline-block;padding:0 12px; color:#FFF;}
+.form-v2 .button-action button { color:#FFF; padding:5px 15px 3px; font-size:12px; border:none;}
+.form-v2 .button-action button.btn-red {
   background: rgba(255,136,103,1);
   background: -moz-linear-gradient(left, rgba(255,136,103,1) 0%, rgba(212,74,10,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,136,103,1)), color-stop(100%, rgba(212,74,10,1)));
@@ -576,7 +584,7 @@ h1,h2,h3,h4,h5 {margin:0;}
   background: linear-gradient(to right, rgba(255,136,103,1) 0%, rgba(212,74,10,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8867', endColorstr='#d44a0a', GradientType=1 );
 }
-.form-v2 .buttton-action button.btn-green {
+.form-v2 .button-action button.btn-green {
   background: rgba(2,147,70,1);
   background: -moz-linear-gradient(left, rgba(2,147,70,1) 0%, rgba(56,180,74,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(2,147,70,1)), color-stop(100%, rgba(56,180,74,1)));
@@ -587,6 +595,17 @@ h1,h2,h3,h4,h5 {margin:0;}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#029346', endColorstr='#38b44a', GradientType=1 );
 
 }
+
+a.btnGenericBack {
+  display:inline-block;
+  height: 80px;
+  width: 170px;
+  background: transparent url('../images/btn_form_back.png') no-repeat;
+  background-size: auto 80px; 
+  position: absolute;
+  bottom:25px; left:25px;
+}
+a.btnGenericBack:hover {text-decoration: none}
 
 /******* /END S2 HIHO LEAR MORE PAGE */
 
@@ -671,7 +690,9 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 .page-s2hiho-contact .form-box {
   /*width:1040px;*/ 
-  background-color: #FFF; margin:0 auto }
+  /*background-color: #FFF; */
+  margin:0 auto; 
+}
 .page-s2hiho-contact .form-box .row {margin:0;}
 .page-s2hiho-contact .form-box .col-right {padding:20px 20px 20px 0;}
 .page-s2hiho-contact .form-box .contact-details {padding:20px;}
@@ -729,10 +750,35 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page6 .slice04 {height:95px; width:70px; border-top:1.5px solid #FFF; border-right:1.5px solid #FFF; left:724px; top:65px;}
 
 
-.page6 .form-box {margin:135px auto 0; }
+.page6 .form-box {margin:135px auto 0; max-width: 840px }
 .page6 .form-box .contact-details .map-image img {border-color:#e55a5a;}
 .page6 .form-box .contact-form .btnQuoteApp {background:#e55a5a;}
 .page6 .form-box .contact-form{background:#3498db;}
+
+.page6 .getstarted-header h2 {
+  text-align: center;
+  font-size: 5em;
+  margin-bottom: 20px;
+}
+
+.page6 .form-v2 .button-action {
+   margin-left: 235px; 
+}
+
+#create-account-v2 {
+   max-width: 1024px;
+   margin:0 auto;
+}
+
+#create-account-v2 .form-box  {
+  margin:0 55px;
+}
+.innovate-header {margin-bottom: 35px}
+.innovate-header h2 {font-family: 'GothamBold', sans-serif; font-size: 3.4em; line-height: 52px; color:#FFF; text-align: center}
+
+#create-account-v2 .form-v2 .button-action button {
+   font-size: 1.2em; padding:12px 20px; border-radius: 20px
+}
 
 
 /* S2 Contact Form - MOBILE */
