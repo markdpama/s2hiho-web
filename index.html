@@ -19,7 +19,7 @@
 <body>
 <!-- Preloader-->
 
-<div id="preloader" style="display:none">
+<div id="preloader">
   <div id="status">
       <svg width="80px"  height="80px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ripple">
           <circle cx="50" cy="50" r="14.0334" fill="none" stroke="#c0f6d2" stroke-width="6">
@@ -922,14 +922,13 @@ SCRATCH
     S2HIHO.resizeLayouts();
 
     $(window).on('load', function() {
-        $('#status').fadeOut(); 
-        $('#preloader').delay(350).fadeOut('slow'); 
-        $('body').delay(350).css({'overflow':'visible'});
         setTimeout(function(){
+          $('#status').fadeOut(); 
+          $('#preloader').delay(350).fadeOut('fast'); 
+          $('body').delay(350).css({'overflow':'visible'});
             S2HIHO.animatePage1();  
             //S2HIHO.animateAppDetails();
-        },500);
-        
+        },1200);
     });
     $(window).on('resize', function() {
         S2HIHO.resizeLayouts();
