@@ -159,6 +159,17 @@ h1,h2,h3,h4,h5 {margin:0;}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36cae0', endColorstr='#257fb0', GradientType=1 );
 }
 
+.hh-torquise-linear {
+  background: rgba(77,202,219,1);
+  background: -moz-linear-gradient(left, rgba(77,202,219,1) 0%, rgba(77,202,219,1) 30%, rgba(161,228,219,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(77,202,219,1)), color-stop(30%, rgba(77,202,219,1)), color-stop(100%, rgba(161,228,219,1)));
+  background: -webkit-linear-gradient(left, rgba(77,202,219,1) 0%, rgba(77,202,219,1) 30%, rgba(161,228,219,1) 100%);
+  background: -o-linear-gradient(left, rgba(77,202,219,1) 0%, rgba(77,202,219,1) 30%, rgba(161,228,219,1) 100%);
+  background: -ms-linear-gradient(left, rgba(77,202,219,1) 0%, rgba(77,202,219,1) 30%, rgba(161,228,219,1) 100%);
+  background: linear-gradient(to right, rgba(77,202,219,1) 0%, rgba(77,202,219,1) 30%, rgba(161,228,219,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dcadb', endColorstr='#a1e4db', GradientType=1 );
+}
+
 #introS2 {float:right;}
 #introHiHo {float:left;}
 .svgcanvas {position: relative;}
@@ -573,8 +584,8 @@ h1,h2,h3,h4,h5 {margin:0;}
 .form-v2 .form-field.message-row textarea:active {border:none;}
 .form-v2 .button-action {margin-top:10px; font-family: 'GothamMediumItalic', sans-serif; margin-left:75px;}
 .form-v2 .button-action span {display:inline-block;padding:0 12px; color:#FFF;}
-.form-v2 .button-action button { color:#FFF; padding:5px 15px 3px; font-size:12px; border:none;}
-.form-v2 .button-action button.btn-red {
+.form-v2 .button-action .btn { color:#FFF; padding:5px 15px 3px; font-size:12px; border:none;}
+.form-v2 .button-action .btn-red {
   background: rgba(255,136,103,1);
   background: -moz-linear-gradient(left, rgba(255,136,103,1) 0%, rgba(212,74,10,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,136,103,1)), color-stop(100%, rgba(212,74,10,1)));
@@ -584,7 +595,7 @@ h1,h2,h3,h4,h5 {margin:0;}
   background: linear-gradient(to right, rgba(255,136,103,1) 0%, rgba(212,74,10,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8867', endColorstr='#d44a0a', GradientType=1 );
 }
-.form-v2 .button-action button.btn-green {
+.form-v2 .button-action .btn-green {
   background: rgba(2,147,70,1);
   background: -moz-linear-gradient(left, rgba(2,147,70,1) 0%, rgba(56,180,74,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(2,147,70,1)), color-stop(100%, rgba(56,180,74,1)));
@@ -766,20 +777,33 @@ a.btnGenericBack:hover {text-decoration: none}
 }
 
 #create-account-v2 {
-   max-width: 1024px;
-   margin:0 auto;
+   max-width: 940px;
+   margin:50px auto 0;
 }
 
 #create-account-v2 .form-box  {
   margin:0 55px;
 }
 .innovate-header {margin-bottom: 35px}
-.innovate-header h2 {font-family: 'GothamBold', sans-serif; font-size: 3.4em; line-height: 52px; color:#FFF; text-align: center}
+.innovate-header h2 {font-family: 'GothamBold', sans-serif; font-size: 4em; line-height: 52px; color:#FFF; text-align: center}
 
 #create-account-v2 .form-v2 .button-action button {
    font-size: 1.2em; padding:12px 20px; border-radius: 20px
 }
 
+.hiho-slogan-logo {
+   width:110px;
+   height:90px;
+   position: absolute; right:15px; top:15px;
+   text-align: center;
+}
+.hiho-slogan-logo .hiho-tagline {font-family: 'GothamThin', sans-serif; 
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFF;
+    margin-top: 5px;
+}
+}  
 
 /* S2 Contact Form - MOBILE */
 body.page-contact-mobile {
@@ -822,7 +846,9 @@ body.page-contact-mobile .w{
 
 
 /* Create Account */
-.page7 .form-box {margin:0 35px; background:#FFF url('../images/beacon_app.png') right bottom no-repeat; background-size: auto 90% }
+.page7 .form-box {margin:0 35px; 
+  /*background:#FFF url('../images/beacon_app.png') right bottom no-repeat; background-size: auto 90%*/
+ }
 .page7 .form-box .header {background:#e55a5a; }
 .page7 .form-box .header  h2 {padding:15px; font-family: 'GothamBold', sans-serif; font-size: 2.4em; line-height: 52px; color:#FFF; text-align: center; text-transform: uppercase;}
 .page7 .form-box .contact-form {
