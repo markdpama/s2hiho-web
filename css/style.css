@@ -568,14 +568,14 @@ h1,h2,h3,h4,h5 {margin:0;}
 }
 
 #lm04 .hiho-slogan {font-family: 'GothamThin', sans-serif; font-size: 13px; line-height: 20px; height:50px; width:115px; margin:0 auto; color:#FFF;}  
-.page6 .getstarted-header h2,
-.page6 .getenabled-header h2,
+.page-s2hiho-contact .getstarted-header h2,
+.page-s2hiho-contact .getenabled-header h2,
 #lm04 .getstarted-header h2,
 #lm04 .getstarted-header h2,
 #lm04 .getenabled-header h2 {font-family: 'GothamBold', sans-serif; font-size: 3.4em; line-height: 52px; color:#FFF;}
 
 #lm04 .getenabled-header h2,
-.page6 .getenabled-header h2 {font-size: 2.5em; margin:0; text-align: left; padding:0; line-height:28px;}
+.page-s2hiho-contact .getenabled-header h2 {font-size: 2.5em; margin:0; text-align: left; padding:0; line-height:28px;}
 
 #lm04 .form-box {
    margin:0 120px;
@@ -765,10 +765,13 @@ a.btnGenericBack:hover {text-decoration: none}
 .page5 .slice03 img {margin-bottom: 10px}
 .page5 .slice04 {height:58px; width:42px; left:858px; top:65px; background: url('../images/contactform-s2-slice04.png') no-repeat; background-size: cover;}
 
-.page5 .form-box {margin:125px auto 0; }
-.page5 .form-box .contact-form{background:#fab26f;}
-.page5 .form-box .contact-details .map-image img {border-color:#9b59b6;}
-.page5 .form-box .contact-form .btnQuoteApp {background:#9b59b6;}
+.page5 .form-box {margin:135px auto 0; max-width: 840px }
+.page5 .form-v2 .form-field{
+   background: #fab26f; 
+}
+.page5 .form-v2 .form-field.message-row textarea {
+  background: #fab26f; 
+}
 
 /* HiHo Contact Form */
 .page6 .contactus-header {top:40px; left:405px; }
@@ -784,13 +787,16 @@ a.btnGenericBack:hover {text-decoration: none}
 .page6 .form-box .contact-form .btnQuoteApp {background:#e55a5a;}
 .page6 .form-box .contact-form{background:#3498db;}
 
-.page6 .getstarted-header h2 {
+.page-s2hiho-contact .getstarted-header h2 {
   text-align: center;
   font-size: 5em;
   margin-bottom: 20px;
 }
+.page5 .getstarted-header h2 {
+   text-align: left
+}
 
-.page6 .form-v2 .button-action {
+.page-s2hiho-contact .form-v2 .button-action {
    margin-left: 235px; 
 }
 
