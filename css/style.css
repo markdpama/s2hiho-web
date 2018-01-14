@@ -264,6 +264,119 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 
 /********* S2 HIHO LEARN MORE PAGE **********/
+
+/* Our Solution */
+.our-solution-con {
+
+}
+.our-solution-con .header {
+   background: #ffb140; color:#FFF;
+}
+.our-solution-con .header h2{
+   background: #ffb140; font-family: 'GothamBlack', sans-serif; font-size: 3.5em; font-size: bold;
+   padding:25px 0 20px;
+}
+.our-solution-con .content {
+   background: #1abc9c; padding:8px 22px
+}
+.our-solution-con .content .inner{
+   background: #43e8c8; 
+   border-radius: 8px; padding:20px;
+}
+.our-solution-con .page {
+   max-width: 1024px; margin:0 auto; background-size: 1024px auto; 
+   position: relative; 
+   text-align: left;
+}
+
+.our-solution-con #page1{
+  background-image: url('../images/solution-full-page1-resized.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height:460px;
+}
+
+.our-solution-con .page-title {
+   margin:0 auto; width:680px; border-bottom:1px solid #1aba9a;
+   padding-bottom:8px;
+}
+.our-solution-con .page-title h3{
+  color:#FFF; font-family: 'GothamBlackItalic', sans-serif;
+  background:#9b59b6; padding:12px; text-align: center; border-radius:8px; font-size: 1.2em
+}
+
+#page1 .text01 {
+  height:55px; width:490px; left:200px; bottom:318px;
+  color:#f69427; font-family: 'GothamMedium', sans-serif;
+  font-size: 1.3em;
+  text-align: left;
+  line-height: 22px;
+}
+#page1 .text01 span,
+#page1 .text02 span {
+  font-family: 'GothamBoldItalic', sans-serif;
+}
+#page1 .text02 {
+  height:68px; width:480px; left:200px; bottom:228px; color:#FFF;
+  font-family: 'GothamLight', sans-serif; font-size:11px;
+}
+#page1 .text03 {
+  height:120px; width:275px; left:728px; bottom:235px; color:#FFF;
+  font-family: 'GothamLight', sans-serif; font-size:11px; line-height: 14px
+}
+#page1 .text03 span {
+  font-family: 'GothamMediumItalic', sans-serif;
+}
+
+#page1 .text04,
+#page1 .text05,
+#page1 .text06 {
+  font-family: 'GothamBlackItalic', sans-serif; color:#FFF;
+   letter-spacing: -1px
+}
+
+#page1 .text04{
+  height:52px; width:208px; left:175px; bottom:145px; font-size: 2.2em; font-weight: bold;
+}
+#page1 .text05{
+  height:28px; width:130px; left:406px; bottom:152px; font-size: 1.4em;
+  text-align: center
+}
+#page1 .text06{
+  height:28px; width:130px; left:710px; bottom:175px; font-size: 1.4em;
+  text-align: center
+} 
+#page1 .text07{
+  height:50px; width:188px; left:176px; bottom:90px; color:#FFF; text-align: center; 
+  line-height: 15px;
+  font-size: 12px;
+}
+#page1 .text07 span {
+  font-family: 'ChampagneLimousinesBoldItalic', sans-serif;
+}
+#page1 .text08{
+  font-family: 'GothamLight', sans-serif; font-style: italic;
+  height:48px; width:140px; left:418px; bottom:96px; color:#FFF; text-align: center; 
+  line-height: 12px; 
+  font-size: 10px;
+  text-align: left
+}
+#page1 .text09{
+  font-family: 'GothamLight', sans-serif; font-style: italic;
+  height:94px; width:115px; left:720px; bottom:70px; color:#FFF; text-align: center; 
+  line-height: 12px; 
+  font-size: 10px;
+  text-align: left
+}
+#page1 .text09 span {
+  font-family: 'GothamBold', sans-serif;
+}
+
+#page1 .pos-absolute {
+   /* border:1px solid green; */
+}
+
+
 .s2hiho-tabs {
    max-width: 1020px; margin: 0 auto;
 }
