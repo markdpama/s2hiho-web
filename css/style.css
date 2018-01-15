@@ -305,6 +305,18 @@ h1,h2,h3,h4,h5 {margin:0;}
   background:#9b59b6; padding:12px; text-align: center; border-radius:8px; font-size: 1.2em
 }
 
+.our-solution-con .btn {
+   background: #9b59b6; color:#FFF; font-family: 'GothamBlackItalic', sans-serif; font-size: 1.3em; font-size: bold;
+   border-radius: 0; padding:5px 22px 2px; 
+}
+.our-solution-con .btnLearnMore,
+.our-solution-con .btnHome{
+  left:420px; bottom:-2px;
+}
+.our-solution-con .btnBack{
+  left:280px; bottom:-2px;
+}
+
 #page1 .text01 {
   height:55px; width:490px; left:200px; bottom:318px;
   color:#f69427; font-family: 'GothamMedium', sans-serif;
@@ -374,6 +386,82 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 #page1 .pos-absolute {
    /* border:1px solid green; */
+}
+
+/* page 2*/
+.our-solution-con #page2{
+  background-image: url('../images/solution-full-page2-resized.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height:460px;
+}
+
+#page2 .text01 {
+  height: 55px; width: 490px;
+  left: 225px; bottom: 305px;
+  color: #f69427; font-family: 'GothamMedium', sans-serif;
+  font-size: 1.1em; text-align: left; line-height: 22px;
+}
+
+#page2 .text01 span,
+#page2 .text02 span,
+#page2 .text09 span {
+  font-family: 'GothamBoldItalic', sans-serif;
+}
+#page2 .text02 {
+  height:70px; width:285px; left:722px; bottom:288px; color:#FFF;
+  font-family: 'GothamLight', sans-serif; font-size:11px;
+}
+#page2 .text03 {
+  height:57px; width:445px; left:240px; bottom:228px; color:#FFF;
+  font-family: 'GothamLight', sans-serif; font-size:11px;
+}
+
+#page2 .text04,
+#page2 .text05, 
+#page2 .text06, 
+#page2 .text07, 
+#page2 .text08,
+#page2 .text09,
+#page2 .text11 {
+  color:#FFF; font-family: 'GothamLight', sans-serif; font-size:11px;
+}
+#page2 .text04 {
+  height:33px; width:314px; left:712px; bottom:222px; 
+}
+#page2 .text05 {
+  height:33px; width:330px; left:450px; bottom:175px; 
+}
+#page2 .text06 {
+   height:33px; width:330px; left:638px; bottom:132px; 
+}
+#page2 .text07 {
+   height:33px; width:330px; left:455px; bottom:85px; 
+}
+#page2 .text08{
+   height:33px; width:330px; left:562px; bottom:55px; 
+}
+#page2 .text09{
+   height:33px; width:325px; left:638px; bottom:22px; 
+}
+#page2 .text10{
+  height:52px; width:208px; font-size: 2.2em; font-weight: bold;
+  left: 215px; bottom: 150px;
+}
+#page2 .text10 {
+  font-family: 'GothamBlackItalic', sans-serif; color:#FFF;
+   letter-spacing: -1px
+}
+
+#page2 .text11{
+  height:50px; width:180px; left:220px; bottom:100px; color:#FFF;
+  line-height: 15px;
+  font-size: 12px; text-align: left;
+}
+
+.our-solution-con #page2 .btn {
+  padding-left:45px;
+  padding-right:45px;
 }
 
 

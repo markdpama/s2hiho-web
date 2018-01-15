@@ -290,6 +290,8 @@
                     <div class="content">
                       <div class="inner">
                           <div id="page1" class="page">
+                              <button class="btn btnLearnMore pos-absolute">LEARN MORE</button>
+                              <button class="btn btnBack pos-absolute" style="display:none">&lt; BACK</button>
                               <div class="page-title">
                                   <h3>FROM A SIMPLE E-FORM TO A FULL BLOWN MARKETING &amp; SALES SUITE</h3>
                               </div>
@@ -321,13 +323,57 @@
                                 was interpreted and used to enable their users.
                               </div> 
                           </div>
-                          <!--/page1 -->
+                          <!--/#page1 -->
+
+                          <div id="page2" class="page" style="display:none">
+                              <button class="btn btnHome pos-absolute">HOME</button>
+                              <div class="page-title">
+                                  <h3>DIGITAL AWARENESS IS OUR MISSION. OUR CLIENTS' LOVE FOR<br /> 
+                                  TECHNOLOGY IS OUR GOAL</h3>
+                              </div>
+                              <div class="text01 pos-absolute">
+                                The love for technology and how it can enable and improve one's business starts with <span>digital awareness.</span>
+                              </div> 
+                              <div class="text02 pos-absolute">
+                                With this client the challenge was to nurture what was initially a passion &amp; ideal, into an actual platform that focuses on delivering a marketing suite to its users.
+                              </div>
+                              <div class="text03 pos-absolute">
+                                This story shows our passion and commitment to enabling technology as this platform continued to evolve in concept over time and required a provider that was flexible and committed to continuous change.
+                              </div>
+                              <div class="text04 pos-absolute">
+                                 From day 1, s simple marketing evaluator tool. To day 365, a complete marketing suite.
+                              </div>
+                              <div class="text05 pos-absolute">
+                                 Want to know what is best practice when it comes to delivering online content to your target audience?
+                              </div>
+                              <div class="text06 pos-absolute">
+                                 Want to know what is best practice when it comes to delivering online content to your target audience?
+                              </div>
+                              <div class="text07 pos-absolute">
+                                 Want to find out how you fare against their competitors?
+                              </div>
+                              <div class="text08 pos-absolute">
+                                 Want to know how truly engaged your target viewers are?
+                              </div>
+                              <div class="text09 pos-absolute">
+                                 This is the evolution of the platform and the results of a <span>true digital partnership.</span>
+                              </div>
+                              <div class="text10 pos-absolute">
+                                 VISION
+                              </div>
+                              <div class="text11 pos-absolute">
+                                 To start and never stop inspiring the love and marriage of technology
+                              </div>
+
+                          </div> 
+                          <!--/#page2 -->
+
+
                       </div>
+                      <!--/.inner -->
                     </div>
-                    <!--/content -->
+                    <!--/.content -->
               </div>
-
-
               <a style="display:none" href="#learnmore-s2" class="btnLM_Back btnGenericBack"></a>
           </div>
 
@@ -536,6 +582,25 @@
             $(target).addClass('active');
         });
     });
+   
+    $('.our-solution-con #page1 .btnLearnMore').click(function(e){
+        $('.our-solution-con #page1').hide();
+        $('.our-solution-con #page2').fadeIn();
+    });  
+
+    $('.our-solution-con #page1 .btnBack').click(function(e){
+        $('#learnmore-s2').hide();
+        $("#app-device-box").fadeIn();
+    });   
+
+    $('.our-solution-con #page2 .btn').click(function(e){
+        $('.our-solution-con #page2').hide();
+        $('.our-solution-con #page1').fadeIn();
+    });
+
+
+
+    
 
     $('a.btnMoveTo').click(function(e){
         e.preventDefault();
