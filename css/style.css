@@ -804,6 +804,10 @@ h1,h2,h3,h4,h5 {margin:0;}
 .form-v2 .button-action {margin-top:10px; font-family: 'GothamMediumItalic', sans-serif; margin-left:75px;}
 .form-v2 .button-action span {display:inline-block;padding:0 12px; color:#FFF;}
 .form-v2 .button-action .btn { color:#FFF; padding:5px 15px 3px; font-size:12px; border:none; background:#38c162;}
+.form-v2 .button-action .btn.btn-white-outlined {
+   background-color: transparent;
+   border:3px solid #FFF;
+}
 /*
 .form-v2 .button-action .btn-red {
   background: rgba(255,136,103,1);
@@ -1000,6 +1004,9 @@ a.btnGenericBack:hover {text-decoration: none}
 .page-s2hiho-contact .form-v2 .button-action {
    margin-left: 235px; 
 }
+.page-s2hiho-contact .form-v2.hiho-create-account .button-action {
+   margin-left: 0; 
+}
 
 #create-account-v2 {
    max-width: 940px;
@@ -1014,6 +1021,9 @@ a.btnGenericBack:hover {text-decoration: none}
 
 #create-account-v2 .form-v2 .button-action button {
    font-size: 1.2em; padding:12px 20px; border-radius: 20px
+}
+#create-account-v2 .form-v2 .button-action button.btn-white-outlined {
+   padding:8px 20px; 
 }
 
 .hiho-slogan-logo {
