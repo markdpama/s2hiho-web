@@ -832,10 +832,10 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 a.btnGenericBack {
   display:inline-block;
-  height: 80px;
-  width: 170px;
+  height: 45px;
+  width: 120px;
   background: transparent url('../images/btn_form_back.png') no-repeat;
-  background-size: auto 80px; 
+  background-size: auto 45px; 
   position: absolute;
   bottom:25px; left:25px;
 }
@@ -910,7 +910,8 @@ a.btnGenericBack:hover {text-decoration: none}
 
 .page-contact .hiho-slogan {font-family: 'GothamThin', sans-serif; font-size: 1.1em; line-height: 20px; height:50px; width:115px; left:280px; top:95px; }  
 
-.page-contact a.btnMoveTo span { display:block; color:#FFF!important; width:320px; 
+.page-contact a.btnMoveTo span,
+.page-contact a.openContactForm span { display:block; color:#FFF!important; width:320px; 
   font-family: 'GothamBlack', sans-serif!important; 
   font-size: 2.5em; padding:10px; border-radius:14px;
   border: 1px solid #FFF;
