@@ -796,7 +796,7 @@ h1,h2,h3,h4,h5 {margin:0;}
 }
 
 .form-v2 .notif-badge { background:#228c78; border:1px solid #FFF; color:#FFF; font-family: 'GothamMedium', sans-serif; font-size:12px; margin: 10px 0 15px; padding:2px; text-align: center;}
-.form-v2 .form-field.message-row {background:none;border:none; margin-left: 80px}
+.form-v2 .form-field.message-row {background:none;border:none;}
 .form-v2 .form-field.message-row label {float:left;}
 .form-v2 .form-field.message-row textarea {float:left; margin:0; resize: none; padding:3px 5px; color:#1F6E9B; width: 340px; height:90px; background:#61c7ff; outline: none!important; border:1px solid #FFF;}
 .form-v2 .form-field.message-row textarea:focus,

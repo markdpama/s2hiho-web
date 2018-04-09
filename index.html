@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
+<meta name="csrf-token" content="">
 <title>S2:HiHo</title>
 
 <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>-->
@@ -644,25 +645,34 @@
                                         
                                         <div class="form-box">
                                           <div class="getstarted-header"><h2>GET STARTED</h2></div> 
-                                          <form class="form-v2">
+                                          <form class="form-v2" action="api/v1/contact/save" id="contactform-hiho">
                                             <div class="row">
                                                 <div class="col-md-6"><div class="notif-badge">Interested? Send us a message.</div></div>
                                                 <div class="col-md-6"><div class="getenabled-header"><h2>Get Enabled.</h2></div></div>
                                             </div>  
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <div class="form-field"><label>First Name</label><input type="text" class="input-control" /></div>
-                                                    <div class="form-field"><label>Email</label><input type="text" class="input-control" /></div>
+                                                    <div class="form-field"><label>First Name</label><input name="first_name" type="text" class="input-control" /></div>
+                                                    <div class="form-field"><label>Email</label><input name="email" type="text" class="input-control" /></div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-field"><label>Last Name</label><input type="text" class="input-control" /></div>
-                                                    <div class="form-field"><label>Country</label><input type="text" class="input-control" /></div>
+                                                    <div class="form-field"><label>Last Name</label><input name="last_name"  type="text" class="input-control" /></div>
+                                                    <div class="form-field"><label>Country</label><input name="country" type="text" class="input-control" /></div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-field message-row"><label>Message</label><textarea name="message" ></textarea></div>
+                                                    <br class="clear" />
+                                                </div>  
+                                                <div class="col-md-6">
+                                                  <div style="margin-top:40px">
+                                                      <div class="g-recaptcha" data-sitekey="6LdnLjcUAAAAAIMEIjvMjDS2q5OBm03mb_TNKki3"></div>
+                                                      <input name="form" type="hidden" class="input-control" value="hiho" />
+                                                  </div>
+                                                   <br class="clear" />
                                                 </div>
                                                 <div class="col-lg-12">
-                                                    <div class="form-field message-row"><label>Message</label><textarea></textarea></div>
-                                                    <br class="clear" />
                                                     <div class="button-action">
-                                                        <button class="btn btn-red">SEND</button><span>Or</span>
+                                                        <button class="btn btn-red btnSaveContactForm" data-form="#contactform-hiho">SEND</button><span>Or</span>
                                                         <a class="btn btn-green" data-target="#myCarousel" data-slide-to="0" >SIGN UP FOR AN ACCOUNT</a>
                                                     </div>
                                                 </div>  
@@ -728,15 +738,65 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="js/svg.min.js"></script> 
 <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
 <script type="text/javascript">  
+    var base_url = "http://localhost/mark/2017/hiho/webmin/public/"
+
     $(document).ready(function(){
-        /*$('#myCarousel').on('slide.bs.carousel', function (e) {
-            console.log(e);
-        });*/
+
+          $.get( base_url+'api/v1/getcsrftoken', "", function( resp ) {
+              if( typeof(resp) == 'object' ){
+                  if(resp.success == true){
+                      $('meta[name="csrf-token"]').attr('content',resp.token);
+                  }
+              }
+          });
+
+          //--CONTACT FORM
+         $('button.btnSaveContactForm').click(function(e){
+              e.preventDefault();
+              var btn = $(this);
+              var form = btn.data('form');
+              
+              if( btn.hasClass("disabled")  ){
+                 return false;
+              }
+
+              btn.addClass("disabled").html('Sending...');
+               
+              $.ajax({
+                url: base_url+"api/v1/contact/save",
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },          
+                type: "post",
+                dataType: "json",
+                data: $(form).serialize(),
+                success: function(resp, textStatus, xhr) {
+                    if( typeof(resp) == 'object' ||  xhr.status !== 200){
+                        if(resp.success==true){
+                            alert(resp.message);
+                        }else{
+                            alert(resp.message);
+                        }
+                    }else{
+                       alert("Some error occured while submitting your inquiries. Please try again...")
+                    }
+                    btn.removeClass("disabled").html("Submit");
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status+": Some error occured while submitting your inquiries. Please try again...");
+                    btn.removeClass("disabled").html("Submit");;
+                }
+              });
+              
+         }); 
+
 
     });
 
+    
     var doc = $(document);
     var colWidth = doc.width() / 2;
     var colHeight = doc.height();
@@ -917,6 +977,8 @@
            $(ele).find("a.btnCF_Back").fadeOut();
         });
     });
+
+
 
 
     S2HIHO.resizeLayouts();
