@@ -1327,5 +1327,13 @@ section.qma-form-af .radiobox-item .label-box {text-align: left}
 section.qma-form-af .radiobox-item .label-box .label {font-size: 1.6em; }
 
 
+@media screen and (min-width:1920px) {
+  .page-appdevice .logo.s2 {left:45%;}
+  .page-appdevice .logo.hiho {right:45%;}
+}
+
+
+
+
 
 
