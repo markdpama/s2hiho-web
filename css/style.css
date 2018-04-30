@@ -184,9 +184,10 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 /*GothamLight*/
 
-.appdevice { width:200px;height: 311px; 
+.appdevice { 
+    width: 280px; height: 440px;
     background: url('../images/app-device.png') no-repeat; background-size: cover;  
-    position: absolute; top:100px; left: 50%; margin-left:-88px; z-index:9; 
+    position: absolute; top:80px; left: 50%; margin-left:-124px; z-index:9; 
 }
 .page-appdevice {
   background:#FFF;
@@ -194,8 +195,8 @@ h1,h2,h3,h4,h5 {margin:0;}
 .page-appdevice .logo {position: absolute; top:20px; z-index:99}
 .page-appdevice .logo.s2 {left:20px;}
 .page-appdevice .logo.hiho {right:20px;}
-.page-appdevice .appdevice_details { width:454px;height:500px; position: absolute; top:120px; }
-.page-appdevice .appdevice_details .canbox { width:454px;height:380px; position: relative;}
+.page-appdevice .appdevice_details { width: 520px; height: 560px; position: absolute; top:120px; }
+.page-appdevice .appdevice_details .canbox { width: 520px; height: 560px; position: relative; }
 
 .page-appdevice .appdevice_details.s2 {
     /*background: url('../images/appdevice-details-s2_draft-2.png') no-repeat; */
@@ -207,7 +208,7 @@ h1,h2,h3,h4,h5 {margin:0;}
     background-size: cover; left:45px;
 }
 
-.page-appdevice .btnLearMore {position: absolute; bottom:0px; width:160px; height:43px; background-size: cover;}
+.page-appdevice .btnLearMore {position: absolute; bottom:0px; width:190px; height:50px; background-size: cover;}
 .page-appdevice .btnLearMore.s2 {
     background-image: url('../images/btn-learnmore1.png'); right:0; 
 }    
@@ -223,18 +224,18 @@ h1,h2,h3,h4,h5 {margin:0;}
     background-image: url('../images/btnCheckVideo-hiho.png'); left:100px; 
 }
 
-.page-appdevice .desc-details { display:none; width:212px; height:40px; position: absolute; z-index:49; font-family: 'GothamMediumItalic', sans-serif;}
-.page-appdevice .desc-details span {text-align: center; color:#FFF; font-size: 1.8em; line-height: 42px}
+.page-appdevice .desc-details { display:none; width:242px; height:50px; position: absolute; z-index:49; font-family: 'GothamMediumItalic', sans-serif;}
+.page-appdevice .desc-details span {text-align: center; color:#FFF; font-size: 1.8em; line-height: 52px}
 .page-appdevice .desc-details .underline {text-decoration: underline}
 .page-appdevice .desc-details.hh-purple {}
 .page-appdevice .desc-details.hh-darkamber {}
 
-.appdevice_details.s2 .desc-details.nth01 {right:62px; top:5px;}
-.appdevice_details.s2 .desc-details.nth02 {right:90px; top:46px;}
-.appdevice_details.s2 .desc-details.nth03 {right:120px; top:87px; width:270px;}
-.appdevice_details.s2 .desc-details.nth04 {right:120px; top:128px; height:45px; line-height: 48px; width:270px;} /* digital awareness */
-.appdevice_details.s2 .desc-details.nth05 {right:90px; top:174px; width:215px;}
-.appdevice_details.s2 .desc-details.nth06 {right:62px; top:215px; width:215px;}
+.appdevice_details.s2 .desc-details.nth01 {right:112px; top:25px;}
+.appdevice_details.s2 .desc-details.nth02 {right:140px; top:76px;}
+.appdevice_details.s2 .desc-details.nth03 {right:170px; top:127px; width:300px;}
+.appdevice_details.s2 .desc-details.nth04 {right:170px; top:178px; height:45px; line-height: 48px; width:300px;} /* digital awareness */
+.appdevice_details.s2 .desc-details.nth05 {right:140px; top:224px; }
+.appdevice_details.s2 .desc-details.nth06 {right:112px; top:275px; }
 
 .page-appdevice .lines {position: absolute; z-index:2; background-size: cover; display: none}
 .appdevice_details.s2 .lines.ll01 {width:105px; height:37px; right:-2px; top:-1px; background-image: url('../images/LL001.png');}
@@ -246,12 +247,12 @@ h1,h2,h3,h4,h5 {margin:0;}
 .appdevice_details.s2 .lines.ll07 {width:120px; height:67px; right:5px; top:210px; background-image: url('../images/LL007.png');}
 
 .appdevice_details.hiho .desc-details {display:none;}
-.appdevice_details.hiho .desc-details.nth01 {left:90px; top:5px; width:214px;}
-.appdevice_details.hiho .desc-details.nth02 {left:110px; top:46px; width:215px; }
-.appdevice_details.hiho .desc-details.nth03 {left:138px; top:87px; width:214px; }
-.appdevice_details.hiho .desc-details.nth04 {left:138px; top:128px; height:45px; line-height: 55px; width:252px; }
-.appdevice_details.hiho .desc-details.nth05 {left:110px; top:174px; width:216px; }
-.appdevice_details.hiho .desc-details.nth06 {left:90px; top:215px; width:214px; }
+.appdevice_details.hiho .desc-details.nth01 {left:150px; top:25px; width:244px;}
+.appdevice_details.hiho .desc-details.nth02 {left:180px; top:76px; width:255px; }
+.appdevice_details.hiho .desc-details.nth03 {left:208px; top:127px; width:254px; }
+.appdevice_details.hiho .desc-details.nth04 {left:208px; top:178px; height:45px; line-height: 55px; width:282px; }
+.appdevice_details.hiho .desc-details.nth05 {left:180px; top:224px; width:246px; }
+.appdevice_details.hiho .desc-details.nth06 {left:150px; top:275px; width:234px; }
 
 
 .appdevice_details.hiho .lines.lr01 {width:120px; height:25px; left:0; top:10px; background-image: url('../images/LR001.png');}

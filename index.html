@@ -63,7 +63,7 @@
                        <div class="appdevice"></div>
                        <div class="col col-xs-6 hh-amber">
                           <div class="svgcanvas docHeight">
-                              <img src="images/s2logo.png" width="70" class="logo s2" /> 
+                              <img src="images/s2logo.png" width="90" class="logo s2" /> 
                               <div class="appdevice_details s2">
                                   <div class="canbox">
                                       <div class="desc-details hh-purple nth01"><span>Custom</span></div>
@@ -79,7 +79,7 @@
                        </div>
                        <div class="col col-xs-6 hh-blue">
                           <div class="svgcanvas docHeight">
-                              <img src="images/HiHoLogo.png" width="80" class="logo hiho" />
+                              <img src="images/HiHoLogo.png" width="120" class="logo hiho" />
                               <div class="appdevice_details hiho">
                                   <div class="canbox">
                                       <div class="desc-details hh-lightred nth01"><span>Pre Fabricated</span></div>
@@ -671,6 +671,9 @@
                                                    <br class="clear" />
                                                 </div>
                                                 <div class="col-lg-12">
+                                                    <div id="cfmsgbox_hiho"></div>
+                                                </div>  
+                                                <div class="col-lg-12">
                                                     <div class="button-action">
                                                         <button class="btn btn-red btnSaveContactForm" data-form="#contactform-hiho">SEND</button><span>Or</span>
                                                         <a class="btn btn-green" data-target="#myCarousel" data-slide-to="0" >SIGN UP FOR AN ACCOUNT</a>
@@ -775,18 +778,18 @@
                 data: $(form).serialize(),
                 success: function(resp, textStatus, xhr) {
                     if( typeof(resp) == 'object' ||  xhr.status !== 200){
-                        if(resp.success==true){
-                            alert(resp.message);
+                        if(resp.success==true){    
+                            displayMessage("success", resp.message, true, "#cfmsgbox_hiho")
                         }else{
-                            alert(resp.message);
+                            displayMessage("error", resp.message, true, "#cfmsgbox_hiho")
                         }
                     }else{
-                       alert("Some error occured while submitting your inquiries. Please try again...")
+                       displayMessage("error", "Some error occured while submitting your inquiries. Please try again...", true, "#cfmsgbox_hiho")
                     }
                     btn.removeClass("disabled").html("Submit");
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                    alert(xhr.status+": Some error occured while submitting your inquiries. Please try again...");
+                    displayMessage("error", "ERROR "+xhr.status+": Some error occured while submitting your inquiries. Please try again...", true, "#cfmsgbox_hiho")
                     btn.removeClass("disabled").html("Submit");;
                 }
               });
@@ -994,7 +997,32 @@
     });
     $(window).on('resize', function() {
         S2HIHO.resizeLayouts();
-    });  
+    });
+
+      displayMessage = function(type, message, removePrevious, canvas) {
+              var msgtype = 'info';
+
+              switch(type) 
+              {
+                  case "success":
+                      msgtype = 'success';
+                  break;
+                  case "error":
+                      msgtype = 'danger';
+                  break;      
+                  case "notice":
+                      msgtype = 'warning';
+                  break;
+              }
+
+              var msg = '<div style="display:none" class="alert alert-'+msgtype+' fade in"><button data-dismiss="alert" class="close close-sm" type="button"><i class="fa fa-times"></i></button>'+ message + '</div>';
+
+              if(removePrevious==true){
+                  $(canvas).html('');
+              }
+              $(canvas).append(msg); 
+              $(canvas).find('.alert:last').fadeIn();
+      };  
 
 </script>  
 
