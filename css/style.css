@@ -213,7 +213,9 @@ h1,h2,h3,h4,h5 {margin:0;}
     background-image: url('../images/btn-learnmore1.png'); right:0; 
 }    
 .page-appdevice .btnLearMore.hiho {
-    background-image: url('../images/btn-learnmore2.png'); left:0; 
+    /* ackground-image: url('../images/btn-learnmore2.png'); */
+    background-image: url('../images/btn-learnmore-comingsoon.png'); 
+    left:0; 
 }
 
 .page-appdevice .btnCheckVideo {position: absolute; top:500px; width:210px; height:75px; background-size: cover;}
@@ -285,7 +287,7 @@ h1,h2,h3,h4,h5 {margin:0;}
    border-radius: 8px; padding:20px;
 }
 .our-solution-con .page {
-   max-width: 1024px; margin:0 auto; background-size: 1024px auto; 
+   max-width: 1280px; margin:0 auto; background-size: 1280px auto; 
    position: relative; 
    text-align: left;
 }
@@ -394,14 +396,14 @@ h1,h2,h3,h4,h5 {margin:0;}
   background-image: url('../images/solution-full-page2-resized.png');
   background-repeat: no-repeat;
   background-position: center bottom;
-  height:460px;
+  height:560px;
 }
 
 #page2 .text01 {
-  height: 55px; width: 490px;
-  left: 225px; bottom: 305px;
+  height: 55px; width: 550px;
+  left: 285px; bottom: 388px;
   color: #f69427; font-family: 'GothamMedium', sans-serif;
-  font-size: 1.1em; text-align: left; line-height: 22px;
+  font-size: 1.2em; text-align: left; line-height: 22px;
 }
 
 #page2 .text01 span,
@@ -410,12 +412,12 @@ h1,h2,h3,h4,h5 {margin:0;}
   font-family: 'GothamBoldItalic', sans-serif;
 }
 #page2 .text02 {
-  height:70px; width:285px; left:722px; bottom:288px; color:#FFF;
-  font-family: 'GothamLight', sans-serif; font-size:11px;
+  height:70px; width:325px; left:890px; bottom:378px; color:#FFF;
+  font-family: 'GothamLight', sans-serif; font-size:13px;
 }
 #page2 .text03 {
-  height:57px; width:445px; left:240px; bottom:228px; color:#FFF;
-  font-family: 'GothamLight', sans-serif; font-size:11px;
+  height:57px; width:505px; left:280px; bottom:300px; color:#FFF;
+  font-family: 'GothamLight', sans-serif; font-size:13px;
 }
 
 #page2 .text04,
@@ -425,29 +427,29 @@ h1,h2,h3,h4,h5 {margin:0;}
 #page2 .text08,
 #page2 .text09,
 #page2 .text11 {
-  color:#FFF; font-family: 'GothamLight', sans-serif; font-size:11px;
+  color:#FFF; font-family: 'GothamLight', sans-serif; font-size:13px;
 }
 #page2 .text04 {
-  height:33px; width:314px; left:712px; bottom:222px; 
+  height:33px; width:314px; left:870px; bottom:285px; 
 }
 #page2 .text05 {
-  height:33px; width:330px; left:450px; bottom:175px; 
+  height:33px; width:350px; left:540px; bottom:228px; 
 }
 #page2 .text06 {
-   height:33px; width:330px; left:638px; bottom:132px; 
+   height:33px; width:350px; left:778px; bottom:172px; 
 }
 #page2 .text07 {
-   height:33px; width:330px; left:455px; bottom:85px; 
+   height:33px; width:390px; left:545px; bottom:115px; 
 }
 #page2 .text08{
-   height:33px; width:330px; left:562px; bottom:55px; 
+   height:33px; width:390px; left:682px; bottom:75px; 
 }
 #page2 .text09{
-   height:33px; width:325px; left:638px; bottom:22px; 
+   height:33px; width:385px; left:778px; bottom:38px; 
 }
 #page2 .text10{
-  height:52px; width:208px; font-size: 2.2em; font-weight: bold;
-  left: 215px; bottom: 150px;
+  height:52px; width:208px; font-size: 2.4em; font-weight: bold;
+  left: 239px; bottom: 200px;
 }
 #page2 .text10 {
   font-family: 'GothamBlackItalic', sans-serif; color:#FFF;
@@ -455,9 +457,9 @@ h1,h2,h3,h4,h5 {margin:0;}
 }
 
 #page2 .text11{
-  height:50px; width:180px; left:220px; bottom:100px; color:#FFF;
+  height:50px; width:200px; left:240px; bottom:130px; color:#FFF;
   line-height: 15px;
-  font-size: 12px; text-align: left;
+  font-size: 13px; text-align: left;
 }
 
 .our-solution-con #page2 .btn {
