@@ -104,7 +104,7 @@
                             <div class="content">
                               <div class="inner">
                                   <div id="page1" class="page">
-                                      <button class="btn btnLearnMore pos-absolute">LEARN MORE</button>
+                                      <button class="btn btnLearnMore pos-absolute">Next Solution</button>
                                       <button class="btn btnBack pos-absolute" style="display:none">&lt; BACK</button>
                                       <div class="page-title">
                                           <h3>FROM A SIMPLE E-FORM TO A FULL BLOWN MARKETING &amp; SALES SUITE</h3>
@@ -403,6 +403,10 @@
     
             <section class="page3 page-about">
                   <div class="about-nav hh-purple rowspan-50">
+                        <div class="intro-text">
+                            <h3>What We Do?</h3>
+                            <p>We believe in tying technology to our clients' <span class="italic-bold">unique business challenges</span>. Our thought process begins with a simple yet open dialogue that puts any project into proper context. Only through a clear <span class="italic-bold">understanding of a client's circumstances, challenges, and objectives</span> can we truly <span class="italic-bold">advocate, educate, and maximize the benefits of technology</span></p>
+                        </div>
                         <h2>About Us</h2>
                         <div class="icons-tabs">
                             <div class="icon-item">
@@ -426,7 +430,7 @@
                         </div>
                   </div>
                   <div class="about-subpages hh-amber-linear rowspan-50">
-                      <div class="container">
+                      <div class="about-container">
                            <div id="about-mission" class="row active">
                                <div class="col-md-6">
                                      <h1>MISSION</h1>
@@ -447,7 +451,7 @@
                                <div class="col-md-6">
                                     <br />
                                     <br />
-                                    <p><img src="images/approach-details.png" alt="" height="170" /></p>
+                                    <p><img src="images/approach-details.png" alt="" width="480" /></p>
                                </div>
                                <div class="col-md-6">
                                      <h1>APPROACH</h1>
@@ -488,9 +492,9 @@
                                 <div class="hiho-slice04 pos-absolute"></div>
                                 <div class="hiho-slice05 pos-absolute"></div>
                                 <div class="hiho-slice06 pos-absolute"></div>
-                                <a href="#contactFormBox-hiho" class="openContactForm">
+                                <a href="#contactFormBox-hiho" class="openContactForm disabled">
                                   <span class="hiho-slice07 pos-absolute hh-red">
-                                     CLICK HERE
+                                     Coming Soon
                                   </span>
                                 </a>
                                 <div class="hiho-slogan pos-absolute">The solution for you.</div>
@@ -741,8 +745,9 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="js/svg.min.js"></script> 
 <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+<!--
 <script src='https://www.google.com/recaptcha/api.js'></script>
-
+-->
 <script type="text/javascript">  
     var base_url = "http://localhost/mark/2017/hiho/webmin/public/"
 
@@ -939,6 +944,11 @@
     $('a.btnLM_S2-HiHo').click(function(e){
         e.preventDefault();
         var ele = $(this).attr('href');
+        if( $(this).find('.hiho').length ){
+           console.log("Coming Soon...");
+           return false;
+        }
+        
         $("#app-device-box").hide(function(){
            $(ele).fadeIn();
            $(ele).find("a.btnLM_Back").fadeIn();
@@ -949,10 +959,17 @@
     $('a.btnLM_Back').click(function(e){
         e.preventDefault();
         var ele = $(this).attr('href');
-        $(ele).hide(function(){
-           $("#app-device-box").fadeIn();
-           $(ele).find("a.btnLM_Back").fadeOut();
-        });
+        if( $('.our-solution-con #page2').is(':visible') ){
+           //--back to page 1
+          $('.our-solution-con #page1').fadeIn();
+          $('.our-solution-con #page2').hide();
+        }else{
+          $(ele).hide(function(){
+             $("#app-device-box").fadeIn();
+             $(ele).find("a.btnLM_Back").fadeOut();
+          });
+        }
+
     });
 
     $('.our-solution-con #page1 .btnLearnMore').click(function(e){
@@ -963,9 +980,17 @@
     $('.our-solution-con #page2 .btn').click(function(e){
         $('.our-solution-con #page2').hide();
         $('.our-solution-con #page1').fadeIn();
+        $("a.btnLM_Back").fadeOut();
+        $("#app-device-box").fadeIn();
     });
 
     $('.openContactForm').click(function(e){
+         e.preventDefault();
+        
+        if( $(this).hasClass('disabled') ){
+            return false;
+        }
+
         var targetEle = $(this).attr('href')
         $('#contact-s2hiho').hide();
         $(targetEle).fadeIn();
