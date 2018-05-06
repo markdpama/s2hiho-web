@@ -267,25 +267,29 @@ class Contact_DatasController extends Controller
 	{
 
 		//$rules = Module::validateRules("Contact_Datas", $request);
+		$isValid = true;
 		
 		$validator = Validator::make($request->all(), $this->rules);
 
 		$this->json_response['message'] = array();
 
 		if( $captch_resp = validate_captcha($request) ){
+			$this->json_response['success'] = $isValid = false;
 			array_push($this->json_response['message'], $captch_resp);
 		}
 
 		if ($validator->fails()) {
 			//$this->json_response['message'][] = $validator->errors()->all();
+			$this->json_response['success'] = $isValid = false;
 			array_push($this->json_response['message'], $validator->errors()->all());
 
-		}else{
-			$insert_id = Module::insert("Contact_Datas", $request);
-			$this->json_response['message'] = "Ok";
-			$this->json_response['success'] = true;
 		}
 		
+		if($isValid){
+			$insert_id = Module::insert("Contact_Datas", $request);
+			$this->json_response['message'] = "Ok";
+			$this->json_response['success'] = true;	
+		}
 
 		return response()->json($this->json_response);
 

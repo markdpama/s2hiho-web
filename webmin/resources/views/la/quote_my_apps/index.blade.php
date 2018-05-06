@@ -60,11 +60,11 @@
 					
 					{{--
 					@la_input($module, 'business_objectives')
-					@la_input($module, 'platform')
 					@la_input($module, 'app_type')
 					@la_input($module, 'ecosystem')
 					@la_input($module, 'ui_custom')
 					@la_input($module, 'app_features')
+					@la_input($module, 'platform')
 					--}}
 				</div>
 			</div>

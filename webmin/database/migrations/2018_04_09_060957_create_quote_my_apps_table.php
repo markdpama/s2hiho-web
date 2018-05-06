@@ -18,12 +18,12 @@ class CreateQuoteMyAppsTable extends Migration
     public function up()
     {
         Module::generate("Quote_my_apps", 'quote_my_apps', 'business_objectives', 'fa-connectdevelop', [
-            ["business_objectives", "Business Objectives", "Radio", false, "", 0, 0, true, ["Marketing","Sales","Operation"]],
-            ["platform", "Platform", "Radio", false, "", 0, 0, true, ["IOS","Android","WIndows"]],
+            ["business_objectives", "Business Objectives", "Multiselect", false, "", 0, 0, true, ["Marketing","Sales","Operation"]],
             ["app_type", "Type of Application", "Radio", false, "", 0, 0, true, ["Offline and Static","Online and Dynamic"]],
             ["ecosystem", "Digital Ecosystem", "Radio", false, "", 0, 0, true, ["Single Application","Console App and Field App"]],
             ["ui_custom", "UI Customization", "Radio", false, "", 0, 0, true, ["Standard Look and Feel","Custom User Interface"]],
-            ["app_features", "App Key Features", "Checkbox", false, "", 0, 0, true],
+            ["app_features", "App Key Features", "Multiselect", false, "", 0, 0, true, ["Account Creation and Sign-Up","Analytics and Aggregation","Notifications","Social Media Integration","Calendar and Scheduler","Payment and Promotions"]],
+            ["platform", "Platform", "Multiselect", false, "", 0, 0, true, ["IOS","Android","Windows"]],
         ]);
 		
 		/*

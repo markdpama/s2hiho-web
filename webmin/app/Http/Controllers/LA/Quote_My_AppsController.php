@@ -23,7 +23,7 @@ class Quote_My_AppsController extends Controller
 {
 	public $show_action = true;
 	public $view_col = 'business_objectives';
-	public $listing_cols = ['id', 'business_objectives', 'platform', 'app_type', 'ecosystem', 'ui_custom', 'app_features'];
+	public $listing_cols = ['id', 'business_objectives', 'app_type', 'ecosystem', 'ui_custom', 'app_features', 'platform'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns
@@ -246,4 +246,39 @@ class Quote_My_AppsController extends Controller
 		$out->setData($data);
 		return $out;
 	}
+
+
+	  /* CREATE DATA FROM API END POINT - 05-07-18 */
+	  public function save(Request $request)
+	  {
+
+	    //$rules = Module::validateRules("Contact_Datas", $request);
+	    $isValid = true;
+	    $rules = Module::validateRules("Quote_My_Apps", $request);
+	    $validator = Validator::make($request->all(), $rules);
+
+	    $this->json_response['message'] = array();
+	    //- app/Helpers
+	    if( $captch_resp = validate_captcha($request) ){
+	      $this->json_response['success'] = $isValid = false;
+	      array_push($this->json_response['message'], $captch_resp);
+	    }
+
+	    if ($validator->fails()) {
+	      //$this->json_response['message'][] = $validator->errors()->all();
+	      $this->json_response['success'] = $isValid = false;
+	      array_push($this->json_response['message'], $validator->errors()->all());
+
+	    }
+	    
+	    if($isValid){
+	      $insert_id = Module::insert("Quote_My_Apps", $request);
+	      $this->json_response['message'] = "Ok";
+	      $this->json_response['success'] = true; 
+	    }
+
+	    return response()->json($this->json_response);
+
+	  }
+	  
 }

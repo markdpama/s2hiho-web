@@ -108,11 +108,11 @@
 					</div>
 					<div class="panel-body">
 						@la_display($module, 'business_objectives')
-						@la_display($module, 'platform')
 						@la_display($module, 'app_type')
 						@la_display($module, 'ecosystem')
 						@la_display($module, 'ui_custom')
 						@la_display($module, 'app_features')
+						@la_display($module, 'platform')
 					</div>
 				</div>
 			</div>
