@@ -10,7 +10,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
 <link href='css/jquery.steps.css' rel='stylesheet' type='text/css'>
-<link href='css/style.css?t=1' rel='stylesheet' type='text/css'>
+<link href='css/style.css' rel='stylesheet' type='text/css'>
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -56,16 +56,20 @@
                                    <div class="radiobox-item">
                                      <div class="label-box">
                                       <div class="label">
-                                        Marketing
+                                        Marketing 
+                                        <a href="#" class="info-tooltip" data-toggle="tooltip" title="Increase Digital Awareness and User Reach">
+                                          <i class="fa fa-question-circle"></i>
+                                        </a>
                                       </div>
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="business_objectives" value="Marketing" />
+                                        <input type="checkbox" name="business_objectives[]" value="Marketing" />
+
                                       </div>
                                      </div> 
                                    </div>
-                                   <div class="option-desc">Increase Digital Awareness and User Reach</div>
+                                   
                                  </div>
 
                                  <div class="col-md-4">  
@@ -76,15 +80,17 @@
                                      <div class="label-box">
                                       <div class="label">
                                         Sales
+                                        <a href="#" class="info-tooltip" data-toggle="tooltip" title="Improve Accessibility & Payment Channels">
+                                          <i class="fa fa-question-circle"></i>
+                                        </a>
                                       </div>
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="business_objectives" value="Sales" />
+                                         <input type="checkbox" name="business_objectives[]" value="Sales" />
                                       </div>
                                      </div> 
                                    </div>
-                                   <div class="option-desc">Improve Accessibility &amp; Payment Channels</div>
                                  </div>
 
                                  <div class="col-md-4">   
@@ -95,15 +101,17 @@
                                      <div class="label-box">
                                       <div class="label">
                                         Operations
+                                        <a href="#" class="info-tooltip" data-toggle="tooltip" title="Simplify internal processes & communications">
+                                          <i class="fa fa-question-circle"></i>
+                                        </a>
                                       </div>
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="business_objectives" value="Operations" />
+                                         <input type="checkbox" name="business_objectives[]" value="Operations" />
                                       </div>
                                      </div> 
                                    </div>
-                                   <div class="option-desc">Simplify internal processes &amp; communications</div>
                                  </div>
 
                                  <br class="clear" />
@@ -113,6 +121,8 @@
 
 
                       </section>
+
+
 
                       <h3> Select a <br />Platform</h3>
                       <section class="qma-form-platform">
@@ -132,7 +142,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="platform" value="iOS" />
+                                        <input type="checkbox" name="platform[]" value="iOS" />
                                       </div>
                                      </div> 
                                    </div>
@@ -151,7 +161,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="platform" value="Android" />
+                                        <input type="checkbox" name="platform[]" value="Android" />
                                       </div>
                                      </div> 
                                    </div>
@@ -170,7 +180,7 @@
                                      </div> 
                                      <div class="radio-box">
                                       <div class="radio-tickbox">
-                                        <input type="radio" name="platform" value="Windows" />
+                                        <input type="checkbox" name="platform[]" value="Windows" />
                                       </div>
                                      </div> 
                                    </div>
@@ -197,6 +207,9 @@
                                      <div class="label-box">
                                       <div class="label">
                                         Offline and Static
+                                        <a href="#" class="info-tooltip" data-toggle="tooltip" title="Fixed Content & Data: Updates are required seldomly and would require a development update.">
+                                          <i class="fa fa-question-circle"></i>
+                                        </a>
                                       </div>
                                      </div> 
                                      <div class="radio-box">
@@ -205,9 +218,7 @@
                                       </div>
                                      </div> 
                                    </div>
-                                   <div class="option-desc">Fixed Content &amp; Data.
-                                        <span class="subdesc">Updates are required seldomly and would require a development update.</span>
-                                   </div>
+
                                  </div>
 
                                  <div class="col-md-6">   
@@ -218,6 +229,9 @@
                                      <div class="label-box">
                                       <div class="label">
                                         Online and Dynamic
+                                        <a href="#" class="info-tooltip" data-placement="left" data-toggle="tooltip" title="Dynamic Content & Data: Updates are required regularly and can be updated easily.">
+                                          <i class="fa fa-question-circle"></i>
+                                        </a>
                                       </div>
                                      </div> 
                                      <div class="radio-box">
@@ -226,9 +240,7 @@
                                       </div>
                                      </div> 
                                    </div>
-                                   <div class="option-desc">Dynamic Content &amp; Data.
-                                    <span class="subdesc">Updates are required regularly and can be updated easily.</span>
-                                   </div>
+
                                  </div>
 
                                  <div class="clear"></div>
@@ -252,6 +264,9 @@
                                      <div class="label-box">
                                       <div class="label">
                                         Single Application
+                                        <a href="#" class="info-tooltip" data-toggle="tooltip" title="Field app only. Management of the app is done via supplier updates.">
+                                          <i class="fa fa-question-circle"></i>
+                                        </a>
                                       </div>
                                      </div> 
                                      <div class="radio-box">
@@ -260,7 +275,7 @@
                                       </div>
                                      </div> 
                                    </div>
-                                   <div class="option-desc">Field app only. Management of the app is done via supplier updates.</div>
+                                   
                                  </div>
 
                                  <div class="col-md-6">   
@@ -271,6 +286,9 @@
                                      <div class="label-box">
                                       <div class="label">
                                         Console App &amp; Field App
+                                        <a href="#" class="info-tooltip" data-placement="left" data-toggle="tooltip" title="Console is provided to the client for content & data management.">
+                                          <i class="fa fa-question-circle"></i>
+                                        </a>
                                       </div>
                                      </div> 
                                      <div class="radio-box">
@@ -279,7 +297,7 @@
                                       </div>
                                      </div> 
                                    </div>
-                                   <div class="option-desc">Console is provided to the client for content &amp; data management.</div>
+                                   
                                  </div>
 
                                  <div class="clear"></div>
@@ -303,6 +321,9 @@
                                      <div class="label-box">
                                       <div class="label">
                                         Standard Look &amp; Feel
+                                        <a href="#" class="info-tooltip" data-toggle="tooltip" title="Standard design look and feel. Recommended for basic forms & reader app types.">
+                                          <i class="fa fa-question-circle"></i>
+                                        </a>
                                       </div>
                                      </div> 
                                      <div class="radio-box">
@@ -311,7 +332,7 @@
                                       </div>
                                      </div> 
                                    </div>
-                                   <div class="option-desc">Standard design look and feel. Recommended for basic forms &amp; reader app types.</div>
+                                   
                                  </div>
 
                                  <div class="col-md-6">   
@@ -322,6 +343,9 @@
                                      <div class="label-box">
                                       <div class="label">
                                         Custom User Interface
+                                        <a href="#" class="info-tooltip" data-placement="left" data-toggle="tooltip" title="Enhanced branding and animations for an advanced user experience">
+                                          <i class="fa fa-question-circle"></i>
+                                        </a>
                                       </div>
                                      </div> 
                                      <div class="radio-box">
@@ -330,7 +354,6 @@
                                       </div>
                                      </div> 
                                    </div>
-                                   <div class="option-desc">Enhanced branding and animations for an advanced user experience</div>
                                  </div>
 
                                  <div class="clear"></div>
@@ -498,12 +521,14 @@
 
 
 <script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <!--<script type="text/javascript" src="js/svg.min.js"></script> 
 <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>-->
 <script type="text/javascript" src="js/jquery.steps.min.js"></script>
  
 <script type="text/javascript">  
     $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip(); 
 
     });
 
@@ -598,50 +623,31 @@
         //startIndex: 5,
     });
   
-    $(".radio-tickbox").on('click', function () {
-        var _this = $(this),
-            block = _this.parent().parent();
-        //$('.radio-tickbox input:radio').attr('checked', false);
-        //block.find(".radio-tickbox").removeClass('checkedRadio');
-        if(_this.find("input").is(":radio")){
-          $(".radio-tickbox").removeClass('checked'); 
-          _this.addClass('checked'); 
-          _this.find('input:radio').attr('checked', true);
-        }else{
-          //--checkbox
-
-          if(_this.find("input").is(":checked")){
-              _this.removeClass('checked'); 
-              _this.find("input").attr('checked', false);
-          }else{
-            _this.removeClass('checked'); 
-          _this.addClass('checked'); 
-          _this.find('input').attr('checked', true);
-          } 
-          
-
-
-        }
-        
-
-        
-    });
 
     
-    $(".radiobox-item .label").on('click', function () {
-        var _this = $(this), item = _this.parent().parent();
-        var radioTickBox =  item.find(".radio-tickbox");
-        radioTickBox.trigger("click");
-
-     });
-
-    $('input[name="check-box"]').wrap('<div class="check-box"></div>');
     $.fn.toggleCheckbox = function () {
-        this.attr('checked', !this.attr('checked'));
-    }
-    $('.check-box').on('click', function () {
-        $(this).find(':checkbox').toggleCheckbox();
-        $(this).toggleClass('checkedBox');
+        //console.log(this.val()+'=='+!this.prop('checked'));
+        this.prop('checked', !this.prop('checked'));
+    }          
+
+
+    $('.radio-tickbox').on('click', function () {
+         var _this = $(this);
+
+        if($(this).find("input").is(":radio")){
+          var RadioEle = $(this).find(':radio');
+          var RadioName = RadioEle.attr('name');
+
+          //--reset/unchecked all radiobox
+          $('input[name="'+RadioName+'"]').attr('checked', false).parent().removeClass('checked');
+          RadioEle.prop("checked", !RadioEle.attr('checked'));
+
+        }else{
+          $(this).find(':checkbox').toggleCheckbox();           
+        }
+
+        $(this).toggleClass('checked');     
+
     });
 
 </script>  

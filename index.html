@@ -11,7 +11,7 @@
 <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>-->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
-<link href='css/style.css?t=1' rel='stylesheet' type='text/css'>
+<link href='css/style.css??v=050718' rel='stylesheet' type='text/css'>
 
 <script src="https://use.fontawesome.com/cf0da6be55.js"></script>
 
@@ -99,7 +99,7 @@
                   <!--/app-device-box -->
 
                   <div id="learnmore-s2" class="row" style="display:block">
-                      <div class="our-solution-con">
+                      <div class="our-solution-con docHeight">
                             <div class="header"><h2>OUR SOLUTIONS</h2></div>
                             <div class="content">
                               <div class="inner">
@@ -201,7 +201,7 @@
                             <li><a data-toggle="tab" href="#lm03">HiHo Subscriptions</a></li>
                             <li><a data-toggle="tab" href="#lm04">Contact The Team</a></li>
                           </ul>
-                          <div class="tab-content">
+                          <div class="tab-content docHeight">
 
                               <div id="lm01" class="tab-pane fade in active">
                                 <div class="mod_content">
@@ -509,7 +509,7 @@
                    <div id="contactFormBox-s2" class="row page5 page-s2hiho-contact" style="display:none">
                         <div class="svgcanvas docHeight hh-amber-linear-right">
 
-                              <div class="container">
+                              <div class="fluid-container">
                                   <div class="slice01 pos-absolute"></div>
                                   <div class="slice02 pos-absolute"></div>
                                   <div class="slice03 pos-absolute">
@@ -523,25 +523,40 @@
 
                                     <div class="form-box">
                                       <div class="getstarted-header"><h2>GET STARTED</h2></div> 
-                                      <form class="form-v2">
+                                      
+                                      <form class="form-v2" action="api/v1/contact/save" id="contactform-s2">
                                         <div class="row">
                                             <div class="col-md-6"><div class="notif-badge">Let's make an app.</div></div>
                                             <div class="col-md-6"><div class="getenabled-header"><h2>Take the second step.</h2></div></div>
                                         </div>  
                                         <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-field"><label>First Name</label><input name="first_name" type="text" class="input-control" /></div>
+                                                    <div class="form-field"><label>Email</label><input name="email" type="text" class="input-control" /></div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-field"><label>Last Name</label><input name="last_name"  type="text" class="input-control" /></div>
+                                                    <div class="form-field"><label>Country</label><input name="country" type="text" class="input-control" /></div>
+                                                </div>
                                             <div class="col-md-6">
-                                                <div class="form-field"><label>First Name</label><input type="text" class="input-control" /></div>
-                                                <div class="form-field"><label>Email</label><input type="text" class="input-control" /></div>
-                                            </div>
+                                                <div class="form-field message-row"><label>Message</label><textarea name="message" ></textarea></div>
+                                                <br class="clear" />
+                                            </div>  
                                             <div class="col-md-6">
-                                                <div class="form-field"><label>Last Name</label><input type="text" class="input-control" /></div>
-                                                <div class="form-field"><label>Country</label><input type="text" class="input-control" /></div>
+                                              <div>
+                                                  <div class="g-recaptcha" data-sitekey="6LdnLjcUAAAAAIMEIjvMjDS2q5OBm03mb_TNKki3"></div>
+                                                  <input name="form" type="hidden" class="input-control" value="s2" />
+                                              </div>
+                                               <br class="clear" />
                                             </div>
                                             <div class="col-lg-12">
-                                                <div class="form-field message-row"><label>Message</label><textarea></textarea></div>
-                                                <br class="clear" />
+                                                <div id="cfmsgbox_hiho"></div>
+                                            </div> 
+
+                                            <div class="col-lg-12">    
                                                 <div class="button-action">
-                                                    <button class="btn btn-red">SEND</button><span>Or</span>
+                                                    <button class="btn btn-red btnSaveContactForm" data-form="#contactform-s2">SEND</button><span>Or</span>
+
                                                     <a href="get_quote.html" target="_blank" class="btn btn-green">QUOTE AN APP FOR ME</a>
                                                 </div>
                                             </div>  
@@ -667,6 +682,7 @@
                                                     <div class="form-field message-row"><label>Message</label><textarea name="message" ></textarea></div>
                                                     <br class="clear" />
                                                 </div>  
+                                                <!--
                                                 <div class="col-md-6">
                                                   <div style="margin-top:40px">
                                                       <div class="g-recaptcha" data-sitekey="6LdnLjcUAAAAAIMEIjvMjDS2q5OBm03mb_TNKki3"></div>
@@ -682,7 +698,9 @@
                                                         <button class="btn btn-red btnSaveContactForm" data-form="#contactform-hiho">SEND</button><span>Or</span>
                                                         <a class="btn btn-green" data-target="#myCarousel" data-slide-to="0" >SIGN UP FOR AN ACCOUNT</a>
                                                     </div>
-                                                </div>  
+                                                </div> 
+                                                --> 
+
                                             </div>
                                           </form>  
                                         </div>
@@ -745,9 +763,9 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="js/svg.min.js"></script> 
 <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
-<!--
+
 <script src='https://www.google.com/recaptcha/api.js'></script>
--->
+
 <script type="text/javascript">  
     var base_url = "http://localhost/mark/2017/hiho/webmin/public/"
 

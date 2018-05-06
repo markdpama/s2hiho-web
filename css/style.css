@@ -270,7 +270,7 @@ h1,h2,h3,h4,h5 {margin:0;}
 
 /* Our Solution */
 .our-solution-con {
-
+   background: #43e8c8; 
 }
 .our-solution-con .header {
    background: #ffb140; color:#FFF;
@@ -280,7 +280,7 @@ h1,h2,h3,h4,h5 {margin:0;}
    padding:25px 0 20px;
 }
 .our-solution-con .content {
-   background: #1abc9c; 
+   
    /*padding:8px 22px*/
 }
 .our-solution-con .content .inner{
@@ -989,14 +989,14 @@ a.btnGenericBack:hover {text-decoration: none}
 .page-s2hiho-contact .form-box .contact-form .btnQuoteApp {padding:2px 15px 0; height:38px; width:100%; border-radius: 12px; display:block; margin:0 auto; font-size: 1.4em; color:#FFF; font-family: 'GothamBold', sans-serif; border:none; }
 
 /* S2 Contact Form */
-.page5 .contactus-header { top:40px; left:330px; }
-.page5 .slice01 {height:80px; width:55px; border-top:1.5px solid #FFF; border-left:1.5px solid #FFF; left:275px; top:65px;}
-.page5 .slice02 {height:7px; width:105px; left:648px; top:65px; background: url('../images/contactform-s2-slice02.png') no-repeat; background-size: cover;}
-.page5 .slice03 {font-family: 'GothamThin', sans-serif; font-size: 1.1em; line-height: 20px; height:110px; width:130px; left:738px; top:30px; color:#FFF; text-align: center}  
+.page5 .contactus-header { top:40px; left:390px; }
+.page5 .slice01 {height:80px; width:115px; border-top:1.5px solid #FFF; border-left:1.5px solid #FFF; left:275px; top:65px;}
+.page5 .slice02 {height:7px; width:105px; left:708px; top:65px; background: url('../images/contactform-s2-slice02.png') no-repeat; background-size: cover;}
+.page5 .slice03 {font-family: 'GothamThin', sans-serif; font-size: 1.1em; line-height: 20px; height:110px; width:130px; left:798px; top:30px; color:#FFF; text-align: center}  
 .page5 .slice03 img {margin-bottom: 10px}
-.page5 .slice04 {height:58px; width:42px; left:858px; top:65px; background: url('../images/contactform-s2-slice04.png') no-repeat; background-size: cover;}
+.page5 .slice04 {height:58px; width:42px; left:918px; top:65px; background: url('../images/contactform-s2-slice04.png') no-repeat; background-size: cover;}
 
-.page5 .form-box {margin:135px auto 0; max-width: 840px }
+.page5 .form-box {margin:135px auto 0; max-width: 1024px }
 .page5 .form-v2 .form-field{
    background: #fab26f; 
 }
@@ -1028,7 +1028,8 @@ a.btnGenericBack:hover {text-decoration: none}
 }
 
 .page-s2hiho-contact .form-v2 .button-action {
-   margin-left: 235px; 
+  text-align: center;
+  margin-top:20px;
 }
 .page-s2hiho-contact .form-v2.hiho-create-account .button-action {
    margin-left: 0; 
@@ -1327,9 +1328,11 @@ body.page-quote {
 .radiobox-item .radio-icon {width: 60px; position: relative;} 
 .radiobox-item .radio-icon img {position: absolute; left:0; max-width: 48px; top:-6px; }
 
-.radio-tickbox input[type="radio"], .check-tickbox input[type="checkbox"] {
+.radio-tickbox input[type="radio"], .check-tickbox input[type="checkbox"], .radio-tickbox input[type="checkbox"] {
     visibility: hidden;
+    /*margin-left:-35px; */
 }
+
 
 .quote-app section {font-family: 'ChampagneLimousinesItalic', sans-serif; font-weight: normal}
 .quote-app section .option-desc {text-align:center; max-width:340px; color:#FFF; background:#b7b7b7; font-size: 1.5em; line-height:24px; padding:8px 15px; margin:10px auto 20px; border-radius: 10px}
@@ -1350,6 +1353,33 @@ section.qma-form-af .radiobox-item { min-width: 460px}
 section.qma-form-af .radiobox-item .label-box {text-align: left}
 section.qma-form-af .radiobox-item .label-box .label {font-size: 1.6em; }
 
+.tooltip-inner {
+  background-color: #b7b7b7 !important;
+  color: #FFF;
+  font-size: 1.5em;
+  line-height: 24px;
+  font-family: 'ChampagneLimousinesItalic', sans-serif;
+  font-weight: normal;
+  max-width:360px;
+  height: 60px; 
+   white-space:pre-wrap;
+
+}
+.tooltip.top .tooltip-arrow {
+  border-top-color: #b7b7b7;
+}
+.tooltip.right .tooltip-arrow {
+  border-right-color: #b7b7b7;
+}
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #b7b7b7;
+}
+.tooltip.left .tooltip-arrow {
+  border-left-color: #b7b7b7;
+}
+.info-tooltip i.fa {
+  color:#3498db;
+}
 
 @media screen and (min-width:1920px) {
   .page-appdevice .logo.s2 {left:45%;}
