@@ -270,15 +270,18 @@ class Quote_My_AppsController extends Controller
 	      array_push($this->json_response['message'], $validator->errors()->all());
 
 	    }
-	    
+
+	    $quote_total = calculate_quote_app($request);
+
 	    if($isValid){
 	      $insert_id = Module::insert("Quote_My_Apps", $request);
 	      $this->json_response['message'] = "Ok";
 	      $this->json_response['success'] = true; 
+	      $this->json_response['quote_total'] = $quote_total; 
 	    }
 
 	    return response()->json($this->json_response);
 
 	  }
-	  
+
 }
