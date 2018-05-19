@@ -1144,7 +1144,9 @@ body.page-contact-mobile .w{
 
 
 body.page-quote {
-  background:#f6a02d; font-family: 'ChampagneLimousines', sans-serif; overflow: auto!important;
+  /*background:#f6a02d; */
+  background:#fab26f; 
+  font-family: 'ChampagneLimousines', sans-serif; overflow: auto!important;
 }
 
 .main.quote-app {max-width: 1840px; margin:0 auto;}
@@ -1379,6 +1381,98 @@ section.qma-form-af .radiobox-item .label-box .label {font-size: 1.6em; }
 }
 .info-tooltip i.fa {
   color:#3498db;
+}
+
+.quote-app footer {
+   
+}
+
+footer .footer-wrap {
+     margin: 0 45px; color: #FFF;
+}
+footer .upper-box {
+   padding: 20px 0;
+   min-height: 110px;
+   border-bottom:3px solid #FFF;
+}
+
+footer .lower-box-nav {
+   padding:5px 0;
+   font-family: 'GothamLight', sans-serif;
+   text-align: center
+}
+footer .lower-box-nav a {
+   color:#FFF;font-size: 11px
+}
+
+footer .lower-box-nav .fa {color:#f79737; font-size: 22px;
+background-image: radial-gradient(at center, white 60%, transparent 0%);
+}
+
+
+.upper-box .quote-myapp .return{
+   font-size: 1.2em;
+   margin-bottom:8px;
+}
+
+.upper-box .quote-myapp .btn,
+.upper-box .quote-myapp .btn:hover {
+   color:#FFF;
+   border: 1px solid #FFF;
+   font-size:1.4em;
+   display:inline-block;
+   border-radius: 0;
+  font-family: 'GothamMedium', sans-serif;
+  padding-left:28px;
+  padding-right:28px;
+
+}
+
+.upper-box .newsletter-s2 {
+  max-width: 380px;
+  text-align: left;
+  float:right;
+  margin-right:-15px;
+  margin-top:20px;
+}
+.upper-box .newsletter-s2 .input-group{
+    
+}
+.newsletter-s2 .input-group .form-control{
+    background:transparent;border:2px solid #FFF;
+    border-radius:0;
+    color:#FFF;
+}
+.newsletter-s2 .input-group .form-control:focus{
+   box-shadow: none
+}
+
+.newsletter-s2 .input-group .btn{
+    background:transparent;
+    border:1px solid #FFF;
+    text-transform:uppercase;
+    font-family: 'GothamMedium', sans-serif;
+    border-radius:0
+} 
+.newsletter-s2 .input-group .btn:hover{
+    color:#FFF;
+}
+
+.input-group .form-control::-webkit-input-placeholder{
+    color: #ffffff;
+    font-style: italic;
+}
+.input-group .form-control::-moz-placeholder{
+    color: #ffffff;
+    font-style: italic;
+}
+.input-group .form-control:-ms-input-placeholder{
+    color: #ffffff;
+    font-style: italic;
+}
+.input-group .form-control:-moz-placeholder {
+   color: #ffffff;
+   font-style: italic;
 }
 
 @media screen and (min-width:1920px) {
