@@ -504,7 +504,12 @@
                                 </div>
                            </div>
                        </div>
+
+
                   </div>
+
+
+
 
                    <div id="contactFormBox-s2" class="row page5 page-s2hiho-contact" style="display:none">
                         <div class="svgcanvas docHeight hh-amber-linear-right">
@@ -578,7 +583,7 @@
                    <!--/contactFormBox-->
 
                    <div id="contactFormBox-hiho" class="page6 page-s2hiho-contact page-hiho-create" style="display:none">
-                        <div class="svgcanvas docHeight hh-blue-linear">
+                        <div class="svgcanvas docHeight_ hh-blue-linear">
 
 
                            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -734,8 +739,6 @@
 
 
 
-
-
              <!--
              <section class="page7 page-hiho-create page-s2hiho-contact" style="display:none">
                   <div class="svgcanvas docHeight hh-torquise-linear">
@@ -754,9 +757,65 @@
     </div>
 
 
+      <div class="footer-fixed">
+          <footer class="footer">
+              <div class="footer-wrap">        
+                  <div class="upper-box">
+                      <div class="row-fluid">
+                          <div class="col-md-4">
+                              <div class="text-left" style="margin:15px 0 0 -15px"><img src="images/s2logo.png" width="80"  /></div>
+                          </div>
+                          <div class="col-md-4">
+                             <div class="quote-myapp">
+                                 <div class="return">Return to homepage</div>
+                                  <a href="#" class="btn">QUOTE MY APP</a>
+                             </div> 
+                          </div>
+                          <div class="col-md-4">
+                              <div class="newsletter-s2">
+                                    <span>Get updates from Step 2 Digital</span><br />
+                                    <div class="input-group">
+                                     <input type="email" class="form-control" placeholder="Type your email here">
+                                     <span class="input-group-btn">
+                                      <button class="btn btn-theme" type="submit">Subscribe</button>
+                                      </span>
+                                    </div>
+                              </div>    
+                          </div>
+                      </div>
+                      <!--.row -->
+                  </div>
+                  <div class="lower-box-nav">
+                      <div class="row">
+                          <div class="col-md-2">
+                              <a href="#">About Step 2 Digital</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="#">Careers</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="#">Press</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="#">Contact us</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="#">Blog</a>
+                          </div>
+                          <div class="col-md-2">
+                              <a href="#">Social</a><br />
+                              <a href="#"><i class="fa fa-facebook-square"></i></a>&nbsp;
+                              <a href="#"><i class="fa fa-youtube-square"></i></a>&nbsp;
+                              <a href="#"><i class="fa fa-google-plus-square"></i></a>&nbsp;
+                              <a href="#"><i class="fa fa-twitter-square"></i></a>&nbsp;
+                          </div>
+                      </div>
+                  </div>  
+              </div>
+              <!--.footer-wrap -->
 
-
-
+          </footer>
+      </div>
 
 
 <script type="text/javascript" src="js/jquery.min.js"></script> 
@@ -918,11 +977,25 @@
         }        
         this.OnePageAfterMove = function(index) {
            console.log('OnePageAfterMove: '+index);
+            
+            if(index==4){
+               $('.footer-fixed').fadeIn();
+            }else{
+               $('.footer-fixed').hide();  
+            }
+            
+
+            console.log('OnLOAD_PageAfterMove: '+index);
+
             switch(index) {
                 case 2:
                     if( $('.lines.ll01').not(":visible") ){
                         S2HIHO.animateAppDetails();  
                     }
+                    break;
+                case 4:
+                    $('.footer-fixed').fadeIn();
+                    console.log('OnLOAD_PageAfterMove: '+index);
                     break;
             }
 
