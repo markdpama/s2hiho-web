@@ -1306,7 +1306,16 @@ body.page-quote {
   background:none!important;
 }
 
+.quoted-result {
+   font-weight: bold;
+   font-size: 3em;
+   text-align: center;
+   margin-top: 2em
+}
 
+.quoted-result span{
+  font-family: 'ChampagneLimousinesBoldItalic';
+}
 
 /* CUSTOM RADIO/CHECK BOX V1 */
 /*

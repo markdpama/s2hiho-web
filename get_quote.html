@@ -45,7 +45,8 @@
 
 
                   <form id="qma-wizard-form" action="http://127.0.0.1:3000/get_quote/saveDB" method="post">
-                      <h3>Business <br />Objectives</h3>
+
+                       <h3>Business <br />Objectives</h3>
                       <section class="qma-form-bo">
                             <div class="step-desc">A digital platform should always be tied to specific goals. Help us understand what objective is your top priority so that we can conceptualize something essential for you</div>
 
@@ -479,21 +480,27 @@
                                  </div>
 
                                 <div class="col-md-12">
+
                                   <div style="width:308px; margin:45px auto 15px">
                                       <div class="g-recaptcha" data-sitekey="6LdnLjcUAAAAAIMEIjvMjDS2q5OBm03mb_TNKki3"></div>
                                   </div>
-                                   <br class="clear" />
+                                  <br class="clear" />
+
                                 </div>
 
-                                <div class="col-lg-12">
+                                <div class="col-md-12">
                                     <div id="cfmsgbox_hiho"></div>
-                                </div> 
-
+                                </div>    
 
                             </div>
 
 
                       </section>
+
+                      <div class="quoted-result" style="display:none">
+                           The quoted price is <span></span>
+                      </div>
+
 
                   </form>
 
@@ -724,9 +731,32 @@
 
           return true; 
         },
+        onStepChanging: function (event, currentIndex, newIndex) { 
+          var section = $('#qma-wizard-form section').eq(currentIndex);  
+          var selected = $(section).find('.radio-box input:checked').length;
+          
+          console.log(selected);
+          if(newIndex > currentIndex && selected == 0){ //if moving forward
+            alert("Please select an option!");
+            return false;
+          }else{
+            return true;   
+          }
+
+          
+        },
         onFinishing: function (event, currentIndex) { 
             console.log($("#qma-wizard-form").serialize());
             displayMessage("notice", "Sending... Please wait...", true, "#cfmsgbox_hiho");
+            
+            var section = $('#qma-wizard-form section').eq(currentIndex);  
+            selected = $(section).find('.radio-box input:checked').length;
+            if(selected == 0){
+              //alert("Please select an option!");
+              displayMessage("error", "Please select an option!", true, "#cfmsgbox_hiho");
+              return false;
+            }
+
             $.ajax({
                type: "POST",
                 url: base_url+"api/v1/quote/save",
@@ -739,7 +769,13 @@
                 success: function(resp, textStatus, xhr) {
                     if( typeof(resp) == 'object' ||  xhr.status !== 200){
                         if(resp.success==true){    
-                            displayMessage("success", resp.message, true, "#cfmsgbox_hiho")
+                            displayMessage("success", resp.message, true, "#cfmsgbox_hiho");
+                            $('.actions, .steps').hide(); 
+                            $('#qma-wizard-form section').eq(currentIndex).hide(); 
+                            $('.quoted-result span').html("Php "+resp.quote_total); 
+                            $('.quoted-result').show(); 
+
+
                         }else{
                             displayMessage("error", resp.message, true, "#cfmsgbox_hiho")
                         }
@@ -768,6 +804,7 @@
     }          
 
 
+    
     $('.radio-tickbox').on('click', function () {
          var _this = $(this);
 
