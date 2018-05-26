@@ -28,5 +28,18 @@
     <![endif]-->
     
     @stack('styles')
+
+    <style type="text/css">
+            .login-page {
+              background: url('{{ asset('la-assets/img/beacons-group-overlay.jpg') }}') no-repeat center center;
+              background-size: cover;
+            }
+            .login-logo a, .register-logo a {
+                color:#FFF;
+            }
+            .login-box-body, .register-box-body {
+                background: rgba(255,255,255,0.75);
+            }
+    </style>
     
 </head>

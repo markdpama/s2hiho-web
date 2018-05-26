@@ -32,6 +32,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        
+        return redirect(config('laraadmin.adminRoute')."/");
+
         $roleCount = \App\Role::count();
 		if($roleCount != 0) {
 			if($roleCount != 0) {
