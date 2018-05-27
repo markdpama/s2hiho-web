@@ -760,6 +760,7 @@
       <div class="footer-fixed">
           <footer class="footer">
               <div class="footer-wrap">        
+                  <a href="#" class="btn-CloseFooter"><i class="fa fa-times"></i></a> 
                   <div class="upper-box">
                       <div class="row-fluid">
                           <div class="col-md-4">
@@ -1097,8 +1098,10 @@
         });
     });
 
-
-
+    $('a.btn-CloseFooter').click(function(e){
+        e.preventDefault();
+        $('.footer-fixed').hide(); 
+    });
 
     S2HIHO.resizeLayouts();
 
