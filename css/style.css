@@ -835,6 +835,8 @@ h1,h2,h3,h4,h5 {margin:0;}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#029346', endColorstr='#38b44a', GradientType=1 );
 }*/
 
+#contactform-s2 input[type=text] { width:320px; }
+
 a.btnGenericBack {
   display:inline-block;
   height: 45px;

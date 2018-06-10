@@ -828,6 +828,7 @@
 
 <script type="text/javascript">  
     var base_url = "http://52.33.52.164/s2hiho-web/webmin/public/"
+    //var base_url = "http://localhost/mark/2017/hiho/webmin/public/"
 
     $(document).ready(function(){
 
@@ -863,6 +864,7 @@
                     if( typeof(resp) == 'object' ||  xhr.status !== 200){
                         if(resp.success==true){    
                             displayMessage("success", resp.message, true, "#cfmsgbox_hiho")
+                            $(form).find("input[type=text], textarea").val("");
                         }else{
                             displayMessage("error", resp.message, true, "#cfmsgbox_hiho")
                         }

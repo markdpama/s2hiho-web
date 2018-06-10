@@ -18,6 +18,7 @@ use Dwij\Laraadmin\Models\Module;
 use Dwij\Laraadmin\Models\ModuleFields;
 
 use App\Models\Contact_Data;
+use Mail;
 
 class Contact_DatasController extends Controller
 {
@@ -272,7 +273,7 @@ class Contact_DatasController extends Controller
 		$validator = Validator::make($request->all(), $this->rules);
 
 		$this->json_response['message'] = array();
-
+		//- app/Helpers
 		if( $captch_resp = validate_captcha($request) ){
 			$this->json_response['success'] = $isValid = false;
 			array_push($this->json_response['message'], $captch_resp);
@@ -287,7 +288,19 @@ class Contact_DatasController extends Controller
 		
 		if($isValid){
 			$insert_id = Module::insert("Contact_Datas", $request);
-			$this->json_response['message'] = "Ok";
+
+			//--sendMail Here
+			$contact_data = Contact_Data::find($insert_id);
+			if(isset($contact_data->id)) {
+				$module = Module::get('Contact_Datas');
+				$module->row = $contact_data;
+				Mail::send('emails.contact_us', ['module' => $module, 'contact_data' => $contact_data], function ($m) {
+					$m->from('hello@laraadmin.com', 'LaraAdmin');
+					$m->to("markdpama@gmail.com", "Mark")->subject('S2HiHo - Contact Us');
+				});
+			} 
+
+			$this->json_response['message'] = "Thank you for your enquiry. Your message has been sent successfully.";
 			$this->json_response['success'] = true;	
 		}
 
