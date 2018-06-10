@@ -6,7 +6,7 @@
 
 @section('main-content')
 <!-- Main content -->
-        <section class="content">
+        <section class="content" style="display:none">
           <!-- Small boxes (Stat box) -->
           <div class="row">
             <div class="col-lg-3 col-xs-6">

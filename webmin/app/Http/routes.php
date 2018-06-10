@@ -61,6 +61,7 @@ Route::get('/api/v1/getcsrftoken', function(){
 Route::group(['prefix' => 'api', 'middleware' => 'throttle'], function () {
     Route::post('/v1/contact/save', 'LA\Contact_DatasController@save');
     Route::post('/v1/quote/save', 'LA\Quote_My_AppsController@save');
+    //Route::get('/v1/quote/save', 'LA\Quote_My_AppsController@save');
 });
 
 /*
