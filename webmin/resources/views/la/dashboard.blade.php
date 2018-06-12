@@ -477,16 +477,18 @@
 
 @push('scripts')
 <script>
+/*
 (function($) {
 	$('body').pgNotification({
 		style: 'circle',
 		title: 'LaraAdmin',
-		message: "Welcome to LaraAdmin...",
+		message: "Welcome to S2-Hiho Digital",
 		position: "top-right",
 		timeout: 0,
 		type: "success",
 		thumbnail: '<img width="40" height="40" style="display: inline-block;" src="{{ Gravatar::fallback(asset('la-assets/img/user2-160x160.jpg'))->get(Auth::user()->email, 'default') }}" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar2x.jpg" alt="">'
 	}).show();
 })(window.jQuery);
+*/
 </script>
 @endpush
