@@ -1,7 +1,7 @@
 @extends("la.layouts.app")
 
 @section("contentheader_title", "Roles")
-@section("contentheader_description", "roles listing")
+@section("contentheader_description", "Roles listing")
 @section("section", "Roles")
 @section("sub_section", "Listing")
 @section("htmlheader_title", "Roles Listing")
@@ -56,11 +56,14 @@
 			{!! Form::open(['action' => 'LA\RolesController@store', 'id' => 'role-add-form']) !!}
 			<div class="modal-body">
 				<div class="box-body">
-                    @la_input($module, 'name', null, null, "form-control text-uppercase", ["placeholder" => "Role Name in CAPITAL LETTERS with '_' to JOIN e.g. 'SUPER_ADMIN'"])
+                    @la_form($module)
+					
+					{{--
+					@la_input($module, 'name')
 					@la_input($module, 'display_name')
 					@la_input($module, 'description')
 					@la_input($module, 'parent')
-					@la_input($module, 'dept')
+					--}}
 				</div>
 			</div>
 			<div class="modal-footer">

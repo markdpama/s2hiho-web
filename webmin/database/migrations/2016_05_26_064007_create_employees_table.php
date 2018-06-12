@@ -4,7 +4,6 @@
  * Help: http://laraadmin.com
  */
 
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\Module;
@@ -25,7 +24,6 @@ class CreateEmployeesTable extends Migration
             ["mobile", "Mobile", "Mobile", false, "", 10, 20, true],
             ["mobile2", "Alternative Mobile", "Mobile", false, "", 10, 20, false],
             ["email", "Email", "Email", true, "", 5, 250, true],
-            ["dept", "Department", "Dropdown", false, "0", 0, 0, true, "@departments"],
             ["city", "City", "String", false, "", 0, 50, false],
             ["address", "Address", "Address", false, "", 0, 1000, false],
             ["about", "About", "String", false, "", 0, 0, false],
