@@ -891,7 +891,7 @@ a.btnGenericBack:hover {text-decoration: none}
 
 .page3 .row {padding:35px 0;}
 .page3 h1 {font-family: 'GothamBlackItalic', sans-serif; font-size: 5em}
-.page3 p.desc {font-family: 'ChampagneLimousines', sans-serif; font-size: 2em}
+.page3 p.desc {font-family: 'ChampagneLimousines', sans-serif; font-size: 2em; margin-top: 1.5em}
 .page3 p.desc .italic {font-family: 'ChampagneLimousinesBoldItalic', sans-serif; }
 .page3 #about-mission h1 {background: url('../images/header-midline.png') no-repeat 120% center; background-size: auto 100%; padding:0; line-height: 1em}
 .page3 #about-vision h1 {background: url('../images/vision-header.png') no-repeat center center; background-size: auto 100%;padding:25px 0 15px; margin-bottom: 20px}
